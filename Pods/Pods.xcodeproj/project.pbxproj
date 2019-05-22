@@ -1,0 +1,1857 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		00F41BEED686E2FF908240DA65E19280 /* KCURIQuery.h in Headers */ = {isa = PBXBuildFile; fileRef = E40A784284FE9E410D61D8ADD90BE8FA /* KCURIQuery.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		05510D7B082F6CEFF004A065311F8D06 /* NSObject+KCNotification.h in Headers */ = {isa = PBXBuildFile; fileRef = A2CFB7B613DC7BF23F4AA05290A3E4CE /* NSObject+KCNotification.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		06C30433E1D00581809D0F68BDDEF570 /* SSKeychainQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 64DC75D41D287D39696442488139F201 /* SSKeychainQuery.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		0934A6F06999641CCCD1F55B46693A19 /* KCMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 308526C3E8927E91F7F0BFDB4F6E91A3 /* KCMethod.m */; };
+		0BA625A5DC43BCE34A1FB325FA827DD5 /* KCUncaughtExceptionHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 6210E524D147068406B69DDA849C377C /* KCUncaughtExceptionHandler.m */; };
+		0C2FD28A3082F87934E8D31FDF18AEB2 /* KCWebView.h in Headers */ = {isa = PBXBuildFile; fileRef = 44F90A23B748452771D69743FFD78FF3 /* KCWebView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0D835369FE18127D27F91B7EB8F3CEAD /* KCFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 613A3209D1EB7A75B4ECB1C12D133E22 /* KCFile.m */; };
+		0E5FA924F605BC5DD8D096CC048CD5D5 /* KCManifestParser.h in Headers */ = {isa = PBXBuildFile; fileRef = AF023E14E8D09F5E7B0B544884171676 /* KCManifestParser.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0E82332E0F419D0BF60A1F0A99BF3A21 /* KCMainBundle.h in Headers */ = {isa = PBXBuildFile; fileRef = B4613C10EFDB219E8587C846A0708E77 /* KCMainBundle.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		107B7365331FC85F3F2BAEDF004EE3C8 /* NSObject+KCTicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 731FDE2801E42805CF0328EFB41CFDB9 /* NSObject+KCTicker.m */; };
+		15D9E06211F52D8A99E5F01AD206F145 /* NSString+KCExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = E0A51975E3D8C91F2D6B2ACF22447965 /* NSString+KCExtension.m */; };
+		1666191DED33ACE98DA6D2633F5C2B22 /* KCString.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC3B3FC33183229FB9A232A0C154FCB /* KCString.m */; };
+		18AAA1F3713058EA4B5C720AF8266481 /* KCArgList.h in Headers */ = {isa = PBXBuildFile; fileRef = 632DEB344F142FB64A9C8AF1A2AC0BDD /* KCArgList.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		199FEDC537ABACE53A486243FA8A4F2B /* KCManifestObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 19CCBBE6C0F836178C4C208D237CF2C6 /* KCManifestObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		19B5533A5CE1391EAEFF31D58F00F16B /* KCRegister.h in Headers */ = {isa = PBXBuildFile; fileRef = 10B9DB63AD17B5D80F167AB8475680A7 /* KCRegister.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1AA60B5D4D61D6BEF6C1F83CE3C80546 /* KCUtilGzip.m in Sources */ = {isa = PBXBuildFile; fileRef = A3E055383E6E63F85DADB3AF77493DEB /* KCUtilGzip.m */; };
+		1DACFC591EC18FA4D052496835FC9484 /* KCStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CDB94248A81CC06961EAB48FDF5D022 /* KCStack.m */; };
+		1E8B7F12CAA716C9BE6AE2FC0E99E336 /* SSKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = BB965B55B541845BF199F3148C6F2F54 /* SSKeychain.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		1F0174E6D18F8AA833D8429545314377 /* KCLog.h in Headers */ = {isa = PBXBuildFile; fileRef = DAFEAE76BE9C7EB191FA9A0CAC664C0A /* KCLog.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		257F09940285CA2B48187B78CFC2AA55 /* KCModifier.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A8F1CC16353019570D921240680BBC8 /* KCModifier.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		25888A75B5EACC788DF91FB3D153EA51 /* NSData+HMAC.h in Headers */ = {isa = PBXBuildFile; fileRef = 2A04CC0105A78D4ACA54028F1FE518D4 /* NSData+HMAC.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		25901B34367DCB5AE813EAE958F0A882 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4662DA9623E6D78EA7D07E0F95380D2B /* Foundation.framework */; };
+		25A951D0C99BFF168184FB2602FDD08C /* KCJSCompileExecutor.h in Headers */ = {isa = PBXBuildFile; fileRef = 2785C536F1132E141AC826A5565CCBAC /* KCJSCompileExecutor.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		27A538F73DBBAD923AF9FFE1BE63AF93 /* NSObject+KCSelector.m in Sources */ = {isa = PBXBuildFile; fileRef = 604A9368E03B7CEE3BFE2C68D11F3BAA /* NSObject+KCSelector.m */; };
+		2A165F59F1B27B4E21BEEB1257FE3960 /* KCWeakScriptMessageDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D77F8BB2844FB140B20EC4C8FBDED18 /* KCWeakScriptMessageDelegate.m */; };
+		2A5E05D37A5BB1C6B3C1D7A09EB228B4 /* KCWebImageSetter.h in Headers */ = {isa = PBXBuildFile; fileRef = 6C63F0D566E9C43930A2634F5564F167 /* KCWebImageSetter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2CD63E4BE8DC9DBBDC74A99F39918C5F /* KCJSObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 296AF140C63842972672D03270CAB42C /* KCJSObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2D74EF42A3B01DA95095DA09664FED18 /* KCURIComponents.m in Sources */ = {isa = PBXBuildFile; fileRef = 30FB890979E13D1B59A009A5263FD833 /* KCURIComponents.m */; };
+		2DA40FCAC7466D286E2DB70B15DFBDF9 /* KCFileCache.m in Sources */ = {isa = PBXBuildFile; fileRef = F75DF0E006DB0816AE91C3638C9213B8 /* KCFileCache.m */; };
+		2DF4784873B1948B156988349F6284A8 /* UIWebView+KCClean.m in Sources */ = {isa = PBXBuildFile; fileRef = B0D6B64B7DB4796924E7C74FE3AD1910 /* UIWebView+KCClean.m */; };
+		3250941496874E5040F8A3E6B0D15CBB /* NSObject+KCObjectInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 428D85AFD203D44E8E2D014C3E6A5D7C /* NSObject+KCObjectInfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		32D4BDECFB26064A54225F3F0FFB9FEB /* Pods-kerkeePlusTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 93AD2FF03D1BE1CF4E14D4933FEC1EA3 /* Pods-kerkeePlusTests-dummy.m */; };
+		33F6AA6EBB09C64E6A3DF2004F8F7592 /* SSKeychain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15B1F1C5CD35815DD60E20604F343B4E /* SSKeychain.framework */; };
+		35543F18591C3A8D57863757F3467827 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A7126925A8082AAC461E37E82048BA5 /* NSData+Base64.m */; };
+		361FDA2D639E9D7DDDF03EB4C3629129 /* KCUtilCoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 89B208BC065492EDB28DCBE0F3759D09 /* KCUtilCoding.m */; };
+		372B03DA08BB5DD286CE09D457A70872 /* KCImagePreCache.h in Headers */ = {isa = PBXBuildFile; fileRef = BF6F220AA551DF4E4E479254CCD916AC /* KCImagePreCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		389F7BAE2D364BD74B574B62454F5AEC /* KCJSBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 334A910B85733C8BBDAAAEAAFC1DB20E /* KCJSBridge.m */; };
+		3927BFFBA32A1FE48134F8F1C83E31B3 /* KCClassParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 5755FC4FFDC5C1C1C1F5E80D806F6D41 /* KCClassParser.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3B86A0519082F4A8507CE8390A2233F6 /* KCUriRegister.h in Headers */ = {isa = PBXBuildFile; fileRef = 40707EA97497B142181127AA530F8C88 /* KCUriRegister.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3D406260DD7F61F430038865FF759EC7 /* KCCacheKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 34D31E0E2BFC50EC05063A42D838F6A6 /* KCCacheKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3E4031FF34903DBCC3731875A6F2951D /* KCManifestObject.m in Sources */ = {isa = PBXBuildFile; fileRef = BBD5CF1FD02F9245CC0A8A2D50E0F2CE /* KCManifestObject.m */; };
+		3FE92B498BA0E0884E30F58DB5A2CC50 /* KCFileArchiver.h in Headers */ = {isa = PBXBuildFile; fileRef = D1C45DA01B9B64724C3F0F8D919D3889 /* KCFileArchiver.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		41574DA494B736DE0F31CAB54875D448 /* KCUtilMd5.h in Headers */ = {isa = PBXBuildFile; fileRef = FC3B59257FE965E12EFAF098EC5DD42E /* KCUtilMd5.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4281D74A30C615697391DFA996F0B8FF /* Pods-kerkeePlusTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D36024A3A758E79A9BE26C52E1ADFE2 /* Pods-kerkeePlusTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		44A75B2E3B657EE551B91B65049942E2 /* KCImageCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 203E49555F4F96AEFAACD871A0925C00 /* KCImageCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		44DAC0BBB2D6EF1463C2503FEA7D0C46 /* KCFileArchiver.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FA2D82BBAE0A315F1E47E8BC0E65925 /* KCFileArchiver.m */; };
+		4509A3AE0BEC22192311F475311C01CC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9B5F3E31D792A17DDC8AC3E09E11983 /* UIKit.framework */; };
+		46499FDD78E8BD82BB38854C1C9538B8 /* KCUtilFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 0783FD50D578BB5DAC594014840928AF /* KCUtilFile.m */; };
+		48C98956CC70BB32BA2E48DE9230423A /* KCArg.h in Headers */ = {isa = PBXBuildFile; fileRef = EAE7A3C4941F9BCD382658DA7CAADBC4 /* KCArg.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4A01839474EB4F4D85D37E48AF2F02EC /* KCArg.m in Sources */ = {isa = PBXBuildFile; fileRef = B919E0C9C313D5C65D69F010A931CCDF /* KCArg.m */; };
+		4B20A3DAAEC18EE7C0C80DA95C108A2F /* KCUriActionDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 150BBDBD15F48BE4719D9FF0CBE5985D /* KCUriActionDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4C32E35708862F2A8B6E73754ED8FFD2 /* kerkee.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B59DD3B7D81E606FA203385BBB3EF4E /* kerkee.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4CB6B05C8FC3A583577DA05972E50CF0 /* SSKeychain.h in Headers */ = {isa = PBXBuildFile; fileRef = D69DB7B9D5AC5584B8A80EA32168354F /* SSKeychain.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4D0DA59B24CE54F681C6DFE0A9E41085 /* NSString+KCExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = E03A3AF97EDDC478BA7852D7CB26635F /* NSString+KCExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4DAA4A924A19A59DF87C1756F7588971 /* KCArchiver.m in Sources */ = {isa = PBXBuildFile; fileRef = 777627119E9B91B04EAD14C6D895715A /* KCArchiver.m */; };
+		50D711AF396A5FD56139C10801AAA302 /* KCWebViewProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = EBD9E41B141519C3FCA6472D2135EC18 /* KCWebViewProxy.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		50E5E233E404668F09257EEA42AEEEDA /* KCUtilFile.h in Headers */ = {isa = PBXBuildFile; fileRef = 540ED2D3C1942D9FAAA53B0EA9F734FF /* KCUtilFile.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		561780C4DD87B5209F702E01804899FD /* KCMemoryCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 72844D6CEA07BD2BD88BAF95A9F227B0 /* KCMemoryCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		567EE5665939B3411F343723050326A3 /* SSKeychain-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 478E8533ACBD16EB124AAF06EFE4520F /* SSKeychain-dummy.m */; };
+		56A734215CA4967DF93997CB7B6216A5 /* KCXMLHttpRequestDispatcher.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A8600AA8D1C595CDD298FDEB1DCEDC4 /* KCXMLHttpRequestDispatcher.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		56F4CA711239541074B3681D6081AD0A /* KCImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF9DB0162C5B85D5ABFCE3EB67955C8 /* KCImageCache.m */; };
+		573FD3BFE175D8077F47AC735CF9411A /* KCApiBridgeManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C48D1878795B935DE6DB40429AD34A9 /* KCApiBridgeManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		59A9417A9CDEC455CC9989521565278D /* KCUtilMd5.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A738445246D847D0A247A41E37BCCC /* KCUtilMd5.m */; };
+		59B3D3C427715417167939FCEFCA900F /* KCUncaughtExceptionHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 38160B4315F8F57A2037D8CD19A8E1E9 /* KCUncaughtExceptionHandler.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5B067E78B0107C9EA0A3FEC828B12290 /* NSDate+KCDate.h in Headers */ = {isa = PBXBuildFile; fileRef = AB4DFD21C4514A90CEB2A1D8D6D799A8 /* NSDate+KCDate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5BB6820DF0D2E583FC50E7AE0678075A /* Pods-kerkeePlus-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 526D442680C160647B23B8FD7431ADAD /* Pods-kerkeePlus-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5BBE0BA30335CF53869662E15B64396A /* KCImagePreCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B9BA3054266501068DD6A568D1786EF /* KCImagePreCache.m */; };
+		5E2000460318A516C1286D09CC98434F /* NSObject+KCObserver.h in Headers */ = {isa = PBXBuildFile; fileRef = 6012858CA22086687FD73E170EBEB156 /* NSObject+KCObserver.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5FF2E7EB652B667643E502E525550318 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAA0D85F5E12A0932DF96B8A4D11D2F9 /* CoreGraphics.framework */; };
+		610B796CC8728202DAE9D2BB2127FE6B /* NSObject+KCSelector.h in Headers */ = {isa = PBXBuildFile; fileRef = BBD0AAAFF973A67FE10D4103FA5F61E2 /* NSObject+KCSelector.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		630F6E8EF89205AF00778CA059B00DF2 /* KCObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 30844CC948D66155C6038DEFAA299EDC /* KCObject.m */; };
+		6468E2C911BEBED54A966A387BF1050D /* NSObject+KCCoding.h in Headers */ = {isa = PBXBuildFile; fileRef = 93AA33045FC2EC7B4E9B008CC3FA1846 /* NSObject+KCCoding.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		661F54145BA558D8F0744EFC73E80659 /* KCWKWebView.h in Headers */ = {isa = PBXBuildFile; fileRef = 84AF70003FD827F1BCA7AF91541261F7 /* KCWKWebView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		675C9C8428FDDB794EA6A2673B25CC79 /* KCJSType.m in Sources */ = {isa = PBXBuildFile; fileRef = 90E7B3AD6FF2D4985DA79968598F2FF5 /* KCJSType.m */; };
+		681E5B4D1D956CDED00F10CD2943094C /* UIActionSheet+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = F28501D6730B21B8094709235B10D7F8 /* UIActionSheet+Blocks.m */; };
+		683D8453EF78FE87A105713F45543FC1 /* KCUtilCoding.h in Headers */ = {isa = PBXBuildFile; fileRef = 163A82832F19F56109CD1E67978A85AA /* KCUtilCoding.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6A6ED6B20697DDFE4C047E8E89DD3A30 /* KCWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 91FA80FE75C80B75A97DAEFA46C00B29 /* KCWebView.m */; };
+		6B323C58CD76724EBAFA0BDEC24F399F /* KCUtilURL.h in Headers */ = {isa = PBXBuildFile; fileRef = 11469BA043A96E662EDC2B641ADFC70B /* KCUtilURL.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6BC24D1A5FD517E703A3C4D2531B3D04 /* KCButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BAFE257CC65EB9A262F59D71E86DFC0 /* KCButton.m */; };
+		6CB482D8C135477CD16901AD0C03C10C /* KCUriDispatcher.h in Headers */ = {isa = PBXBuildFile; fileRef = 71586392D3115D13AF41DBC328C8770D /* KCUriDispatcher.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6E74628B5A597A6AB4990CFEDF20ABD1 /* KCWeakScriptMessageDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 77211B4D250FBE3138293E28E4F409C6 /* KCWeakScriptMessageDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		71DE9884AF2F42ADA2FFA12EF2DC31B5 /* KCAssert.h in Headers */ = {isa = PBXBuildFile; fileRef = 44E92419C5E828CAE75536C8665F1B1C /* KCAssert.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		73D0953C799723F411566807E24C93AF /* KCUtilDevice.h in Headers */ = {isa = PBXBuildFile; fileRef = 3973D4EDC83E9CF865891AF8B75ABF96 /* KCUtilDevice.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		743892A123B397D885D1C889F386366F /* KCCache.h in Headers */ = {isa = PBXBuildFile; fileRef = A9742E0768710EE3423C68D18AE6F140 /* KCCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		74EA4688693AE578904CC05EC83F426F /* KCLog.m in Sources */ = {isa = PBXBuildFile; fileRef = C47D02574A36055A1F0D0318DD60C754 /* KCLog.m */; };
+		7589A25FD53F8D9448BE0634EAD8B0EA /* UIDevice+KCHardware.m in Sources */ = {isa = PBXBuildFile; fileRef = 48C2425E75137B2F76FECC8A52592759 /* UIDevice+KCHardware.m */; };
+		7687488019416A2A2AAF6DCE84226E86 /* KCRuntime.h in Headers */ = {isa = PBXBuildFile; fileRef = 44162283B13EFE7ABE0203F224733F6E /* KCRuntime.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		78690B9DD5412D8640C628E43802D5E5 /* KCJSExecutor.m in Sources */ = {isa = PBXBuildFile; fileRef = 771965A1CF7717EE466EE7652BF0C015 /* KCJSExecutor.m */; };
+		78B8624F8DA3251CEF8E0BC20F4A9833 /* kerkee-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 77B86965E3FA241481E83B97C63A95A4 /* kerkee-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		79C2C87856E36C74DA7CC6E325A52657 /* KCUtilNet.m in Sources */ = {isa = PBXBuildFile; fileRef = 40D52C9EE821C2A18A1AB5333D9F3497 /* KCUtilNet.m */; };
+		7B62298ADFC7FBB5C8C672B342965942 /* KCFileCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 5718B5809F0F81B17F6BD994B615FAA4 /* KCFileCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7C201CFBE9DD75625F0558CC8F17302B /* KCJSExecutor.h in Headers */ = {isa = PBXBuildFile; fileRef = 911A274E81C806A7F3DFB9B7612E9EE4 /* KCJSExecutor.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7D41590D300D3E621EF5576CC7B6E088 /* NSObject+KCProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EC320A2734CD930AC873AAB2B518BB1 /* NSObject+KCProperty.m */; };
+		8116A8A5A4757792B0A6EF60A85B4403 /* KCWebPath.h in Headers */ = {isa = PBXBuildFile; fileRef = 5885AD16C6421A237043B43F24511896 /* KCWebPath.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		82050B3508FFC51AF25E87FED4F877F2 /* KCRuntime.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B3D6F1D5D3102C0258D78A1066E7C5A /* KCRuntime.m */; };
+		838EDBC2435BB35ABE20F03C954D7BFC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4662DA9623E6D78EA7D07E0F95380D2B /* Foundation.framework */; };
+		85D83525ECB3A21985589A3B92046D5C /* NSData+HMAC.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D78AADE506E1B813B06A6EE8F3C4F9B /* NSData+HMAC.m */; };
+		869D7DA73E45380309CEFBD46D7658D4 /* KCFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CD7E1CBE8FDB1DB4CDA3417EC0CE6F28 /* KCFileManager.m */; };
+		86F2604E339B65828B9A045E679073A9 /* KCURIQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = DE10A9801C2BA8D0AEEF55AA5C7BDCAE /* KCURIQuery.m */; };
+		872313822AB5E25692FE7C6E2768A43B /* KCException.m in Sources */ = {isa = PBXBuildFile; fileRef = 82C7E3CF01DDF841A303E289C9976A34 /* KCException.m */; };
+		8A2FE41A56272AFC64EBE9CB4C2C2B1E /* KCWebImageSetterTask.m in Sources */ = {isa = PBXBuildFile; fileRef = F93998F1646B420B439FE8B0BC44BF78 /* KCWebImageSetterTask.m */; };
+		8ACC25AE9DF5B00715711ED18923D700 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 775E5EC7192D5A1E1D48C46EE7934035 /* Security.framework */; };
+		8AD01576F4E42AB7209BF75F75542892 /* KCWebPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A65D4BF8DC51A7B4ECE097CA396B4BE /* KCWebPath.m */; };
+		8B73BD749C5C7701B2767EED47B7B3D9 /* KCURIComponents.h in Headers */ = {isa = PBXBuildFile; fileRef = F36BD266FA6B53250DB42CBAD7AE299E /* KCURIComponents.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8C367AAE6BB887412249EA8047F488B2 /* KCSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = AC8BA13169C72BDE6A93313B7937125A /* KCSingleton.m */; };
+		8D1476AA6AA1D893FD567168C364877F /* KCXMLHttpRequestDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = CB4D3DEA5AA8D63FA8E48E0A5B25F1BC /* KCXMLHttpRequestDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8D5C80D59BC7C3F55E093405D0DFA5E4 /* KCCache.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE438DB7227D2C2FCB0E482F1BA4B6B /* KCCache.m */; };
+		8D9B47DC97D449DC601295C7773FEBA2 /* KCStack.h in Headers */ = {isa = PBXBuildFile; fileRef = A9A620E7CDD5470AA21C0B62BD9172C8 /* KCStack.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8DF89A1C0BB1595EE0D9B49BC2615009 /* KCString.h in Headers */ = {isa = PBXBuildFile; fileRef = 110CD988D15B23A02F828D9A5B924B3D /* KCString.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8E09A4190BE3984993CC592EBC36D701 /* KCUtilNet.h in Headers */ = {isa = PBXBuildFile; fileRef = 4EF834C142920A6A8101E7096F8773EB /* KCUtilNet.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8E92E913E3C05551548ACA3FEAFB14FD /* KCUtilJson.m in Sources */ = {isa = PBXBuildFile; fileRef = 074AEE0BD836D2DBCCC1EF1CD5592D8D /* KCUtilJson.m */; };
+		8EDB64BC8D293DC61AFCDAC75075AC14 /* KCRegister.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F9A96A9FCDC44C7D38BA12DEC77C8FB /* KCRegister.m */; };
+		90504823D8642731EA43C97FC2620032 /* KCClass.h in Headers */ = {isa = PBXBuildFile; fileRef = F549138CE050C25D89FAD547AB330F94 /* KCClass.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		91F8A1D7C97E367E2A1F977443B6A795 /* SSKeychainQuery.h in Headers */ = {isa = PBXBuildFile; fileRef = B9654AB75513D10F8138F0E585FACFA7 /* SSKeychainQuery.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		925114C9BFD8CC430F85C9F8B7545455 /* KCUriRegister.m in Sources */ = {isa = PBXBuildFile; fileRef = EBCCCE30CD4A46901F73CEB98B2DA0C0 /* KCUriRegister.m */; };
+		94CCFCF4F18182361548D8AFD7D6E5E8 /* KCURI.h in Headers */ = {isa = PBXBuildFile; fileRef = 175B409081FD2817430AAFD8C129FA7D /* KCURI.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		94E9C9E3C63D9217F93D312ADF6D8FAC /* KCClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 11E5968EF1635BAFD2451E608E928D97 /* KCClass.m */; };
+		950336730C0365288F86A7FD2FF8B193 /* UIActionSheet+Blocks.h in Headers */ = {isa = PBXBuildFile; fileRef = A07041244BBBF05D5C1FE5C2DD1117ED /* UIActionSheet+Blocks.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9798C3CE737BDB8C7FA2070834ACF6DF /* KCFile.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D9CF1F38191CAABE95E16AE146257AB /* KCFile.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		98848D8D3A9D81BD2B057EA4B7C14ED2 /* KCJSType.h in Headers */ = {isa = PBXBuildFile; fileRef = F4D6EE752ED502DA929117EA9605CFD7 /* KCJSType.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		988B2F9C16F39F89F784A4D50570058C /* NSObject+KCTicker.h in Headers */ = {isa = PBXBuildFile; fileRef = 2032ED7A8BF801AB482DBE489F26AFBF /* NSObject+KCTicker.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		99CF87E4280463502D4A493AC90522DF /* KCDataValidCache.m in Sources */ = {isa = PBXBuildFile; fileRef = F7DDB2958090DB468A61E6AA6956C45C /* KCDataValidCache.m */; };
+		9B72A58F779592B3D60BEC3817295A56 /* KCUtilURI.m in Sources */ = {isa = PBXBuildFile; fileRef = 534DDB1A67C41EF0BF4D1184F35F1EFA /* KCUtilURI.m */; };
+		9C1DC4C5AD40B76416D96C6A24809F25 /* KCObject.h in Headers */ = {isa = PBXBuildFile; fileRef = D962B5D3B84DBFC139F14525AD63B0F4 /* KCObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9D05FF9E04269689CE21694BBEDC6D35 /* KCUtilDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 2632F4FD26F4A4AE967BEF66DCD9D35E /* KCUtilDevice.m */; };
+		9D3849997072323234C3B0A48B8D7144 /* KCUtilURL.m in Sources */ = {isa = PBXBuildFile; fileRef = 051EDC12D5AAA84F2532E6EFF8914558 /* KCUtilURL.m */; };
+		9D8313C40032AA19E819413C2A8AACAF /* UIAlertView+Blocks.h in Headers */ = {isa = PBXBuildFile; fileRef = 55651EC341D2FAEF0AA62B882106F8DB /* UIAlertView+Blocks.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9FCF9F1D3FDB8A3EAC054E65955312EB /* NSObject+KCCoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A8AAD76B10BACB7FD2472BA62FE230F /* NSObject+KCCoding.m */; };
+		A245DB8029B9F3DFFB459E66B8B062A8 /* KCWebImageSetterTask.h in Headers */ = {isa = PBXBuildFile; fileRef = C57DE588D0C136867AC1FDCA524356C7 /* KCWebImageSetterTask.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A2BB74871289B48BB9D9E9822925158A /* KCJSCallback.h in Headers */ = {isa = PBXBuildFile; fileRef = 764E54EB0C5528F795197FEEEAA351AD /* KCJSCallback.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A6D21656F5302314C5AAE6D4337D8F70 /* KCUtilJson.h in Headers */ = {isa = PBXBuildFile; fileRef = BBCDC940838B6310A410A36D9B7E75CA /* KCUtilJson.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A8795898FAAF8ABCC68246900BEE583B /* KCUtilURI.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AB5B7DEEA53C50E382FEB5A88BBB6E8 /* KCUtilURI.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A92B8AC0B42E23E4007217872433E4AC /* UIAlertView+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = F11BE1A856BA92812BA4EE82BB27E8AC /* UIAlertView+Blocks.m */; };
+		A94D9DD103BE304380306C0B93C417FB /* KCXMLHttpRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 545F04D51A35FC41BBDD8B4A06825332 /* KCXMLHttpRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A94F0FE2292AAD4B4BD94C1D5FE18B5B /* KCDirWatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 058A83CC09C780D245F2B3122C5B12D7 /* KCDirWatcher.m */; };
+		AA001D2E8F0BA8894B61F0E2D9BC9602 /* KCClassParser.m in Sources */ = {isa = PBXBuildFile; fileRef = E9F0D216465FCA8A02160C053AA555DB /* KCClassParser.m */; };
+		AAA064D5762AD2C95DB0FE7C90AACAB5 /* KCWKWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D58F0E98482611F8953E37666537FBE /* KCWKWebView.m */; };
+		AB098E3E884FE0FB67C366345B193A22 /* KCJSObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C45701D8CC3CA114FE9CCA90E0E3424 /* KCJSObject.m */; };
+		AB5A327EE9A8AF2A50CD1B00C8334776 /* KCTaskQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = BFFED660DD08BE33E91667BC7EB7C857 /* KCTaskQueue.m */; };
+		B2D8219DE315892C9CC8DFA1EB876F3C /* KCURI.m in Sources */ = {isa = PBXBuildFile; fileRef = 11AF57D9603F45CBCA052AE15CF02C48 /* KCURI.m */; };
+		B3A98FC437E012FBF6E8695C354345D7 /* NSData+Base64.h in Headers */ = {isa = PBXBuildFile; fileRef = 28177A2491CAECCC62428B9BB08B2EBB /* NSData+Base64.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B56131966268642BD6991A8CACE088D5 /* KCMethod.h in Headers */ = {isa = PBXBuildFile; fileRef = 267B393F89F75258BA062B3BDCEA8A2D /* KCMethod.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B5797D9517909743BE043161C5E88164 /* KCManifestParser.m in Sources */ = {isa = PBXBuildFile; fileRef = BE45D8D75FD746D977598A4F4135E46A /* KCManifestParser.m */; };
+		B5B3D9BE097956F0657D741AC6A37D1F /* KCApiBridgeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F3323D1EFC87E15FCA22E5666565347 /* KCApiBridgeManager.m */; };
+		BDEF8BCF4D25705275C64EA7A93F8553 /* KCSingleton.h in Headers */ = {isa = PBXBuildFile; fileRef = 0266820A697B17F3311C4B70EDA991B3 /* KCSingleton.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BE909A5873ED3473925EDE9A6227A756 /* KCApiBridge.h in Headers */ = {isa = PBXBuildFile; fileRef = B02B9620CD358B6CC5FB24A27C55A1D7 /* KCApiBridge.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BF1A0DC68C00F2A901978EA64C65700F /* KCWebViewManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 546BD94545910D059686FF70F17C4123 /* KCWebViewManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C015684C8522D46344D70407798D88C2 /* KCTaskQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = 9B54CC9947E080551D900BE55E7981FA /* KCTaskQueue.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C043BC7B4882C4B1B0AB238D5A33484D /* NSObject+KCProperty.h in Headers */ = {isa = PBXBuildFile; fileRef = C9D49CFBBAB0D516FDB88487714CC077 /* NSObject+KCProperty.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C0833183349E5E7F791D609655EFA834 /* KCJSCallback.m in Sources */ = {isa = PBXBuildFile; fileRef = 903D230FDF9F2823B0BD1BBB37674975 /* KCJSCallback.m */; };
+		C0FCD22CB89899D19A359B1396FA3568 /* KCBaseDefine.h in Headers */ = {isa = PBXBuildFile; fileRef = 6AEB40D2C8AC3BDA8DFFD8BA09FB8D75 /* KCBaseDefine.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C1A79471E042E52CC5C22E26C83A05D1 /* KCXMLHttpRequestDispatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FE44E068BAF8BCD832EB2E8A249B3F8 /* KCXMLHttpRequestDispatcher.m */; };
+		C4F1A5D4EF86B7A59072315D638B8F3A /* KCMainBundle.m in Sources */ = {isa = PBXBuildFile; fileRef = 463DE014DE28A0377F39E60DF2ED67EB /* KCMainBundle.m */; };
+		C4FF6856CDA52FF57B3B240C7BBBD0A4 /* KCSandbox.m in Sources */ = {isa = PBXBuildFile; fileRef = F065F36A0692112DA79F1F2E64251C34 /* KCSandbox.m */; };
+		C57E114B6E23302F53F1B86FC8BD3931 /* KCArchiver.h in Headers */ = {isa = PBXBuildFile; fileRef = EED6728CA0D8CB6636090EC14E2CAFC7 /* KCArchiver.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C59723D5881859606A4D9ACD1FBCBA11 /* KCSandbox.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B6FB944C1E30401082614D0E749997D /* KCSandbox.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C5C9032F61DE7367A0BC85D01816D930 /* KCFetchManifest.h in Headers */ = {isa = PBXBuildFile; fileRef = D778DD4DFE1AC93E12966EEFDBB895B5 /* KCFetchManifest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C7154EC5533C46DC942FE19AB82E3E68 /* NSObject+KCObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = EDF3F7574C99350CC2841C92EEFA8B9D /* NSObject+KCObserver.m */; };
+		C920C0B178E39E231F0B77F51E94493B /* KCWebImageSetter.m in Sources */ = {isa = PBXBuildFile; fileRef = 36351C5C89831B6A4837346702041D8B /* KCWebImageSetter.m */; };
+		CED2218C0D6289440581C0568F8C9BA3 /* KCUriDispatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 08C182F0AB230868AFA000D7C3AB5EE3 /* KCUriDispatcher.m */; };
+		CF038A9229F49F38FCC006BCB534A17A /* KCArgList.m in Sources */ = {isa = PBXBuildFile; fileRef = 209663CD8D6A8EDD1418F609692E37BA /* KCArgList.m */; };
+		CFD3D0E4FDF037B1F8989CEDD6651F80 /* NSObject+KCNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = F4D93A9DF9DFD4B18B2926BE5B41BA57 /* NSObject+KCNotification.m */; };
+		D0056668324B656FF407A5E8B7895E16 /* KCMemoryCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AEBC45633AEE22E937955C091E91978 /* KCMemoryCache.m */; };
+		D01C643760556C2F6AAB288FFDA361DE /* NSObject+KCObjectInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = E7C932FA84093BDD82FFC85CEAEC6484 /* NSObject+KCObjectInfo.m */; };
+		D4138DB19AA6633F7EA1277C9069ECB1 /* KCFileManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 70BF10FCF77DE8F559A87853E5A4F4C6 /* KCFileManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D616AC672230ABC20DA65E059CE03901 /* NSDate+KCDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 16798669F060016BE0D57DBD3D77099A /* NSDate+KCDate.m */; };
+		DC2F659C3CCED1F06A41790410DBFC3A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4662DA9623E6D78EA7D07E0F95380D2B /* Foundation.framework */; };
+		DC8D62781903E1AA29BC1024D6B730EC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4662DA9623E6D78EA7D07E0F95380D2B /* Foundation.framework */; };
+		DD9FA8518933CC74F635F8892557F09B /* Pods-kerkeePlus-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BC6E1E700A4F06C39F11CC100DCD7C3 /* Pods-kerkeePlus-dummy.m */; };
+		DE868125BC7DF9F91B2C7CF6AEBAD2B5 /* KCException.h in Headers */ = {isa = PBXBuildFile; fileRef = 53464E49D5AA92B4450B3ACFF3374755 /* KCException.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E2115152C0DA10F453E9A68ECEF82176 /* KCWebViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A069ACA43A7C37A6F05AC39A582471B /* KCWebViewManager.m */; };
+		E2C72BE98DEBF2D994D01327FB4A8333 /* kerkee-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E9A00312D670D0C60A86C9C3E1F2360 /* kerkee-dummy.m */; };
+		E3493214468CFEB9E21B992FC2C97F88 /* UIWebView+KCClean.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D52493B063AD97EB90978747E84AF6B /* UIWebView+KCClean.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E6806ECB7F8FACC4779F18D17DF2220B /* KCXMLHttpRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = AB69CA476E3726DF1BA89CC645C56418 /* KCXMLHttpRequest.m */; };
+		E6D4002DAD2CC6802F0862C99FCDF6B5 /* KCWebViewProgressDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 67F3241B2D3215EAE865FA5D80578675 /* KCWebViewProgressDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E73F241F9AA0A12C1C53D95CCBF77B79 /* KCUIWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = EC78BA92A8FEFEFD9E258C0DBA665474 /* KCUIWebView.m */; };
+		E77F7FE0A4F2793318C27A5BFBF877D3 /* KCAssert.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F0257A036A097E4684701A85F9DEB73 /* KCAssert.m */; };
+		E84E046B237E3DAAB443AC0734FF2FD5 /* KCDirWatcher.h in Headers */ = {isa = PBXBuildFile; fileRef = 82C24E4C54B9CD09AF4FAA3988AC1895 /* KCDirWatcher.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E8947BBFB9D15514A13164D356BC8E9D /* KCFetchManifest.m in Sources */ = {isa = PBXBuildFile; fileRef = D9F83D7EAA8F639EF998D123B2B943C2 /* KCFetchManifest.m */; };
+		ECAC8361FA419DEDD4CE778A4F3FA651 /* KCWebViewProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 74F5B0DD105BC5E94CCB04EAE5A6C047 /* KCWebViewProxy.m */; };
+		ECCAFF6011255CFA41D1A8BA696A6AD9 /* KCJSDefine.h in Headers */ = {isa = PBXBuildFile; fileRef = ACCAAAC0056B553CC1B9DFDB13A7D5CF /* KCJSDefine.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EE28614329497681502F235B4F862565 /* KCModifier.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C47DB65C001E6858F858D78409AE173 /* KCModifier.m */; };
+		F2819F8EFA242A0BCA70DD7212B91F9B /* UIDevice+KCHardware.h in Headers */ = {isa = PBXBuildFile; fileRef = BAD5FEA19CCC466E7056F9D7086A0CD6 /* UIDevice+KCHardware.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F3D42B6A925A78910A950CB2A46105CF /* KCJSCompileExecutor.m in Sources */ = {isa = PBXBuildFile; fileRef = 722C31A8C11652BF9E8A4EE24A50A56B /* KCJSCompileExecutor.m */; };
+		F450CF9BEB7157D9B9B6E5FA44FA8A73 /* KCButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 5A6D94F2A68D08FABE2E47202BACF22A /* KCButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F817B268344EB69034DCCB705CF7BCB9 /* KCDataValidCache.h in Headers */ = {isa = PBXBuildFile; fileRef = C90664BE7007D9304FBCD8BA09FE3E35 /* KCDataValidCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FB2CEB441EA34727E6B3FD31FF412B3E /* SSKeychain-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DCAB78D116376093B85F4CB59B229C26 /* SSKeychain-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FCD9EC48AF37E6E9A63B7EC0AF9AC528 /* KCUIWebView.h in Headers */ = {isa = PBXBuildFile; fileRef = 50C015F2ED9A879D27A4AAF9F7EF1E0C /* KCUIWebView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FD265A00DD158074AB95A62B55ADD0A0 /* KCJSBridge.h in Headers */ = {isa = PBXBuildFile; fileRef = B5B3561CC1F8B242B066E98825C06D55 /* KCJSBridge.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FD87EF3F6FF32D171F2BBFEF90BB5828 /* KCApiBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = C3964A5D680CA16B12EB1E27ABC922E4 /* KCApiBridge.m */; };
+		FFF042DAFE896F95D6D2636654432944 /* KCUtilGzip.h in Headers */ = {isa = PBXBuildFile; fileRef = DAB13415A876DDCBD09BB3D47C4D8B03 /* KCUtilGzip.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2EACB9A6B7CC939CE0F34DC1EB6FC84B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 30615C636AC80283F1FB5F97051B9728;
+			remoteInfo = kerkee;
+		};
+		57D4108724FC981B2A11C2E0B83E2287 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 87D62A011F30879ADF5A00D601F014C1;
+			remoteInfo = "Pods-kerkeePlus";
+		};
+		5CD6E96D92638E4605F1F534DF2E2C86 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F3A48A4348E2BE484DF68DDAE67D557D;
+			remoteInfo = SSKeychain;
+		};
+		63E19CAC8FDC59823C1940846DAAE56B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F3A48A4348E2BE484DF68DDAE67D557D;
+			remoteInfo = SSKeychain;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0266820A697B17F3311C4B70EDA991B3 /* KCSingleton.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = KCSingleton.h; sourceTree = "<group>"; };
+		051EDC12D5AAA84F2532E6EFF8914558 /* KCUtilURL.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = KCUtilURL.m; sourceTree = "<group>"; };
+		058A83CC09C780D245F2B3122C5B12D7 /* KCDirWatcher.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = KCDirWatcher.m; sourceTree = "<group>"; };
+		074AEE0BD836D2DBCCC1EF1CD5592D8D /* KCUtilJson.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = KCUtilJson.m; sourceTree = "<group>"; };
+		0783FD50D578BB5DAC594014840928AF /* KCUtilFile.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = KCUtilFile.m; sourceTree = "<group>"; };
+		08C182F0AB230868AFA000D7C3AB5EE3 /* KCUriDispatcher.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = KCUriDispatcher.m; sourceTree = "<group>"; };
+		0A65D4BF8DC51A7B4ECE097CA396B4BE /* KCWebPath.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = KCWebPath.m; sourceTree = "<group>"; };
+		0A8600AA8D1C595CDD298FDEB1DCEDC4 /* KCXMLHttpRequestDispatcher.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = KCXMLHttpRequestDispatcher.h; sourceTree = "<group>"; };
+		0A8F1CC16353019570D921240680BBC8 /* KCModifier.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = KCModifier.h; sourceTree = "<group>"; };
+		0D58F0E98482611F8953E37666537FBE /* KCWKWebView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = KCWKWebView.m; sourceTree = "<group>"; };
+		0FA2D82BBAE0A315F1E47E8BC0E65925 /* KCFileArchiver.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = KCFileArchiver.m; sourceTree = "<group>"; };
+		0FE44E068BAF8BCD832EB2E8A249B3F8 /* KCXMLHttpRequestDispatcher.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = KCXMLHttpRequestDispatcher.m; sourceTree = "<group>"; };
+		10B9DB63AD17B5D80F167AB8475680A7 /* KCRegister.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = KCRegister.h; sourceTree = "<group>"; };
+		110CD988D15B23A02F828D9A5B924B3D /* KCString.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = KCString.h; sourceTree = "<group>"; };
+		11469BA043A96E662EDC2B641ADFC70B /* KCUtilURL.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = KCUtilURL.h; sourceTree = "<group>"; };
+		11AF57D9603F45CBCA052AE15CF02C48 /* KCURI.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = KCURI.m; sourceTree = "<group>"; };
+		11E5968EF1635BAFD2451E608E928D97 /* KCClass.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = KCClass.m; sourceTree = "<group>"; };
+		13BBF10B287557E453EAA0A78D3DA192 /* Pods-kerkeePlusTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-kerkeePlusTests-Info.plist"; sourceTree = "<group>"; };
+		150BBDBD15F48BE4719D9FF0CBE5985D /* KCUriActionDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = KCUriActionDelegate.h; sourceTree = "<group>"; };
+		15B1F1C5CD35815DD60E20604F343B4E /* SSKeychain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SSKeychain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		15C33AC6B4A78227F6A5D3FDDED00CAC /* Pods_kerkeePlus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_kerkeePlus.framework; path = "Pods-kerkeePlus.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		163A82832F19F56109CD1E67978A85AA /* KCUtilCoding.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = KCUtilCoding.h; sourceTree = "<group>"; };
+		16798669F060016BE0D57DBD3D77099A /* NSDate+KCDate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSDate+KCDate.m"; sourceTree = "<group>"; };
+		175B409081FD2817430AAFD8C129FA7D /* KCURI.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = KCURI.h; sourceTree = "<group>"; };
+		19CCBBE6C0F836178C4C208D237CF2C6 /* KCManifestObject.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = KCManifestObject.h; sourceTree = "<group>"; };
+		1AB5B7DEEA53C50E382FEB5A88BBB6E8 /* KCUtilURI.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = KCUtilURI.h; sourceTree = "<group>"; };
+		1B3D6F1D5D3102C0258D78A1066E7C5A /* KCRuntime.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = KCRuntime.m; sourceTree = "<group>"; };
+		1C45701D8CC3CA114FE9CCA90E0E3424 /* KCJSObject.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = KCJSObject.m; sourceTree = "<group>"; };
+		1D52493B063AD97EB90978747E84AF6B /* UIWebView+KCClean.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIWebView+KCClean.h"; sourceTree = "<group>"; };
+		1DF10AEF000F95C98021CE640A12A032 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		2032ED7A8BF801AB482DBE489F26AFBF /* NSObject+KCTicker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSObject+KCTicker.h"; sourceTree = "<group>"; };
+		203E49555F4F96AEFAACD871A0925C00 /* KCImageCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = KCImageCache.h; sourceTree = "<group>"; };
+		209663CD8D6A8EDD1418F609692E37BA /* KCArgList.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = KCArgList.m; sourceTree = "<group>"; };
+		21A738445246D847D0A247A41E37BCCC /* KCUtilMd5.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = KCUtilMd5.m; sourceTree = "<group>"; };
+		25D47395B01E3860A0392C65220F4375 /* kerkee-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "kerkee-prefix.pch"; sourceTree = "<group>"; };
+		2632F4FD26F4A4AE967BEF66DCD9D35E /* KCUtilDevice.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = KCUtilDevice.m; sourceTree = "<group>"; };
+		267B393F89F75258BA062B3BDCEA8A2D /* KCMethod.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = KCMethod.h; sourceTree = "<group>"; };
+		2785C536F1132E141AC826A5565CCBAC /* KCJSCompileExecutor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = KCJSCompileExecutor.h; sourceTree = "<group>"; };
+		28177A2491CAECCC62428B9BB08B2EBB /* NSData+Base64.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64.h"; sourceTree = "<group>"; };
+		296AF140C63842972672D03270CAB42C /* KCJSObject.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = KCJSObject.h; sourceTree = "<group>"; };
+		2A04CC0105A78D4ACA54028F1FE518D4 /* NSData+HMAC.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSData+HMAC.h"; sourceTree = "<group>"; };
+		2A7126925A8082AAC461E37E82048BA5 /* NSData+Base64.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64.m"; sourceTree = "<group>"; };
+		2B59DD3B7D81E606FA203385BBB3EF4E /* kerkee.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = kerkee.h; path = kerkee/kerkee.h; sourceTree = "<group>"; };
+		2D77F8BB2844FB140B20EC4C8FBDED18 /* KCWeakScriptMessageDelegate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = KCWeakScriptMessageDelegate.m; sourceTree = "<group>"; };
+		2E9A00312D670D0C60A86C9C3E1F2360 /* kerkee-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "kerkee-dummy.m"; sourceTree = "<group>"; };
+		2EC64A38D29798CE2A9DDEAEFF9E77A5 /* SSKeychain-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SSKeychain-prefix.pch"; sourceTree = "<group>"; };
+		2F9A96A9FCDC44C7D38BA12DEC77C8FB /* KCRegister.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = KCRegister.m; sourceTree = "<group>"; };
+		30844CC948D66155C6038DEFAA299EDC /* KCObject.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = KCObject.m; sourceTree = "<group>"; };
+		308526C3E8927E91F7F0BFDB4F6E91A3 /* KCMethod.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = KCMethod.m; sourceTree = "<group>"; };
+		30FB890979E13D1B59A009A5263FD833 /* KCURIComponents.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = KCURIComponents.m; sourceTree = "<group>"; };
+		31273BCE5880BE00B9A6AF743081AA9E /* SSKeychain.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SSKeychain.xcconfig; sourceTree = "<group>"; };
+		32279FF9E6202CC4C5BE51EDA354BE6F /* SSKeychain-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SSKeychain-Info.plist"; sourceTree = "<group>"; };
+		334A910B85733C8BBDAAAEAAFC1DB20E /* KCJSBridge.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = KCJSBridge.m; sourceTree = "<group>"; };
+		34D31E0E2BFC50EC05063A42D838F6A6 /* KCCacheKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = KCCacheKit.h; sourceTree = "<group>"; };
+		36351C5C89831B6A4837346702041D8B /* KCWebImageSetter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = KCWebImageSetter.m; sourceTree = "<group>"; };
+		378E28F8DA3102E7DB84A55213172FB0 /* Pods-kerkeePlus.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-kerkeePlus.release.xcconfig"; sourceTree = "<group>"; };
+		38160B4315F8F57A2037D8CD19A8E1E9 /* KCUncaughtExceptionHandler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = KCUncaughtExceptionHandler.h; sourceTree = "<group>"; };
+		3973D4EDC83E9CF865891AF8B75ABF96 /* KCUtilDevice.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = KCUtilDevice.h; sourceTree = "<group>"; };
+		3CDB94248A81CC06961EAB48FDF5D022 /* KCStack.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = KCStack.m; sourceTree = "<group>"; };
+		3F0257A036A097E4684701A85F9DEB73 /* KCAssert.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = KCAssert.m; sourceTree = "<group>"; };
+		40707EA97497B142181127AA530F8C88 /* KCUriRegister.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = KCUriRegister.h; sourceTree = "<group>"; };
+		40D52C9EE821C2A18A1AB5333D9F3497 /* KCUtilNet.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = KCUtilNet.m; sourceTree = "<group>"; };
+		428D85AFD203D44E8E2D014C3E6A5D7C /* NSObject+KCObjectInfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSObject+KCObjectInfo.h"; sourceTree = "<group>"; };
+		44162283B13EFE7ABE0203F224733F6E /* KCRuntime.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = KCRuntime.h; sourceTree = "<group>"; };
+		44E92419C5E828CAE75536C8665F1B1C /* KCAssert.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = KCAssert.h; sourceTree = "<group>"; };
+		44F90A23B748452771D69743FFD78FF3 /* KCWebView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = KCWebView.h; sourceTree = "<group>"; };
+		463DE014DE28A0377F39E60DF2ED67EB /* KCMainBundle.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = KCMainBundle.m; sourceTree = "<group>"; };
+		4662DA9623E6D78EA7D07E0F95380D2B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		478E8533ACBD16EB124AAF06EFE4520F /* SSKeychain-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SSKeychain-dummy.m"; sourceTree = "<group>"; };
+		48C2425E75137B2F76FECC8A52592759 /* UIDevice+KCHardware.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+KCHardware.m"; sourceTree = "<group>"; };
+		4A069ACA43A7C37A6F05AC39A582471B /* KCWebViewManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = KCWebViewManager.m; sourceTree = "<group>"; };
+		4A8AAD76B10BACB7FD2472BA62FE230F /* NSObject+KCCoding.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSObject+KCCoding.m"; sourceTree = "<group>"; };
+		4B6FB944C1E30401082614D0E749997D /* KCSandbox.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = KCSandbox.h; sourceTree = "<group>"; };
+		4C48D1878795B935DE6DB40429AD34A9 /* KCApiBridgeManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = KCApiBridgeManager.h; sourceTree = "<group>"; };
+		4D36024A3A758E79A9BE26C52E1ADFE2 /* Pods-kerkeePlusTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-kerkeePlusTests-umbrella.h"; sourceTree = "<group>"; };
+		4DA0E0CF1DEC61620600D97A48606550 /* Pods_kerkeePlusTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_kerkeePlusTests.framework; path = "Pods-kerkeePlusTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4EC320A2734CD930AC873AAB2B518BB1 /* NSObject+KCProperty.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSObject+KCProperty.m"; sourceTree = "<group>"; };
+		4EF834C142920A6A8101E7096F8773EB /* KCUtilNet.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = KCUtilNet.h; sourceTree = "<group>"; };
+		4F3323D1EFC87E15FCA22E5666565347 /* KCApiBridgeManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = KCApiBridgeManager.m; sourceTree = "<group>"; };
+		50C015F2ED9A879D27A4AAF9F7EF1E0C /* KCUIWebView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = KCUIWebView.h; sourceTree = "<group>"; };
+		526D442680C160647B23B8FD7431ADAD /* Pods-kerkeePlus-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-kerkeePlus-umbrella.h"; sourceTree = "<group>"; };
+		53464E49D5AA92B4450B3ACFF3374755 /* KCException.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = KCException.h; sourceTree = "<group>"; };
+		534DDB1A67C41EF0BF4D1184F35F1EFA /* KCUtilURI.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = KCUtilURI.m; sourceTree = "<group>"; };
+		540ED2D3C1942D9FAAA53B0EA9F734FF /* KCUtilFile.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = KCUtilFile.h; sourceTree = "<group>"; };
+		545F04D51A35FC41BBDD8B4A06825332 /* KCXMLHttpRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = KCXMLHttpRequest.h; sourceTree = "<group>"; };
+		546BD94545910D059686FF70F17C4123 /* KCWebViewManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = KCWebViewManager.h; sourceTree = "<group>"; };
+		55651EC341D2FAEF0AA62B882106F8DB /* UIAlertView+Blocks.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+Blocks.h"; sourceTree = "<group>"; };
+		5718B5809F0F81B17F6BD994B615FAA4 /* KCFileCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = KCFileCache.h; sourceTree = "<group>"; };
+		5755FC4FFDC5C1C1C1F5E80D806F6D41 /* KCClassParser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = KCClassParser.h; sourceTree = "<group>"; };
+		5885AD16C6421A237043B43F24511896 /* KCWebPath.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = KCWebPath.h; sourceTree = "<group>"; };
+		58B8FAEF73DA1AB52DB432AAAE589587 /* Pods-kerkeePlusTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-kerkeePlusTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		5922446568E2EDFEBC75324B148E5AA6 /* kerkee.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = kerkee.modulemap; sourceTree = "<group>"; };
+		5A6D94F2A68D08FABE2E47202BACF22A /* KCButton.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = KCButton.h; sourceTree = "<group>"; };
+		5BC3B3FC33183229FB9A232A0C154FCB /* KCString.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = KCString.m; sourceTree = "<group>"; };
+		5F1C954873907DB65D485291161DCD79 /* Pods-kerkeePlusTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-kerkeePlusTests.debug.xcconfig"; sourceTree = "<group>"; };
+		5FB9B6EEF9EB1E7E7E2EE087B829B8C2 /* Pods-kerkeePlusTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-kerkeePlusTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		6012858CA22086687FD73E170EBEB156 /* NSObject+KCObserver.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSObject+KCObserver.h"; sourceTree = "<group>"; };
+		604A9368E03B7CEE3BFE2C68D11F3BAA /* NSObject+KCSelector.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSObject+KCSelector.m"; sourceTree = "<group>"; };
+		613A3209D1EB7A75B4ECB1C12D133E22 /* KCFile.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = KCFile.m; sourceTree = "<group>"; };
+		6210E524D147068406B69DDA849C377C /* KCUncaughtExceptionHandler.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = KCUncaughtExceptionHandler.m; sourceTree = "<group>"; };
+		632DEB344F142FB64A9C8AF1A2AC0BDD /* KCArgList.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = KCArgList.h; sourceTree = "<group>"; };
+		64DC75D41D287D39696442488139F201 /* SSKeychainQuery.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SSKeychainQuery.m; path = SSKeychain/SSKeychainQuery.m; sourceTree = "<group>"; };
+		65BA22225D9A58661984D4AB74CC9036 /* Pods-kerkeePlus.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-kerkeePlus.debug.xcconfig"; sourceTree = "<group>"; };
+		67F3241B2D3215EAE865FA5D80578675 /* KCWebViewProgressDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = KCWebViewProgressDelegate.h; sourceTree = "<group>"; };
+		6AEB40D2C8AC3BDA8DFFD8BA09FB8D75 /* KCBaseDefine.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = KCBaseDefine.h; sourceTree = "<group>"; };
+		6B9BA3054266501068DD6A568D1786EF /* KCImagePreCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = KCImagePreCache.m; sourceTree = "<group>"; };
+		6C63F0D566E9C43930A2634F5564F167 /* KCWebImageSetter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = KCWebImageSetter.h; sourceTree = "<group>"; };
+		70BF10FCF77DE8F559A87853E5A4F4C6 /* KCFileManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = KCFileManager.h; sourceTree = "<group>"; };
+		71586392D3115D13AF41DBC328C8770D /* KCUriDispatcher.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = KCUriDispatcher.h; sourceTree = "<group>"; };
+		722C31A8C11652BF9E8A4EE24A50A56B /* KCJSCompileExecutor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = KCJSCompileExecutor.m; sourceTree = "<group>"; };
+		72844D6CEA07BD2BD88BAF95A9F227B0 /* KCMemoryCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = KCMemoryCache.h; sourceTree = "<group>"; };
+		731FDE2801E42805CF0328EFB41CFDB9 /* NSObject+KCTicker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSObject+KCTicker.m"; sourceTree = "<group>"; };
+		74F5B0DD105BC5E94CCB04EAE5A6C047 /* KCWebViewProxy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = KCWebViewProxy.m; sourceTree = "<group>"; };
+		764E54EB0C5528F795197FEEEAA351AD /* KCJSCallback.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = KCJSCallback.h; sourceTree = "<group>"; };
+		771965A1CF7717EE466EE7652BF0C015 /* KCJSExecutor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = KCJSExecutor.m; sourceTree = "<group>"; };
+		77211B4D250FBE3138293E28E4F409C6 /* KCWeakScriptMessageDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = KCWeakScriptMessageDelegate.h; sourceTree = "<group>"; };
+		775E5EC7192D5A1E1D48C46EE7934035 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
+		777627119E9B91B04EAD14C6D895715A /* KCArchiver.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = KCArchiver.m; sourceTree = "<group>"; };
+		77B86965E3FA241481E83B97C63A95A4 /* kerkee-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "kerkee-umbrella.h"; sourceTree = "<group>"; };
+		7BC6E1E700A4F06C39F11CC100DCD7C3 /* Pods-kerkeePlus-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-kerkeePlus-dummy.m"; sourceTree = "<group>"; };
+		82585BC27366B11E91BD6E75052A6732 /* Pods-kerkeePlus-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-kerkeePlus-acknowledgements.markdown"; sourceTree = "<group>"; };
+		82C24E4C54B9CD09AF4FAA3988AC1895 /* KCDirWatcher.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = KCDirWatcher.h; sourceTree = "<group>"; };
+		82C7E3CF01DDF841A303E289C9976A34 /* KCException.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = KCException.m; sourceTree = "<group>"; };
+		8412724B246849B914294E07325C47B2 /* kerkee.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = kerkee.framework; path = kerkee.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		84AF70003FD827F1BCA7AF91541261F7 /* KCWKWebView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = KCWKWebView.h; sourceTree = "<group>"; };
+		89B208BC065492EDB28DCBE0F3759D09 /* KCUtilCoding.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = KCUtilCoding.m; sourceTree = "<group>"; };
+		8BAFE257CC65EB9A262F59D71E86DFC0 /* KCButton.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = KCButton.m; sourceTree = "<group>"; };
+		903D230FDF9F2823B0BD1BBB37674975 /* KCJSCallback.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = KCJSCallback.m; sourceTree = "<group>"; };
+		90E7B3AD6FF2D4985DA79968598F2FF5 /* KCJSType.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = KCJSType.m; sourceTree = "<group>"; };
+		911A274E81C806A7F3DFB9B7612E9EE4 /* KCJSExecutor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = KCJSExecutor.h; sourceTree = "<group>"; };
+		91FA80FE75C80B75A97DAEFA46C00B29 /* KCWebView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = KCWebView.m; sourceTree = "<group>"; };
+		93AA33045FC2EC7B4E9B008CC3FA1846 /* NSObject+KCCoding.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSObject+KCCoding.h"; sourceTree = "<group>"; };
+		93AD2FF03D1BE1CF4E14D4933FEC1EA3 /* Pods-kerkeePlusTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-kerkeePlusTests-dummy.m"; sourceTree = "<group>"; };
+		9AEBC45633AEE22E937955C091E91978 /* KCMemoryCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = KCMemoryCache.m; sourceTree = "<group>"; };
+		9B54CC9947E080551D900BE55E7981FA /* KCTaskQueue.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = KCTaskQueue.h; sourceTree = "<group>"; };
+		9C47DB65C001E6858F858D78409AE173 /* KCModifier.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = KCModifier.m; sourceTree = "<group>"; };
+		9C4F3049E609C4FF1798854ADC228680 /* SSKeychain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SSKeychain.framework; path = SSKeychain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D78AADE506E1B813B06A6EE8F3C4F9B /* NSData+HMAC.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSData+HMAC.m"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D9CF1F38191CAABE95E16AE146257AB /* KCFile.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = KCFile.h; sourceTree = "<group>"; };
+		A07041244BBBF05D5C1FE5C2DD1117ED /* UIActionSheet+Blocks.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIActionSheet+Blocks.h"; sourceTree = "<group>"; };
+		A2CFB7B613DC7BF23F4AA05290A3E4CE /* NSObject+KCNotification.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSObject+KCNotification.h"; sourceTree = "<group>"; };
+		A3E055383E6E63F85DADB3AF77493DEB /* KCUtilGzip.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = KCUtilGzip.m; sourceTree = "<group>"; };
+		A7D86E459A35E80085B33AC0CB9FCCD0 /* Pods-kerkeePlus.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-kerkeePlus.modulemap"; sourceTree = "<group>"; };
+		A9742E0768710EE3423C68D18AE6F140 /* KCCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = KCCache.h; sourceTree = "<group>"; };
+		A9A620E7CDD5470AA21C0B62BD9172C8 /* KCStack.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = KCStack.h; sourceTree = "<group>"; };
+		AB4DFD21C4514A90CEB2A1D8D6D799A8 /* NSDate+KCDate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSDate+KCDate.h"; sourceTree = "<group>"; };
+		AB69CA476E3726DF1BA89CC645C56418 /* KCXMLHttpRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = KCXMLHttpRequest.m; sourceTree = "<group>"; };
+		AC8BA13169C72BDE6A93313B7937125A /* KCSingleton.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = KCSingleton.m; sourceTree = "<group>"; };
+		ACCAAAC0056B553CC1B9DFDB13A7D5CF /* KCJSDefine.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = KCJSDefine.h; sourceTree = "<group>"; };
+		AF023E14E8D09F5E7B0B544884171676 /* KCManifestParser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = KCManifestParser.h; sourceTree = "<group>"; };
+		B02B9620CD358B6CC5FB24A27C55A1D7 /* KCApiBridge.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = KCApiBridge.h; sourceTree = "<group>"; };
+		B0D6B64B7DB4796924E7C74FE3AD1910 /* UIWebView+KCClean.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+KCClean.m"; sourceTree = "<group>"; };
+		B4613C10EFDB219E8587C846A0708E77 /* KCMainBundle.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = KCMainBundle.h; sourceTree = "<group>"; };
+		B5B3561CC1F8B242B066E98825C06D55 /* KCJSBridge.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = KCJSBridge.h; sourceTree = "<group>"; };
+		B8A379994B7C52A2E573171C1E41E14D /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		B919E0C9C313D5C65D69F010A931CCDF /* KCArg.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = KCArg.m; sourceTree = "<group>"; };
+		B9654AB75513D10F8138F0E585FACFA7 /* SSKeychainQuery.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SSKeychainQuery.h; path = SSKeychain/SSKeychainQuery.h; sourceTree = "<group>"; };
+		BAA0D85F5E12A0932DF96B8A4D11D2F9 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
+		BAD5FEA19CCC466E7056F9D7086A0CD6 /* UIDevice+KCHardware.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIDevice+KCHardware.h"; sourceTree = "<group>"; };
+		BB965B55B541845BF199F3148C6F2F54 /* SSKeychain.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SSKeychain.m; path = SSKeychain/SSKeychain.m; sourceTree = "<group>"; };
+		BBCDC940838B6310A410A36D9B7E75CA /* KCUtilJson.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = KCUtilJson.h; sourceTree = "<group>"; };
+		BBD0AAAFF973A67FE10D4103FA5F61E2 /* NSObject+KCSelector.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSObject+KCSelector.h"; sourceTree = "<group>"; };
+		BBD5CF1FD02F9245CC0A8A2D50E0F2CE /* KCManifestObject.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = KCManifestObject.m; sourceTree = "<group>"; };
+		BE45D8D75FD746D977598A4F4135E46A /* KCManifestParser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = KCManifestParser.m; sourceTree = "<group>"; };
+		BEF9DB0162C5B85D5ABFCE3EB67955C8 /* KCImageCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = KCImageCache.m; sourceTree = "<group>"; };
+		BF6F220AA551DF4E4E479254CCD916AC /* KCImagePreCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = KCImagePreCache.h; sourceTree = "<group>"; };
+		BFFED660DD08BE33E91667BC7EB7C857 /* KCTaskQueue.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = KCTaskQueue.m; sourceTree = "<group>"; };
+		C3964A5D680CA16B12EB1E27ABC922E4 /* KCApiBridge.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = KCApiBridge.m; sourceTree = "<group>"; };
+		C45E5C915A170C46D77C56B92135987D /* kerkee.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = kerkee.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		C47D02574A36055A1F0D0318DD60C754 /* KCLog.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = KCLog.m; sourceTree = "<group>"; };
+		C50A930B207B26132029965465F3ECF1 /* Pods-kerkeePlus-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-kerkeePlus-acknowledgements.plist"; sourceTree = "<group>"; };
+		C57DE588D0C136867AC1FDCA524356C7 /* KCWebImageSetterTask.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = KCWebImageSetterTask.h; sourceTree = "<group>"; };
+		C90664BE7007D9304FBCD8BA09FE3E35 /* KCDataValidCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = KCDataValidCache.h; sourceTree = "<group>"; };
+		C9D49CFBBAB0D516FDB88487714CC077 /* NSObject+KCProperty.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSObject+KCProperty.h"; sourceTree = "<group>"; };
+		CB4D3DEA5AA8D63FA8E48E0A5B25F1BC /* KCXMLHttpRequestDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = KCXMLHttpRequestDelegate.h; sourceTree = "<group>"; };
+		CD7E1CBE8FDB1DB4CDA3417EC0CE6F28 /* KCFileManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = KCFileManager.m; sourceTree = "<group>"; };
+		CF61F24FB8E4E0AF03C1FA9E5A37CEAE /* Pods-kerkeePlusTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-kerkeePlusTests.release.xcconfig"; sourceTree = "<group>"; };
+		D1C45DA01B9B64724C3F0F8D919D3889 /* KCFileArchiver.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = KCFileArchiver.h; sourceTree = "<group>"; };
+		D1F8DD9E2D1E23941D1CC43519C6E2F0 /* kerkee-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "kerkee-Info.plist"; sourceTree = "<group>"; };
+		D69DB7B9D5AC5584B8A80EA32168354F /* SSKeychain.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SSKeychain.h; path = SSKeychain/SSKeychain.h; sourceTree = "<group>"; };
+		D778DD4DFE1AC93E12966EEFDBB895B5 /* KCFetchManifest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = KCFetchManifest.h; sourceTree = "<group>"; };
+		D962B5D3B84DBFC139F14525AD63B0F4 /* KCObject.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = KCObject.h; sourceTree = "<group>"; };
+		D9721D7A3C42089E9A30E802D6BD6ED7 /* Pods-kerkeePlus-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-kerkeePlus-Info.plist"; sourceTree = "<group>"; };
+		D9F83D7EAA8F639EF998D123B2B943C2 /* KCFetchManifest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = KCFetchManifest.m; sourceTree = "<group>"; };
+		DAB13415A876DDCBD09BB3D47C4D8B03 /* KCUtilGzip.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = KCUtilGzip.h; sourceTree = "<group>"; };
+		DAFEAE76BE9C7EB191FA9A0CAC664C0A /* KCLog.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = KCLog.h; sourceTree = "<group>"; };
+		DCAB78D116376093B85F4CB59B229C26 /* SSKeychain-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SSKeychain-umbrella.h"; sourceTree = "<group>"; };
+		DE10A9801C2BA8D0AEEF55AA5C7BDCAE /* KCURIQuery.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = KCURIQuery.m; sourceTree = "<group>"; };
+		DEE438DB7227D2C2FCB0E482F1BA4B6B /* KCCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = KCCache.m; sourceTree = "<group>"; };
+		E03A3AF97EDDC478BA7852D7CB26635F /* NSString+KCExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSString+KCExtension.h"; sourceTree = "<group>"; };
+		E0A51975E3D8C91F2D6B2ACF22447965 /* NSString+KCExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSString+KCExtension.m"; sourceTree = "<group>"; };
+		E40A784284FE9E410D61D8ADD90BE8FA /* KCURIQuery.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = KCURIQuery.h; sourceTree = "<group>"; };
+		E7C932FA84093BDD82FFC85CEAEC6484 /* NSObject+KCObjectInfo.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSObject+KCObjectInfo.m"; sourceTree = "<group>"; };
+		E9F0D216465FCA8A02160C053AA555DB /* KCClassParser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = KCClassParser.m; sourceTree = "<group>"; };
+		EAE7A3C4941F9BCD382658DA7CAADBC4 /* KCArg.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = KCArg.h; sourceTree = "<group>"; };
+		EBCCCE30CD4A46901F73CEB98B2DA0C0 /* KCUriRegister.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = KCUriRegister.m; sourceTree = "<group>"; };
+		EBD9E41B141519C3FCA6472D2135EC18 /* KCWebViewProxy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = KCWebViewProxy.h; sourceTree = "<group>"; };
+		EBFBE3D940305047BFE22C0784A38CBB /* Pods-kerkeePlusTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-kerkeePlusTests.modulemap"; sourceTree = "<group>"; };
+		EC78BA92A8FEFEFD9E258C0DBA665474 /* KCUIWebView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = KCUIWebView.m; sourceTree = "<group>"; };
+		EDF3F7574C99350CC2841C92EEFA8B9D /* NSObject+KCObserver.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSObject+KCObserver.m"; sourceTree = "<group>"; };
+		EED6728CA0D8CB6636090EC14E2CAFC7 /* KCArchiver.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = KCArchiver.h; sourceTree = "<group>"; };
+		F065F36A0692112DA79F1F2E64251C34 /* KCSandbox.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = KCSandbox.m; sourceTree = "<group>"; };
+		F11BE1A856BA92812BA4EE82BB27E8AC /* UIAlertView+Blocks.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+Blocks.m"; sourceTree = "<group>"; };
+		F1FE3EEA58DB38A430C9555BA96C115D /* kerkee.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = kerkee.xcconfig; sourceTree = "<group>"; };
+		F28501D6730B21B8094709235B10D7F8 /* UIActionSheet+Blocks.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIActionSheet+Blocks.m"; sourceTree = "<group>"; };
+		F36BD266FA6B53250DB42CBAD7AE299E /* KCURIComponents.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = KCURIComponents.h; sourceTree = "<group>"; };
+		F4D6EE752ED502DA929117EA9605CFD7 /* KCJSType.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = KCJSType.h; sourceTree = "<group>"; };
+		F4D93A9DF9DFD4B18B2926BE5B41BA57 /* NSObject+KCNotification.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSObject+KCNotification.m"; sourceTree = "<group>"; };
+		F549138CE050C25D89FAD547AB330F94 /* KCClass.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = KCClass.h; sourceTree = "<group>"; };
+		F75DF0E006DB0816AE91C3638C9213B8 /* KCFileCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = KCFileCache.m; sourceTree = "<group>"; };
+		F7DDB2958090DB468A61E6AA6956C45C /* KCDataValidCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = KCDataValidCache.m; sourceTree = "<group>"; };
+		F8A624A4C6712991B245FAADF2BD8780 /* SSKeychain.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SSKeychain.modulemap; sourceTree = "<group>"; };
+		F93998F1646B420B439FE8B0BC44BF78 /* KCWebImageSetterTask.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = KCWebImageSetterTask.m; sourceTree = "<group>"; };
+		F9B5F3E31D792A17DDC8AC3E09E11983 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		FC3B59257FE965E12EFAF098EC5DD42E /* KCUtilMd5.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = KCUtilMd5.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		026A6BDD0D1A9395340BB2338123C3AB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				25901B34367DCB5AE813EAE958F0A882 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0FF74B21774A56A3720D42CC803EA3D3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				838EDBC2435BB35ABE20F03C954D7BFC /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7256C999B9F654A5C5B11BB0F2A766CF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC2F659C3CCED1F06A41790410DBFC3A /* Foundation.framework in Frameworks */,
+				8ACC25AE9DF5B00715711ED18923D700 /* Security.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7CC6C41307C805DCC1B89ADC9D818AD2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5FF2E7EB652B667643E502E525550318 /* CoreGraphics.framework in Frameworks */,
+				DC8D62781903E1AA29BC1024D6B730EC /* Foundation.framework in Frameworks */,
+				33F6AA6EBB09C64E6A3DF2004F8F7592 /* SSKeychain.framework in Frameworks */,
+				4509A3AE0BEC22192311F475311C01CC /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		098BD5CB4BC4255900BBE8467BC1DDAF /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				EED6728CA0D8CB6636090EC14E2CAFC7 /* KCArchiver.h */,
+				777627119E9B91B04EAD14C6D895715A /* KCArchiver.m */,
+				B4613C10EFDB219E8587C846A0708E77 /* KCMainBundle.h */,
+				463DE014DE28A0377F39E60DF2ED67EB /* KCMainBundle.m */,
+				163A82832F19F56109CD1E67978A85AA /* KCUtilCoding.h */,
+				89B208BC065492EDB28DCBE0F3759D09 /* KCUtilCoding.m */,
+				3973D4EDC83E9CF865891AF8B75ABF96 /* KCUtilDevice.h */,
+				2632F4FD26F4A4AE967BEF66DCD9D35E /* KCUtilDevice.m */,
+				540ED2D3C1942D9FAAA53B0EA9F734FF /* KCUtilFile.h */,
+				0783FD50D578BB5DAC594014840928AF /* KCUtilFile.m */,
+				DAB13415A876DDCBD09BB3D47C4D8B03 /* KCUtilGzip.h */,
+				A3E055383E6E63F85DADB3AF77493DEB /* KCUtilGzip.m */,
+				BBCDC940838B6310A410A36D9B7E75CA /* KCUtilJson.h */,
+				074AEE0BD836D2DBCCC1EF1CD5592D8D /* KCUtilJson.m */,
+				FC3B59257FE965E12EFAF098EC5DD42E /* KCUtilMd5.h */,
+				21A738445246D847D0A247A41E37BCCC /* KCUtilMd5.m */,
+				4EF834C142920A6A8101E7096F8773EB /* KCUtilNet.h */,
+				40D52C9EE821C2A18A1AB5333D9F3497 /* KCUtilNet.m */,
+				11469BA043A96E662EDC2B641ADFC70B /* KCUtilURL.h */,
+				051EDC12D5AAA84F2532E6EFF8914558 /* KCUtilURL.m */,
+			);
+			name = Util;
+			path = Util;
+			sourceTree = "<group>";
+		};
+		275046BC5D67074BBA99CEEDC207305F /* WebView */ = {
+			isa = PBXGroup;
+			children = (
+				50C015F2ED9A879D27A4AAF9F7EF1E0C /* KCUIWebView.h */,
+				EC78BA92A8FEFEFD9E258C0DBA665474 /* KCUIWebView.m */,
+				77211B4D250FBE3138293E28E4F409C6 /* KCWeakScriptMessageDelegate.h */,
+				2D77F8BB2844FB140B20EC4C8FBDED18 /* KCWeakScriptMessageDelegate.m */,
+				5885AD16C6421A237043B43F24511896 /* KCWebPath.h */,
+				0A65D4BF8DC51A7B4ECE097CA396B4BE /* KCWebPath.m */,
+				44F90A23B748452771D69743FFD78FF3 /* KCWebView.h */,
+				91FA80FE75C80B75A97DAEFA46C00B29 /* KCWebView.m */,
+				67F3241B2D3215EAE865FA5D80578675 /* KCWebViewProgressDelegate.h */,
+				84AF70003FD827F1BCA7AF91541261F7 /* KCWKWebView.h */,
+				0D58F0E98482611F8953E37666537FBE /* KCWKWebView.m */,
+				B338993680A7C3B27386174E8FB20BE4 /* alertView */,
+				5644BE9B2B6BC0390D8135F139B3DF06 /* private */,
+			);
+			name = WebView;
+			path = WebView;
+			sourceTree = "<group>";
+		};
+		2AA689C0E2037386027F2C3CA1EA3975 /* Debug */ = {
+			isa = PBXGroup;
+			children = (
+				53464E49D5AA92B4450B3ACFF3374755 /* KCException.h */,
+				82C7E3CF01DDF841A303E289C9976A34 /* KCException.m */,
+				DAFEAE76BE9C7EB191FA9A0CAC664C0A /* KCLog.h */,
+				C47D02574A36055A1F0D0318DD60C754 /* KCLog.m */,
+				38160B4315F8F57A2037D8CD19A8E1E9 /* KCUncaughtExceptionHandler.h */,
+				6210E524D147068406B69DDA849C377C /* KCUncaughtExceptionHandler.m */,
+			);
+			name = Debug;
+			path = Debug;
+			sourceTree = "<group>";
+		};
+		2D321B18FF9869FEEF0783DA3C27DFF6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8412724B246849B914294E07325C47B2 /* kerkee.framework */,
+				15C33AC6B4A78227F6A5D3FDDED00CAC /* Pods_kerkeePlus.framework */,
+				4DA0E0CF1DEC61620600D97A48606550 /* Pods_kerkeePlusTests.framework */,
+				9C4F3049E609C4FF1798854ADC228680 /* SSKeychain.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3A94B694CDF2F59F5BABCE4910AC7802 /* kerkee */ = {
+			isa = PBXGroup;
+			children = (
+				2B59DD3B7D81E606FA203385BBB3EF4E /* kerkee.h */,
+				55065C4F4F792BF7F011C00393E202FB /* BaseClass */,
+				5CC624D3853A084970FFAB1E9E92F61B /* Browser */,
+				ECD5AB5B65F783F8EA4CFB53CB6BA190 /* Pod */,
+				D1BFE8FC61A000B8ACBC55DD3B5E2B1A /* Support Files */,
+			);
+			name = kerkee;
+			path = /Users/tangjin/kerkee_ios;
+			sourceTree = "<absolute>";
+		};
+		3D56C33BEE2FCE3DBCAEA31AA580FD08 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				EB20879ECC15F653EF1C1058F6B7623F /* Pods-kerkeePlus */,
+				64269395BA1F9685E361B1540C666BF4 /* Pods-kerkeePlusTests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		3F5C4851033F1D14A01C086760C2101B /* ImageSetter */ = {
+			isa = PBXGroup;
+			children = (
+				6C63F0D566E9C43930A2634F5564F167 /* KCWebImageSetter.h */,
+				36351C5C89831B6A4837346702041D8B /* KCWebImageSetter.m */,
+				C57DE588D0C136867AC1FDCA524356C7 /* KCWebImageSetterTask.h */,
+				F93998F1646B420B439FE8B0BC44BF78 /* KCWebImageSetterTask.m */,
+			);
+			name = ImageSetter;
+			path = ImageSetter;
+			sourceTree = "<group>";
+		};
+		408BAD6B16634EE2E961F4F2A83F3B85 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				15B1F1C5CD35815DD60E20604F343B4E /* SSKeychain.framework */,
+				5BF71E86DE7BB6DDA33F57AE54ED3D54 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4C0563CF01CAC84F85ACAA46D559B888 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3A94B694CDF2F59F5BABCE4910AC7802 /* kerkee */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		55065C4F4F792BF7F011C00393E202FB /* BaseClass */ = {
+			isa = PBXGroup;
+			children = (
+				83CA24A05EA46AAC04113771B218E4EB /* Base */,
+				809F7D55FC71652A10B0602A7F04530E /* Cache */,
+				78BA15624E80F81A7E3E637CF2D6B525 /* Coder */,
+				2AA689C0E2037386027F2C3CA1EA3975 /* Debug */,
+				B97E7247C101F78327A44FC6047BD641 /* Device */,
+				61C98517D6B35A60358E6073EAEE45EE /* Uri */,
+				098BD5CB4BC4255900BBE8467BC1DDAF /* Util */,
+			);
+			name = BaseClass;
+			path = kerkee/BaseClass;
+			sourceTree = "<group>";
+		};
+		5644BE9B2B6BC0390D8135F139B3DF06 /* private */ = {
+			isa = PBXGroup;
+			children = (
+				546BD94545910D059686FF70F17C4123 /* KCWebViewManager.h */,
+				4A069ACA43A7C37A6F05AC39A582471B /* KCWebViewManager.m */,
+				EBD9E41B141519C3FCA6472D2135EC18 /* KCWebViewProxy.h */,
+				74F5B0DD105BC5E94CCB04EAE5A6C047 /* KCWebViewProxy.m */,
+				1D52493B063AD97EB90978747E84AF6B /* UIWebView+KCClean.h */,
+				B0D6B64B7DB4796924E7C74FE3AD1910 /* UIWebView+KCClean.m */,
+			);
+			name = private;
+			path = private;
+			sourceTree = "<group>";
+		};
+		5BF71E86DE7BB6DDA33F57AE54ED3D54 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				BAA0D85F5E12A0932DF96B8A4D11D2F9 /* CoreGraphics.framework */,
+				4662DA9623E6D78EA7D07E0F95380D2B /* Foundation.framework */,
+				775E5EC7192D5A1E1D48C46EE7934035 /* Security.framework */,
+				F9B5F3E31D792A17DDC8AC3E09E11983 /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		5CC624D3853A084970FFAB1E9E92F61B /* Browser */ = {
+			isa = PBXGroup;
+			children = (
+				93F1B843FD5859219CAC14035F3C9646 /* JSBridge */,
+				275046BC5D67074BBA99CEEDC207305F /* WebView */,
+			);
+			name = Browser;
+			path = kerkee/Browser;
+			sourceTree = "<group>";
+		};
+		5D6A9368E62306358DB6433401F60AAE /* SSKeychain */ = {
+			isa = PBXGroup;
+			children = (
+				D69DB7B9D5AC5584B8A80EA32168354F /* SSKeychain.h */,
+				BB965B55B541845BF199F3148C6F2F54 /* SSKeychain.m */,
+				B9654AB75513D10F8138F0E585FACFA7 /* SSKeychainQuery.h */,
+				64DC75D41D287D39696442488139F201 /* SSKeychainQuery.m */,
+				AE4769BB987808B2094CFCCA5F9846ED /* Support Files */,
+			);
+			name = SSKeychain;
+			path = SSKeychain;
+			sourceTree = "<group>";
+		};
+		61C98517D6B35A60358E6073EAEE45EE /* Uri */ = {
+			isa = PBXGroup;
+			children = (
+				175B409081FD2817430AAFD8C129FA7D /* KCURI.h */,
+				11AF57D9603F45CBCA052AE15CF02C48 /* KCURI.m */,
+				F36BD266FA6B53250DB42CBAD7AE299E /* KCURIComponents.h */,
+				30FB890979E13D1B59A009A5263FD833 /* KCURIComponents.m */,
+				E40A784284FE9E410D61D8ADD90BE8FA /* KCURIQuery.h */,
+				DE10A9801C2BA8D0AEEF55AA5C7BDCAE /* KCURIQuery.m */,
+				1AB5B7DEEA53C50E382FEB5A88BBB6E8 /* KCUtilURI.h */,
+				534DDB1A67C41EF0BF4D1184F35F1EFA /* KCUtilURI.m */,
+			);
+			name = Uri;
+			path = Uri;
+			sourceTree = "<group>";
+		};
+		62BD8CBAB4FE9A34C6D31C97FDC2F0EA /* runtime */ = {
+			isa = PBXGroup;
+			children = (
+				B02B9620CD358B6CC5FB24A27C55A1D7 /* KCApiBridge.h */,
+				C3964A5D680CA16B12EB1E27ABC922E4 /* KCApiBridge.m */,
+				4C48D1878795B935DE6DB40429AD34A9 /* KCApiBridgeManager.h */,
+				4F3323D1EFC87E15FCA22E5666565347 /* KCApiBridgeManager.m */,
+				EAE7A3C4941F9BCD382658DA7CAADBC4 /* KCArg.h */,
+				B919E0C9C313D5C65D69F010A931CCDF /* KCArg.m */,
+				632DEB344F142FB64A9C8AF1A2AC0BDD /* KCArgList.h */,
+				209663CD8D6A8EDD1418F609692E37BA /* KCArgList.m */,
+				F549138CE050C25D89FAD547AB330F94 /* KCClass.h */,
+				11E5968EF1635BAFD2451E608E928D97 /* KCClass.m */,
+				5755FC4FFDC5C1C1C1F5E80D806F6D41 /* KCClassParser.h */,
+				E9F0D216465FCA8A02160C053AA555DB /* KCClassParser.m */,
+				2785C536F1132E141AC826A5565CCBAC /* KCJSCompileExecutor.h */,
+				722C31A8C11652BF9E8A4EE24A50A56B /* KCJSCompileExecutor.m */,
+				ACCAAAC0056B553CC1B9DFDB13A7D5CF /* KCJSDefine.h */,
+				911A274E81C806A7F3DFB9B7612E9EE4 /* KCJSExecutor.h */,
+				771965A1CF7717EE466EE7652BF0C015 /* KCJSExecutor.m */,
+				296AF140C63842972672D03270CAB42C /* KCJSObject.h */,
+				1C45701D8CC3CA114FE9CCA90E0E3424 /* KCJSObject.m */,
+				267B393F89F75258BA062B3BDCEA8A2D /* KCMethod.h */,
+				308526C3E8927E91F7F0BFDB4F6E91A3 /* KCMethod.m */,
+				0A8F1CC16353019570D921240680BBC8 /* KCModifier.h */,
+				9C47DB65C001E6858F858D78409AE173 /* KCModifier.m */,
+				10B9DB63AD17B5D80F167AB8475680A7 /* KCRegister.h */,
+				2F9A96A9FCDC44C7D38BA12DEC77C8FB /* KCRegister.m */,
+				8752DC8555471469440B921035D5D8B7 /* type */,
+			);
+			name = runtime;
+			path = runtime;
+			sourceTree = "<group>";
+		};
+		64269395BA1F9685E361B1540C666BF4 /* Pods-kerkeePlusTests */ = {
+			isa = PBXGroup;
+			children = (
+				EBFBE3D940305047BFE22C0784A38CBB /* Pods-kerkeePlusTests.modulemap */,
+				5FB9B6EEF9EB1E7E7E2EE087B829B8C2 /* Pods-kerkeePlusTests-acknowledgements.markdown */,
+				58B8FAEF73DA1AB52DB432AAAE589587 /* Pods-kerkeePlusTests-acknowledgements.plist */,
+				93AD2FF03D1BE1CF4E14D4933FEC1EA3 /* Pods-kerkeePlusTests-dummy.m */,
+				13BBF10B287557E453EAA0A78D3DA192 /* Pods-kerkeePlusTests-Info.plist */,
+				4D36024A3A758E79A9BE26C52E1ADFE2 /* Pods-kerkeePlusTests-umbrella.h */,
+				5F1C954873907DB65D485291161DCD79 /* Pods-kerkeePlusTests.debug.xcconfig */,
+				CF61F24FB8E4E0AF03C1FA9E5A37CEAE /* Pods-kerkeePlusTests.release.xcconfig */,
+			);
+			name = "Pods-kerkeePlusTests";
+			path = "Target Support Files/Pods-kerkeePlusTests";
+			sourceTree = "<group>";
+		};
+		78BA15624E80F81A7E3E637CF2D6B525 /* Coder */ = {
+			isa = PBXGroup;
+			children = (
+				28177A2491CAECCC62428B9BB08B2EBB /* NSData+Base64.h */,
+				2A7126925A8082AAC461E37E82048BA5 /* NSData+Base64.m */,
+			);
+			name = Coder;
+			path = Coder;
+			sourceTree = "<group>";
+		};
+		809F7D55FC71652A10B0602A7F04530E /* Cache */ = {
+			isa = PBXGroup;
+			children = (
+				A9742E0768710EE3423C68D18AE6F140 /* KCCache.h */,
+				DEE438DB7227D2C2FCB0E482F1BA4B6B /* KCCache.m */,
+				34D31E0E2BFC50EC05063A42D838F6A6 /* KCCacheKit.h */,
+				C90664BE7007D9304FBCD8BA09FE3E35 /* KCDataValidCache.h */,
+				F7DDB2958090DB468A61E6AA6956C45C /* KCDataValidCache.m */,
+				5718B5809F0F81B17F6BD994B615FAA4 /* KCFileCache.h */,
+				F75DF0E006DB0816AE91C3638C9213B8 /* KCFileCache.m */,
+				203E49555F4F96AEFAACD871A0925C00 /* KCImageCache.h */,
+				BEF9DB0162C5B85D5ABFCE3EB67955C8 /* KCImageCache.m */,
+				BF6F220AA551DF4E4E479254CCD916AC /* KCImagePreCache.h */,
+				6B9BA3054266501068DD6A568D1786EF /* KCImagePreCache.m */,
+				72844D6CEA07BD2BD88BAF95A9F227B0 /* KCMemoryCache.h */,
+				9AEBC45633AEE22E937955C091E91978 /* KCMemoryCache.m */,
+			);
+			name = Cache;
+			path = Cache;
+			sourceTree = "<group>";
+		};
+		82DC472756C3A7E0A6ADC855007C2D43 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5D6A9368E62306358DB6433401F60AAE /* SSKeychain */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		83CA24A05EA46AAC04113771B218E4EB /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				6AEB40D2C8AC3BDA8DFFD8BA09FB8D75 /* KCBaseDefine.h */,
+				82C24E4C54B9CD09AF4FAA3988AC1895 /* KCDirWatcher.h */,
+				058A83CC09C780D245F2B3122C5B12D7 /* KCDirWatcher.m */,
+				9D9CF1F38191CAABE95E16AE146257AB /* KCFile.h */,
+				613A3209D1EB7A75B4ECB1C12D133E22 /* KCFile.m */,
+				D1C45DA01B9B64724C3F0F8D919D3889 /* KCFileArchiver.h */,
+				0FA2D82BBAE0A315F1E47E8BC0E65925 /* KCFileArchiver.m */,
+				70BF10FCF77DE8F559A87853E5A4F4C6 /* KCFileManager.h */,
+				CD7E1CBE8FDB1DB4CDA3417EC0CE6F28 /* KCFileManager.m */,
+				D962B5D3B84DBFC139F14525AD63B0F4 /* KCObject.h */,
+				30844CC948D66155C6038DEFAA299EDC /* KCObject.m */,
+				44162283B13EFE7ABE0203F224733F6E /* KCRuntime.h */,
+				1B3D6F1D5D3102C0258D78A1066E7C5A /* KCRuntime.m */,
+				4B6FB944C1E30401082614D0E749997D /* KCSandbox.h */,
+				F065F36A0692112DA79F1F2E64251C34 /* KCSandbox.m */,
+				0266820A697B17F3311C4B70EDA991B3 /* KCSingleton.h */,
+				AC8BA13169C72BDE6A93313B7937125A /* KCSingleton.m */,
+				A9A620E7CDD5470AA21C0B62BD9172C8 /* KCStack.h */,
+				3CDB94248A81CC06961EAB48FDF5D022 /* KCStack.m */,
+				110CD988D15B23A02F828D9A5B924B3D /* KCString.h */,
+				5BC3B3FC33183229FB9A232A0C154FCB /* KCString.m */,
+				9B54CC9947E080551D900BE55E7981FA /* KCTaskQueue.h */,
+				BFFED660DD08BE33E91667BC7EB7C857 /* KCTaskQueue.m */,
+				2A04CC0105A78D4ACA54028F1FE518D4 /* NSData+HMAC.h */,
+				9D78AADE506E1B813B06A6EE8F3C4F9B /* NSData+HMAC.m */,
+				AB4DFD21C4514A90CEB2A1D8D6D799A8 /* NSDate+KCDate.h */,
+				16798669F060016BE0D57DBD3D77099A /* NSDate+KCDate.m */,
+				93AA33045FC2EC7B4E9B008CC3FA1846 /* NSObject+KCCoding.h */,
+				4A8AAD76B10BACB7FD2472BA62FE230F /* NSObject+KCCoding.m */,
+				A2CFB7B613DC7BF23F4AA05290A3E4CE /* NSObject+KCNotification.h */,
+				F4D93A9DF9DFD4B18B2926BE5B41BA57 /* NSObject+KCNotification.m */,
+				428D85AFD203D44E8E2D014C3E6A5D7C /* NSObject+KCObjectInfo.h */,
+				E7C932FA84093BDD82FFC85CEAEC6484 /* NSObject+KCObjectInfo.m */,
+				6012858CA22086687FD73E170EBEB156 /* NSObject+KCObserver.h */,
+				EDF3F7574C99350CC2841C92EEFA8B9D /* NSObject+KCObserver.m */,
+				C9D49CFBBAB0D516FDB88487714CC077 /* NSObject+KCProperty.h */,
+				4EC320A2734CD930AC873AAB2B518BB1 /* NSObject+KCProperty.m */,
+				BBD0AAAFF973A67FE10D4103FA5F61E2 /* NSObject+KCSelector.h */,
+				604A9368E03B7CEE3BFE2C68D11F3BAA /* NSObject+KCSelector.m */,
+				2032ED7A8BF801AB482DBE489F26AFBF /* NSObject+KCTicker.h */,
+				731FDE2801E42805CF0328EFB41CFDB9 /* NSObject+KCTicker.m */,
+				E03A3AF97EDDC478BA7852D7CB26635F /* NSString+KCExtension.h */,
+				E0A51975E3D8C91F2D6B2ACF22447965 /* NSString+KCExtension.m */,
+			);
+			name = Base;
+			path = Base;
+			sourceTree = "<group>";
+		};
+		8752DC8555471469440B921035D5D8B7 /* type */ = {
+			isa = PBXGroup;
+			children = (
+				764E54EB0C5528F795197FEEEAA351AD /* KCJSCallback.h */,
+				903D230FDF9F2823B0BD1BBB37674975 /* KCJSCallback.m */,
+				F4D6EE752ED502DA929117EA9605CFD7 /* KCJSType.h */,
+				90E7B3AD6FF2D4985DA79968598F2FF5 /* KCJSType.m */,
+			);
+			name = type;
+			path = type;
+			sourceTree = "<group>";
+		};
+		8F2F0F73B72F499906FF7C2E952BDB54 /* XMLHttpRequest */ = {
+			isa = PBXGroup;
+			children = (
+				545F04D51A35FC41BBDD8B4A06825332 /* KCXMLHttpRequest.h */,
+				AB69CA476E3726DF1BA89CC645C56418 /* KCXMLHttpRequest.m */,
+				CB4D3DEA5AA8D63FA8E48E0A5B25F1BC /* KCXMLHttpRequestDelegate.h */,
+				0A8600AA8D1C595CDD298FDEB1DCEDC4 /* KCXMLHttpRequestDispatcher.h */,
+				0FE44E068BAF8BCD832EB2E8A249B3F8 /* KCXMLHttpRequestDispatcher.m */,
+			);
+			name = XMLHttpRequest;
+			path = XMLHttpRequest;
+			sourceTree = "<group>";
+		};
+		93F1B843FD5859219CAC14035F3C9646 /* JSBridge */ = {
+			isa = PBXGroup;
+			children = (
+				FF08DDBBF0BEE81D0E4E21CBD7D22B7A /* ApplicationCache */,
+				F9968391D791BE071BBDFCA98BB8F3A8 /* bridge */,
+				3F5C4851033F1D14A01C086760C2101B /* ImageSetter */,
+				B6B385C2E5B684A86F2E7221986BF5B5 /* UriDispatcher */,
+				8F2F0F73B72F499906FF7C2E952BDB54 /* XMLHttpRequest */,
+			);
+			name = JSBridge;
+			path = JSBridge;
+			sourceTree = "<group>";
+		};
+		AE4769BB987808B2094CFCCA5F9846ED /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				F8A624A4C6712991B245FAADF2BD8780 /* SSKeychain.modulemap */,
+				31273BCE5880BE00B9A6AF743081AA9E /* SSKeychain.xcconfig */,
+				478E8533ACBD16EB124AAF06EFE4520F /* SSKeychain-dummy.m */,
+				32279FF9E6202CC4C5BE51EDA354BE6F /* SSKeychain-Info.plist */,
+				2EC64A38D29798CE2A9DDEAEFF9E77A5 /* SSKeychain-prefix.pch */,
+				DCAB78D116376093B85F4CB59B229C26 /* SSKeychain-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SSKeychain";
+			sourceTree = "<group>";
+		};
+		B338993680A7C3B27386174E8FB20BE4 /* alertView */ = {
+			isa = PBXGroup;
+			children = (
+				5A6D94F2A68D08FABE2E47202BACF22A /* KCButton.h */,
+				8BAFE257CC65EB9A262F59D71E86DFC0 /* KCButton.m */,
+				A07041244BBBF05D5C1FE5C2DD1117ED /* UIActionSheet+Blocks.h */,
+				F28501D6730B21B8094709235B10D7F8 /* UIActionSheet+Blocks.m */,
+				55651EC341D2FAEF0AA62B882106F8DB /* UIAlertView+Blocks.h */,
+				F11BE1A856BA92812BA4EE82BB27E8AC /* UIAlertView+Blocks.m */,
+			);
+			name = alertView;
+			path = alertView;
+			sourceTree = "<group>";
+		};
+		B6B385C2E5B684A86F2E7221986BF5B5 /* UriDispatcher */ = {
+			isa = PBXGroup;
+			children = (
+				150BBDBD15F48BE4719D9FF0CBE5985D /* KCUriActionDelegate.h */,
+				71586392D3115D13AF41DBC328C8770D /* KCUriDispatcher.h */,
+				08C182F0AB230868AFA000D7C3AB5EE3 /* KCUriDispatcher.m */,
+				40707EA97497B142181127AA530F8C88 /* KCUriRegister.h */,
+				EBCCCE30CD4A46901F73CEB98B2DA0C0 /* KCUriRegister.m */,
+			);
+			name = UriDispatcher;
+			path = UriDispatcher;
+			sourceTree = "<group>";
+		};
+		B97E7247C101F78327A44FC6047BD641 /* Device */ = {
+			isa = PBXGroup;
+			children = (
+				BAD5FEA19CCC466E7056F9D7086A0CD6 /* UIDevice+KCHardware.h */,
+				48C2425E75137B2F76FECC8A52592759 /* UIDevice+KCHardware.m */,
+			);
+			name = Device;
+			path = Device;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				4C0563CF01CAC84F85ACAA46D559B888 /* Development Pods */,
+				408BAD6B16634EE2E961F4F2A83F3B85 /* Frameworks */,
+				82DC472756C3A7E0A6ADC855007C2D43 /* Pods */,
+				2D321B18FF9869FEEF0783DA3C27DFF6 /* Products */,
+				3D56C33BEE2FCE3DBCAEA31AA580FD08 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D107EC927CFD646BE3033F34F4C39972 /* executors */ = {
+			isa = PBXGroup;
+			children = (
+				44E92419C5E828CAE75536C8665F1B1C /* KCAssert.h */,
+				3F0257A036A097E4684701A85F9DEB73 /* KCAssert.m */,
+			);
+			name = executors;
+			path = executors;
+			sourceTree = "<group>";
+		};
+		D1BFE8FC61A000B8ACBC55DD3B5E2B1A /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				5922446568E2EDFEBC75324B148E5AA6 /* kerkee.modulemap */,
+				F1FE3EEA58DB38A430C9555BA96C115D /* kerkee.xcconfig */,
+				2E9A00312D670D0C60A86C9C3E1F2360 /* kerkee-dummy.m */,
+				D1F8DD9E2D1E23941D1CC43519C6E2F0 /* kerkee-Info.plist */,
+				25D47395B01E3860A0392C65220F4375 /* kerkee-prefix.pch */,
+				77B86965E3FA241481E83B97C63A95A4 /* kerkee-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../kerkeePlus_ios/Pods/Target Support Files/kerkee";
+			sourceTree = "<group>";
+		};
+		EB20879ECC15F653EF1C1058F6B7623F /* Pods-kerkeePlus */ = {
+			isa = PBXGroup;
+			children = (
+				A7D86E459A35E80085B33AC0CB9FCCD0 /* Pods-kerkeePlus.modulemap */,
+				82585BC27366B11E91BD6E75052A6732 /* Pods-kerkeePlus-acknowledgements.markdown */,
+				C50A930B207B26132029965465F3ECF1 /* Pods-kerkeePlus-acknowledgements.plist */,
+				7BC6E1E700A4F06C39F11CC100DCD7C3 /* Pods-kerkeePlus-dummy.m */,
+				D9721D7A3C42089E9A30E802D6BD6ED7 /* Pods-kerkeePlus-Info.plist */,
+				526D442680C160647B23B8FD7431ADAD /* Pods-kerkeePlus-umbrella.h */,
+				65BA22225D9A58661984D4AB74CC9036 /* Pods-kerkeePlus.debug.xcconfig */,
+				378E28F8DA3102E7DB84A55213172FB0 /* Pods-kerkeePlus.release.xcconfig */,
+			);
+			name = "Pods-kerkeePlus";
+			path = "Target Support Files/Pods-kerkeePlus";
+			sourceTree = "<group>";
+		};
+		ECD5AB5B65F783F8EA4CFB53CB6BA190 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				C45E5C915A170C46D77C56B92135987D /* kerkee.podspec */,
+				1DF10AEF000F95C98021CE640A12A032 /* LICENSE */,
+				B8A379994B7C52A2E573171C1E41E14D /* README.md */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		F9968391D791BE071BBDFCA98BB8F3A8 /* bridge */ = {
+			isa = PBXGroup;
+			children = (
+				B5B3561CC1F8B242B066E98825C06D55 /* KCJSBridge.h */,
+				334A910B85733C8BBDAAAEAAFC1DB20E /* KCJSBridge.m */,
+				D107EC927CFD646BE3033F34F4C39972 /* executors */,
+				62BD8CBAB4FE9A34C6D31C97FDC2F0EA /* runtime */,
+			);
+			name = bridge;
+			path = bridge;
+			sourceTree = "<group>";
+		};
+		FF08DDBBF0BEE81D0E4E21CBD7D22B7A /* ApplicationCache */ = {
+			isa = PBXGroup;
+			children = (
+				D778DD4DFE1AC93E12966EEFDBB895B5 /* KCFetchManifest.h */,
+				D9F83D7EAA8F639EF998D123B2B943C2 /* KCFetchManifest.m */,
+				19CCBBE6C0F836178C4C208D237CF2C6 /* KCManifestObject.h */,
+				BBD5CF1FD02F9245CC0A8A2D50E0F2CE /* KCManifestObject.m */,
+				AF023E14E8D09F5E7B0B544884171676 /* KCManifestParser.h */,
+				BE45D8D75FD746D977598A4F4135E46A /* KCManifestParser.m */,
+			);
+			name = ApplicationCache;
+			path = ApplicationCache;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		0733B7BBE271AD7912D01F02AFA23664 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB2CEB441EA34727E6B3FD31FF412B3E /* SSKeychain-umbrella.h in Headers */,
+				4CB6B05C8FC3A583577DA05972E50CF0 /* SSKeychain.h in Headers */,
+				91F8A1D7C97E367E2A1F977443B6A795 /* SSKeychainQuery.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		13D7B010063A50322FBE66B978D78DC5 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5BB6820DF0D2E583FC50E7AE0678075A /* Pods-kerkeePlus-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5D33619F9099BD059B94980E0B2AC02B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4281D74A30C615697391DFA996F0B8FF /* Pods-kerkeePlusTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C84B782D5B12A5037F0858897E53F939 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE909A5873ED3473925EDE9A6227A756 /* KCApiBridge.h in Headers */,
+				573FD3BFE175D8077F47AC735CF9411A /* KCApiBridgeManager.h in Headers */,
+				C57E114B6E23302F53F1B86FC8BD3931 /* KCArchiver.h in Headers */,
+				48C98956CC70BB32BA2E48DE9230423A /* KCArg.h in Headers */,
+				18AAA1F3713058EA4B5C720AF8266481 /* KCArgList.h in Headers */,
+				71DE9884AF2F42ADA2FFA12EF2DC31B5 /* KCAssert.h in Headers */,
+				C0FCD22CB89899D19A359B1396FA3568 /* KCBaseDefine.h in Headers */,
+				F450CF9BEB7157D9B9B6E5FA44FA8A73 /* KCButton.h in Headers */,
+				743892A123B397D885D1C889F386366F /* KCCache.h in Headers */,
+				3D406260DD7F61F430038865FF759EC7 /* KCCacheKit.h in Headers */,
+				90504823D8642731EA43C97FC2620032 /* KCClass.h in Headers */,
+				3927BFFBA32A1FE48134F8F1C83E31B3 /* KCClassParser.h in Headers */,
+				F817B268344EB69034DCCB705CF7BCB9 /* KCDataValidCache.h in Headers */,
+				E84E046B237E3DAAB443AC0734FF2FD5 /* KCDirWatcher.h in Headers */,
+				DE868125BC7DF9F91B2C7CF6AEBAD2B5 /* KCException.h in Headers */,
+				C5C9032F61DE7367A0BC85D01816D930 /* KCFetchManifest.h in Headers */,
+				9798C3CE737BDB8C7FA2070834ACF6DF /* KCFile.h in Headers */,
+				3FE92B498BA0E0884E30F58DB5A2CC50 /* KCFileArchiver.h in Headers */,
+				7B62298ADFC7FBB5C8C672B342965942 /* KCFileCache.h in Headers */,
+				D4138DB19AA6633F7EA1277C9069ECB1 /* KCFileManager.h in Headers */,
+				44A75B2E3B657EE551B91B65049942E2 /* KCImageCache.h in Headers */,
+				372B03DA08BB5DD286CE09D457A70872 /* KCImagePreCache.h in Headers */,
+				FD265A00DD158074AB95A62B55ADD0A0 /* KCJSBridge.h in Headers */,
+				A2BB74871289B48BB9D9E9822925158A /* KCJSCallback.h in Headers */,
+				25A951D0C99BFF168184FB2602FDD08C /* KCJSCompileExecutor.h in Headers */,
+				ECCAFF6011255CFA41D1A8BA696A6AD9 /* KCJSDefine.h in Headers */,
+				7C201CFBE9DD75625F0558CC8F17302B /* KCJSExecutor.h in Headers */,
+				2CD63E4BE8DC9DBBDC74A99F39918C5F /* KCJSObject.h in Headers */,
+				98848D8D3A9D81BD2B057EA4B7C14ED2 /* KCJSType.h in Headers */,
+				1F0174E6D18F8AA833D8429545314377 /* KCLog.h in Headers */,
+				0E82332E0F419D0BF60A1F0A99BF3A21 /* KCMainBundle.h in Headers */,
+				199FEDC537ABACE53A486243FA8A4F2B /* KCManifestObject.h in Headers */,
+				0E5FA924F605BC5DD8D096CC048CD5D5 /* KCManifestParser.h in Headers */,
+				561780C4DD87B5209F702E01804899FD /* KCMemoryCache.h in Headers */,
+				B56131966268642BD6991A8CACE088D5 /* KCMethod.h in Headers */,
+				257F09940285CA2B48187B78CFC2AA55 /* KCModifier.h in Headers */,
+				9C1DC4C5AD40B76416D96C6A24809F25 /* KCObject.h in Headers */,
+				19B5533A5CE1391EAEFF31D58F00F16B /* KCRegister.h in Headers */,
+				7687488019416A2A2AAF6DCE84226E86 /* KCRuntime.h in Headers */,
+				C59723D5881859606A4D9ACD1FBCBA11 /* KCSandbox.h in Headers */,
+				BDEF8BCF4D25705275C64EA7A93F8553 /* KCSingleton.h in Headers */,
+				8D9B47DC97D449DC601295C7773FEBA2 /* KCStack.h in Headers */,
+				8DF89A1C0BB1595EE0D9B49BC2615009 /* KCString.h in Headers */,
+				C015684C8522D46344D70407798D88C2 /* KCTaskQueue.h in Headers */,
+				FCD9EC48AF37E6E9A63B7EC0AF9AC528 /* KCUIWebView.h in Headers */,
+				59B3D3C427715417167939FCEFCA900F /* KCUncaughtExceptionHandler.h in Headers */,
+				94CCFCF4F18182361548D8AFD7D6E5E8 /* KCURI.h in Headers */,
+				4B20A3DAAEC18EE7C0C80DA95C108A2F /* KCUriActionDelegate.h in Headers */,
+				8B73BD749C5C7701B2767EED47B7B3D9 /* KCURIComponents.h in Headers */,
+				6CB482D8C135477CD16901AD0C03C10C /* KCUriDispatcher.h in Headers */,
+				00F41BEED686E2FF908240DA65E19280 /* KCURIQuery.h in Headers */,
+				3B86A0519082F4A8507CE8390A2233F6 /* KCUriRegister.h in Headers */,
+				683D8453EF78FE87A105713F45543FC1 /* KCUtilCoding.h in Headers */,
+				73D0953C799723F411566807E24C93AF /* KCUtilDevice.h in Headers */,
+				50E5E233E404668F09257EEA42AEEEDA /* KCUtilFile.h in Headers */,
+				FFF042DAFE896F95D6D2636654432944 /* KCUtilGzip.h in Headers */,
+				A6D21656F5302314C5AAE6D4337D8F70 /* KCUtilJson.h in Headers */,
+				41574DA494B736DE0F31CAB54875D448 /* KCUtilMd5.h in Headers */,
+				8E09A4190BE3984993CC592EBC36D701 /* KCUtilNet.h in Headers */,
+				A8795898FAAF8ABCC68246900BEE583B /* KCUtilURI.h in Headers */,
+				6B323C58CD76724EBAFA0BDEC24F399F /* KCUtilURL.h in Headers */,
+				6E74628B5A597A6AB4990CFEDF20ABD1 /* KCWeakScriptMessageDelegate.h in Headers */,
+				2A5E05D37A5BB1C6B3C1D7A09EB228B4 /* KCWebImageSetter.h in Headers */,
+				A245DB8029B9F3DFFB459E66B8B062A8 /* KCWebImageSetterTask.h in Headers */,
+				8116A8A5A4757792B0A6EF60A85B4403 /* KCWebPath.h in Headers */,
+				0C2FD28A3082F87934E8D31FDF18AEB2 /* KCWebView.h in Headers */,
+				BF1A0DC68C00F2A901978EA64C65700F /* KCWebViewManager.h in Headers */,
+				E6D4002DAD2CC6802F0862C99FCDF6B5 /* KCWebViewProgressDelegate.h in Headers */,
+				50D711AF396A5FD56139C10801AAA302 /* KCWebViewProxy.h in Headers */,
+				661F54145BA558D8F0744EFC73E80659 /* KCWKWebView.h in Headers */,
+				A94D9DD103BE304380306C0B93C417FB /* KCXMLHttpRequest.h in Headers */,
+				8D1476AA6AA1D893FD567168C364877F /* KCXMLHttpRequestDelegate.h in Headers */,
+				56A734215CA4967DF93997CB7B6216A5 /* KCXMLHttpRequestDispatcher.h in Headers */,
+				78B8624F8DA3251CEF8E0BC20F4A9833 /* kerkee-umbrella.h in Headers */,
+				4C32E35708862F2A8B6E73754ED8FFD2 /* kerkee.h in Headers */,
+				B3A98FC437E012FBF6E8695C354345D7 /* NSData+Base64.h in Headers */,
+				25888A75B5EACC788DF91FB3D153EA51 /* NSData+HMAC.h in Headers */,
+				5B067E78B0107C9EA0A3FEC828B12290 /* NSDate+KCDate.h in Headers */,
+				6468E2C911BEBED54A966A387BF1050D /* NSObject+KCCoding.h in Headers */,
+				05510D7B082F6CEFF004A065311F8D06 /* NSObject+KCNotification.h in Headers */,
+				3250941496874E5040F8A3E6B0D15CBB /* NSObject+KCObjectInfo.h in Headers */,
+				5E2000460318A516C1286D09CC98434F /* NSObject+KCObserver.h in Headers */,
+				C043BC7B4882C4B1B0AB238D5A33484D /* NSObject+KCProperty.h in Headers */,
+				610B796CC8728202DAE9D2BB2127FE6B /* NSObject+KCSelector.h in Headers */,
+				988B2F9C16F39F89F784A4D50570058C /* NSObject+KCTicker.h in Headers */,
+				4D0DA59B24CE54F681C6DFE0A9E41085 /* NSString+KCExtension.h in Headers */,
+				950336730C0365288F86A7FD2FF8B193 /* UIActionSheet+Blocks.h in Headers */,
+				9D8313C40032AA19E819413C2A8AACAF /* UIAlertView+Blocks.h in Headers */,
+				F2819F8EFA242A0BCA70DD7212B91F9B /* UIDevice+KCHardware.h in Headers */,
+				E3493214468CFEB9E21B992FC2C97F88 /* UIWebView+KCClean.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		0435BE6137869D21F4D3B489D6A521B2 /* Pods-kerkeePlusTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6090E2A1836D5DFCC2E20CD3EF7630AC /* Build configuration list for PBXNativeTarget "Pods-kerkeePlusTests" */;
+			buildPhases = (
+				5D33619F9099BD059B94980E0B2AC02B /* Headers */,
+				CEEB6416BF8E0D111536880324E5BD9A /* Sources */,
+				026A6BDD0D1A9395340BB2338123C3AB /* Frameworks */,
+				DAF30B59482B0534492C776EC6949B2C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F427757F36F549C84050A39135DDA2A6 /* PBXTargetDependency */,
+			);
+			name = "Pods-kerkeePlusTests";
+			productName = "Pods-kerkeePlusTests";
+			productReference = 4DA0E0CF1DEC61620600D97A48606550 /* Pods_kerkeePlusTests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		30615C636AC80283F1FB5F97051B9728 /* kerkee */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3EB79620C4CFAB198569FE3B3BEF03CD /* Build configuration list for PBXNativeTarget "kerkee" */;
+			buildPhases = (
+				C84B782D5B12A5037F0858897E53F939 /* Headers */,
+				4BD642A9CAFDE472033A0DFF79FFF6C9 /* Sources */,
+				7CC6C41307C805DCC1B89ADC9D818AD2 /* Frameworks */,
+				F935126C8E9C29CE19C83E7E4EC701FC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				200B0D68038A29773FC94416A4F89F7A /* PBXTargetDependency */,
+			);
+			name = kerkee;
+			productName = kerkee;
+			productReference = 8412724B246849B914294E07325C47B2 /* kerkee.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		87D62A011F30879ADF5A00D601F014C1 /* Pods-kerkeePlus */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C8E82F0083BD67F298204F41390C1CBB /* Build configuration list for PBXNativeTarget "Pods-kerkeePlus" */;
+			buildPhases = (
+				13D7B010063A50322FBE66B978D78DC5 /* Headers */,
+				C27B368F0ACC1EE4CB1305178A124DF9 /* Sources */,
+				0FF74B21774A56A3720D42CC803EA3D3 /* Frameworks */,
+				6AE020F6F3625EEF6C841233D4F2CFDA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				875F068972584C6F49FF1095CF855ED4 /* PBXTargetDependency */,
+				13B4943BA36E561A57F0F850FB527DE6 /* PBXTargetDependency */,
+			);
+			name = "Pods-kerkeePlus";
+			productName = "Pods-kerkeePlus";
+			productReference = 15C33AC6B4A78227F6A5D3FDDED00CAC /* Pods_kerkeePlus.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		F3A48A4348E2BE484DF68DDAE67D557D /* SSKeychain */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 60AEF76BA88147874EFF3125EA529994 /* Build configuration list for PBXNativeTarget "SSKeychain" */;
+			buildPhases = (
+				0733B7BBE271AD7912D01F02AFA23664 /* Headers */,
+				A38098773EB3E875FBC07196CDF716F7 /* Sources */,
+				7256C999B9F654A5C5B11BB0F2A766CF /* Frameworks */,
+				C5CDF97A796DC074B4B2DA4ADEB63D54 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SSKeychain;
+			productName = SSKeychain;
+			productReference = 9C4F3049E609C4FF1798854ADC228680 /* SSKeychain.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 2D321B18FF9869FEEF0783DA3C27DFF6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				30615C636AC80283F1FB5F97051B9728 /* kerkee */,
+				87D62A011F30879ADF5A00D601F014C1 /* Pods-kerkeePlus */,
+				0435BE6137869D21F4D3B489D6A521B2 /* Pods-kerkeePlusTests */,
+				F3A48A4348E2BE484DF68DDAE67D557D /* SSKeychain */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6AE020F6F3625EEF6C841233D4F2CFDA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C5CDF97A796DC074B4B2DA4ADEB63D54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DAF30B59482B0534492C776EC6949B2C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F935126C8E9C29CE19C83E7E4EC701FC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4BD642A9CAFDE472033A0DFF79FFF6C9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD87EF3F6FF32D171F2BBFEF90BB5828 /* KCApiBridge.m in Sources */,
+				B5B3D9BE097956F0657D741AC6A37D1F /* KCApiBridgeManager.m in Sources */,
+				4DAA4A924A19A59DF87C1756F7588971 /* KCArchiver.m in Sources */,
+				4A01839474EB4F4D85D37E48AF2F02EC /* KCArg.m in Sources */,
+				CF038A9229F49F38FCC006BCB534A17A /* KCArgList.m in Sources */,
+				E77F7FE0A4F2793318C27A5BFBF877D3 /* KCAssert.m in Sources */,
+				6BC24D1A5FD517E703A3C4D2531B3D04 /* KCButton.m in Sources */,
+				8D5C80D59BC7C3F55E093405D0DFA5E4 /* KCCache.m in Sources */,
+				94E9C9E3C63D9217F93D312ADF6D8FAC /* KCClass.m in Sources */,
+				AA001D2E8F0BA8894B61F0E2D9BC9602 /* KCClassParser.m in Sources */,
+				99CF87E4280463502D4A493AC90522DF /* KCDataValidCache.m in Sources */,
+				A94F0FE2292AAD4B4BD94C1D5FE18B5B /* KCDirWatcher.m in Sources */,
+				872313822AB5E25692FE7C6E2768A43B /* KCException.m in Sources */,
+				E8947BBFB9D15514A13164D356BC8E9D /* KCFetchManifest.m in Sources */,
+				0D835369FE18127D27F91B7EB8F3CEAD /* KCFile.m in Sources */,
+				44DAC0BBB2D6EF1463C2503FEA7D0C46 /* KCFileArchiver.m in Sources */,
+				2DA40FCAC7466D286E2DB70B15DFBDF9 /* KCFileCache.m in Sources */,
+				869D7DA73E45380309CEFBD46D7658D4 /* KCFileManager.m in Sources */,
+				56F4CA711239541074B3681D6081AD0A /* KCImageCache.m in Sources */,
+				5BBE0BA30335CF53869662E15B64396A /* KCImagePreCache.m in Sources */,
+				389F7BAE2D364BD74B574B62454F5AEC /* KCJSBridge.m in Sources */,
+				C0833183349E5E7F791D609655EFA834 /* KCJSCallback.m in Sources */,
+				F3D42B6A925A78910A950CB2A46105CF /* KCJSCompileExecutor.m in Sources */,
+				78690B9DD5412D8640C628E43802D5E5 /* KCJSExecutor.m in Sources */,
+				AB098E3E884FE0FB67C366345B193A22 /* KCJSObject.m in Sources */,
+				675C9C8428FDDB794EA6A2673B25CC79 /* KCJSType.m in Sources */,
+				74EA4688693AE578904CC05EC83F426F /* KCLog.m in Sources */,
+				C4F1A5D4EF86B7A59072315D638B8F3A /* KCMainBundle.m in Sources */,
+				3E4031FF34903DBCC3731875A6F2951D /* KCManifestObject.m in Sources */,
+				B5797D9517909743BE043161C5E88164 /* KCManifestParser.m in Sources */,
+				D0056668324B656FF407A5E8B7895E16 /* KCMemoryCache.m in Sources */,
+				0934A6F06999641CCCD1F55B46693A19 /* KCMethod.m in Sources */,
+				EE28614329497681502F235B4F862565 /* KCModifier.m in Sources */,
+				630F6E8EF89205AF00778CA059B00DF2 /* KCObject.m in Sources */,
+				8EDB64BC8D293DC61AFCDAC75075AC14 /* KCRegister.m in Sources */,
+				82050B3508FFC51AF25E87FED4F877F2 /* KCRuntime.m in Sources */,
+				C4FF6856CDA52FF57B3B240C7BBBD0A4 /* KCSandbox.m in Sources */,
+				8C367AAE6BB887412249EA8047F488B2 /* KCSingleton.m in Sources */,
+				1DACFC591EC18FA4D052496835FC9484 /* KCStack.m in Sources */,
+				1666191DED33ACE98DA6D2633F5C2B22 /* KCString.m in Sources */,
+				AB5A327EE9A8AF2A50CD1B00C8334776 /* KCTaskQueue.m in Sources */,
+				E73F241F9AA0A12C1C53D95CCBF77B79 /* KCUIWebView.m in Sources */,
+				0BA625A5DC43BCE34A1FB325FA827DD5 /* KCUncaughtExceptionHandler.m in Sources */,
+				B2D8219DE315892C9CC8DFA1EB876F3C /* KCURI.m in Sources */,
+				2D74EF42A3B01DA95095DA09664FED18 /* KCURIComponents.m in Sources */,
+				CED2218C0D6289440581C0568F8C9BA3 /* KCUriDispatcher.m in Sources */,
+				86F2604E339B65828B9A045E679073A9 /* KCURIQuery.m in Sources */,
+				925114C9BFD8CC430F85C9F8B7545455 /* KCUriRegister.m in Sources */,
+				361FDA2D639E9D7DDDF03EB4C3629129 /* KCUtilCoding.m in Sources */,
+				9D05FF9E04269689CE21694BBEDC6D35 /* KCUtilDevice.m in Sources */,
+				46499FDD78E8BD82BB38854C1C9538B8 /* KCUtilFile.m in Sources */,
+				1AA60B5D4D61D6BEF6C1F83CE3C80546 /* KCUtilGzip.m in Sources */,
+				8E92E913E3C05551548ACA3FEAFB14FD /* KCUtilJson.m in Sources */,
+				59A9417A9CDEC455CC9989521565278D /* KCUtilMd5.m in Sources */,
+				79C2C87856E36C74DA7CC6E325A52657 /* KCUtilNet.m in Sources */,
+				9B72A58F779592B3D60BEC3817295A56 /* KCUtilURI.m in Sources */,
+				9D3849997072323234C3B0A48B8D7144 /* KCUtilURL.m in Sources */,
+				2A165F59F1B27B4E21BEEB1257FE3960 /* KCWeakScriptMessageDelegate.m in Sources */,
+				C920C0B178E39E231F0B77F51E94493B /* KCWebImageSetter.m in Sources */,
+				8A2FE41A56272AFC64EBE9CB4C2C2B1E /* KCWebImageSetterTask.m in Sources */,
+				8AD01576F4E42AB7209BF75F75542892 /* KCWebPath.m in Sources */,
+				6A6ED6B20697DDFE4C047E8E89DD3A30 /* KCWebView.m in Sources */,
+				E2115152C0DA10F453E9A68ECEF82176 /* KCWebViewManager.m in Sources */,
+				ECAC8361FA419DEDD4CE778A4F3FA651 /* KCWebViewProxy.m in Sources */,
+				AAA064D5762AD2C95DB0FE7C90AACAB5 /* KCWKWebView.m in Sources */,
+				E6806ECB7F8FACC4779F18D17DF2220B /* KCXMLHttpRequest.m in Sources */,
+				C1A79471E042E52CC5C22E26C83A05D1 /* KCXMLHttpRequestDispatcher.m in Sources */,
+				E2C72BE98DEBF2D994D01327FB4A8333 /* kerkee-dummy.m in Sources */,
+				35543F18591C3A8D57863757F3467827 /* NSData+Base64.m in Sources */,
+				85D83525ECB3A21985589A3B92046D5C /* NSData+HMAC.m in Sources */,
+				D616AC672230ABC20DA65E059CE03901 /* NSDate+KCDate.m in Sources */,
+				9FCF9F1D3FDB8A3EAC054E65955312EB /* NSObject+KCCoding.m in Sources */,
+				CFD3D0E4FDF037B1F8989CEDD6651F80 /* NSObject+KCNotification.m in Sources */,
+				D01C643760556C2F6AAB288FFDA361DE /* NSObject+KCObjectInfo.m in Sources */,
+				C7154EC5533C46DC942FE19AB82E3E68 /* NSObject+KCObserver.m in Sources */,
+				7D41590D300D3E621EF5576CC7B6E088 /* NSObject+KCProperty.m in Sources */,
+				27A538F73DBBAD923AF9FFE1BE63AF93 /* NSObject+KCSelector.m in Sources */,
+				107B7365331FC85F3F2BAEDF004EE3C8 /* NSObject+KCTicker.m in Sources */,
+				15D9E06211F52D8A99E5F01AD206F145 /* NSString+KCExtension.m in Sources */,
+				681E5B4D1D956CDED00F10CD2943094C /* UIActionSheet+Blocks.m in Sources */,
+				A92B8AC0B42E23E4007217872433E4AC /* UIAlertView+Blocks.m in Sources */,
+				7589A25FD53F8D9448BE0634EAD8B0EA /* UIDevice+KCHardware.m in Sources */,
+				2DF4784873B1948B156988349F6284A8 /* UIWebView+KCClean.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A38098773EB3E875FBC07196CDF716F7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				567EE5665939B3411F343723050326A3 /* SSKeychain-dummy.m in Sources */,
+				1E8B7F12CAA716C9BE6AE2FC0E99E336 /* SSKeychain.m in Sources */,
+				06C30433E1D00581809D0F68BDDEF570 /* SSKeychainQuery.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C27B368F0ACC1EE4CB1305178A124DF9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD9FA8518933CC74F635F8892557F09B /* Pods-kerkeePlus-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEEB6416BF8E0D111536880324E5BD9A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				32D4BDECFB26064A54225F3F0FFB9FEB /* Pods-kerkeePlusTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		13B4943BA36E561A57F0F850FB527DE6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = kerkee;
+			target = 30615C636AC80283F1FB5F97051B9728 /* kerkee */;
+			targetProxy = 2EACB9A6B7CC939CE0F34DC1EB6FC84B /* PBXContainerItemProxy */;
+		};
+		200B0D68038A29773FC94416A4F89F7A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SSKeychain;
+			target = F3A48A4348E2BE484DF68DDAE67D557D /* SSKeychain */;
+			targetProxy = 63E19CAC8FDC59823C1940846DAAE56B /* PBXContainerItemProxy */;
+		};
+		875F068972584C6F49FF1095CF855ED4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SSKeychain;
+			target = F3A48A4348E2BE484DF68DDAE67D557D /* SSKeychain */;
+			targetProxy = 5CD6E96D92638E4605F1F534DF2E2C86 /* PBXContainerItemProxy */;
+		};
+		F427757F36F549C84050A39135DDA2A6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-kerkeePlus";
+			target = 87D62A011F30879ADF5A00D601F014C1 /* Pods-kerkeePlus */;
+			targetProxy = 57D4108724FC981B2A11C2E0B83E2287 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		05DF210AC65EBB0E593AAF976B2C2177 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 4.2;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		084C4F788130CBCA82F5ED0BBE436D44 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 31273BCE5880BE00B9A6AF743081AA9E /* SSKeychain.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SSKeychain/SSKeychain-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SSKeychain/SSKeychain-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SSKeychain/SSKeychain.modulemap";
+				PRODUCT_MODULE_NAME = SSKeychain;
+				PRODUCT_NAME = SSKeychain;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		421ECB1396280A8D83853C3DDBED1700 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		4DF9DC6FE078BAB9CE43C7131506BFA2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 31273BCE5880BE00B9A6AF743081AA9E /* SSKeychain.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SSKeychain/SSKeychain-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SSKeychain/SSKeychain-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SSKeychain/SSKeychain.modulemap";
+				PRODUCT_MODULE_NAME = SSKeychain;
+				PRODUCT_NAME = SSKeychain;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		57C5B41944C40A712E2BA7AD29218B72 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F1FE3EEA58DB38A430C9555BA96C115D /* kerkee.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/kerkee/kerkee-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/kerkee/kerkee-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/kerkee/kerkee.modulemap";
+				PRODUCT_MODULE_NAME = kerkee;
+				PRODUCT_NAME = kerkee;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		9459AF2B184A78B54883A21F2344C57C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5F1C954873907DB65D485291161DCD79 /* Pods-kerkeePlusTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-kerkeePlusTests/Pods-kerkeePlusTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-kerkeePlusTests/Pods-kerkeePlusTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		A43104B7FC063364F4CED1667C2FAC1E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F1FE3EEA58DB38A430C9555BA96C115D /* kerkee.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/kerkee/kerkee-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/kerkee/kerkee-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/kerkee/kerkee.modulemap";
+				PRODUCT_MODULE_NAME = kerkee;
+				PRODUCT_NAME = kerkee;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		AF7AA8F86501FEC9837111FD3D8A3ECD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CF61F24FB8E4E0AF03C1FA9E5A37CEAE /* Pods-kerkeePlusTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-kerkeePlusTests/Pods-kerkeePlusTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-kerkeePlusTests/Pods-kerkeePlusTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		E469934306F4DD7AF85E0731BF52CF8D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 378E28F8DA3102E7DB84A55213172FB0 /* Pods-kerkeePlus.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-kerkeePlus/Pods-kerkeePlus-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-kerkeePlus/Pods-kerkeePlus.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		F39C896DD40576321AF4B7920857BABA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 65BA22225D9A58661984D4AB74CC9036 /* Pods-kerkeePlus.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-kerkeePlus/Pods-kerkeePlus-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-kerkeePlus/Pods-kerkeePlus.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3EB79620C4CFAB198569FE3B3BEF03CD /* Build configuration list for PBXNativeTarget "kerkee" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				57C5B41944C40A712E2BA7AD29218B72 /* Debug */,
+				A43104B7FC063364F4CED1667C2FAC1E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				421ECB1396280A8D83853C3DDBED1700 /* Debug */,
+				05DF210AC65EBB0E593AAF976B2C2177 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6090E2A1836D5DFCC2E20CD3EF7630AC /* Build configuration list for PBXNativeTarget "Pods-kerkeePlusTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9459AF2B184A78B54883A21F2344C57C /* Debug */,
+				AF7AA8F86501FEC9837111FD3D8A3ECD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		60AEF76BA88147874EFF3125EA529994 /* Build configuration list for PBXNativeTarget "SSKeychain" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				084C4F788130CBCA82F5ED0BBE436D44 /* Debug */,
+				4DF9DC6FE078BAB9CE43C7131506BFA2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C8E82F0083BD67F298204F41390C1CBB /* Build configuration list for PBXNativeTarget "Pods-kerkeePlus" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F39C896DD40576321AF4B7920857BABA /* Debug */,
+				E469934306F4DD7AF85E0731BF52CF8D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}
