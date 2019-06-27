@@ -79,7 +79,7 @@
         {
             KCURI* urlManifest = [aManifestObject manifestURI];
             KCManifestObject* serverManifestObject = aManifestObject;
-            NSString* relativeDir =[serverManifestObject.mRelativePath substring:0 end:[serverManifestObject.mRelativePath lastIndexOfChar:KCFile.separatorChar]];
+            NSString* relativeDir =[serverManifestObject.mRelativePath kc_substring:0 end:[serverManifestObject.mRelativePath kc_lastIndexOfChar:KCFile.separatorChar]];
             KCFile* rootPath = [[KCFile alloc] initWithPath:[NSString stringWithFormat:@"%@%c%@",aWebApp.mRootPath, KCFile.separatorChar, relativeDir]];
             KCDek* dek = [[KCDek alloc] initWithRootPath:rootPath];
             [dek setManifestObject:serverManifestObject];
@@ -100,8 +100,8 @@
     if ([self canInstall:aDek])
     {
         NSString* downloadDir = aDek.mRootPath.getAbsolutePath;
-        int IndexOfChar = [downloadDir lastIndexOfChar:KCFile.separatorChar];
-        downloadDir = [downloadDir substring:0 end:IndexOfChar];
+        int IndexOfChar = [downloadDir kc_lastIndexOfChar:KCFile.separatorChar];
+        downloadDir = [downloadDir kc_substring:0 end:IndexOfChar];
         KCFile* dekFile = [[KCFile alloc] initWithPath:[NSString stringWithFormat:@"%@%@%@", downloadDir, KCFile.separator, kDekFileName]];
         KCAutorelease(dekFile);
         

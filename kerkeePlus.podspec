@@ -2,7 +2,7 @@
 Pod::Spec.new do |spec|
  
   spec.name         = "kerkeePlus"
-  spec.version      = "0.0.1"
+  spec.version      = "0.0.2"
   spec.summary      = "A short description of kerkeePlus."
   spec.description  = "kerkee的加强版，dek的部署封装"
   spec.homepage     = "http://wiki.ops.yangege.cn/pages/viewpage.action?pageId=12237479"

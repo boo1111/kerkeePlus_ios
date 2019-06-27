@@ -1,6 +1,6 @@
 {
   "name": "kerkee",
-  "version": "0.0.3",
+  "version": "0.0.5",
   "summary": "kerkee is a hybrid app framework,This repository is kerkee for ios",
   "description": "kerkee is a hybrid app framework,This repository is kerkee for ios, is the multi-agent framework",
   "homepage": "http://www.kerkee.com",
@@ -14,7 +14,7 @@
   },
   "source": {
     "git": "https://github.com/boo1111/kerkee_ios",
-    "tag": "0.0.3",
+    "tag": "0.0.5",
     "submodules": true
   },
   "source_files": "kerkee/**/*.{h,m}",
