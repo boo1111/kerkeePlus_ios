@@ -18,7 +18,7 @@
 
 - (id)initWithObjectId:(NSNumber *)objectId WebView:(KCWebView*)webview;
 
-- (void)open:(NSString *)method url:(NSString *)url userAgent:(NSString *)userAgent referer:(NSString*)referer cookie:(NSString *)cookie;
+- (void)open:(NSString *)method url:(NSString *)url userAgent:(NSString *)userAgent referer:(NSString *)referer cookie:(NSString *)cookie timeout:(NSString *)timeout;
 - (void)send;
 - (void)send:(NSString *)data;
 - (void)setRequestHeader:(NSString *)headerName headerValue:(NSString *)headerValue;

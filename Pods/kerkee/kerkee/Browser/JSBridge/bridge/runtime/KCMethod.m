@@ -101,7 +101,7 @@
     {
         va_list args;
         va_start(args, aReceiver);
-        result = [aReceiver performSelectorSafetyWithArgs:m_method arguments:args];
+        result = [aReceiver kc_performSelectorSafetyWithArgs:m_method arguments:args];
         va_end(args);
     }
     

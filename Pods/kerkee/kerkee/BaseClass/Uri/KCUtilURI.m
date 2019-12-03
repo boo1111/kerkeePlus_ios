@@ -24,43 +24,43 @@
     
     NSString* input = aPath;
     
-    while (![input isEmpty])
+    while (![input kc_isEmpty])
     {
-        if ([input startsWith:@"../"] || [input startsWith:@"./"])
+        if ([input kc_startsWith:@"../"] || [input kc_startsWith:@"./"])
         {
-            input = [input substringFromIndex:[input indexOf:@"/"]+1];
+            input = [input substringFromIndex:[input kc_indexOf:@"/"]+1];
         }
-        else if ([input startsWith:@"/.."])
+        else if ([input kc_startsWith:@"/.."])
         {
-            input = [input substring:3];
+            input = [input kc_substring:3];
             if (![output isEmpty])
             {
                 [output pop];
             }
         }
-        else if ([input equals:@"/."])
+        else if ([input kc_equals:@"/."])
         {
             input = @"/";
         }
-        else if ([input startsWith:@"/."])
+        else if ([input kc_startsWith:@"/."])
         {
-            input = [input substring:2];
+            input = [input kc_substring:2];
         }
-        else if ([input equals:@"."] || [input equals:@".."])
+        else if ([input kc_equals:@"."] || [input kc_equals:@".."])
         {
             input = @"";
         }
         else
         {
-            int segmentIndex = [input indexOf:@"/" startIndex:1];
+            int segmentIndex = [input kc_indexOf:@"/" startIndex:1];
             if (segmentIndex == -1)
             {
                 segmentIndex = (int)input.length;
             }
             
-            NSString* pathSegment = [input substring:0 end:segmentIndex];
-            input = [input substring:segmentIndex];
-            if (![pathSegment isEmpty])
+            NSString* pathSegment = [input kc_substring:0 end:segmentIndex];
+            input = [input kc_substring:segmentIndex];
+            if (![pathSegment kc_isEmpty])
             {
                 [output push:pathSegment];
             }

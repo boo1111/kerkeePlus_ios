@@ -14,7 +14,7 @@
 @implementation NSObject (KCProperty)
 
 #pragma mark -
-- (NSMutableDictionary *)propertiesForClass:(Class)aClass
+- (NSMutableDictionary *)kc_propertiesForClass:(Class)aClass
 {
     
     NSMutableDictionary *results = [[NSMutableDictionary alloc] init];
@@ -38,15 +38,15 @@
     
     if ([aClass superclass] != [NSObject class])
     {
-        [results addEntriesFromDictionary:[self propertiesForClass:[aClass superclass]]];
+        [results addEntriesFromDictionary:[self kc_propertiesForClass:[aClass superclass]]];
     }
     
     return results;
 }
 
-- (NSDictionary *)propertyTypeDic
+- (NSDictionary *)kc_propertyTypeDic
 {
-    return [self propertiesForClass:[self class]];
+    return [self kc_propertiesForClass:[self class]];
 }
 
 
@@ -58,19 +58,19 @@
 
 #pragma mark Add Property
 
-- (void)setProperty:(id)aProperty forKey:(char const * const)aKey withPolicy:(KCAssociantionPolicy)aPolicy
+- (void)kc_setProperty:(id)aProperty forKey:(char const * const)aKey withPolicy:(KCAssociantionPolicy)aPolicy
 {
     // validate input
     NSAssert(aProperty,@"PROPERTY must not be nil.");
     NSAssert(aKey,@"KEY must not be nil.");
     NSAssert(aPolicy!=0, @"POLICY must not be null.");
-    NSAssert([self isValidPolicy:aPolicy],@"POLICY must be valid.");
+    NSAssert([self kc_isValidPolicy:aPolicy],@"POLICY must be valid.");
     
     // associate object
     objc_setAssociatedObject(self, aKey, aProperty, (objc_AssociationPolicy)aPolicy);
 }
 
-- (id)getPropertyForKey:(char const * const)aKey
+- (id)kc_getPropertyForKey:(char const * const)aKey
 {
     // validate input
     NSAssert(aKey,@"KEY must not be nil.");
@@ -80,7 +80,7 @@
     return objc_getAssociatedObject(self, aKey);
 }
 
-- (BOOL)hasPropertyForKey:(char const * const)aKey
+- (BOOL)kc_hasPropertyForKey:(char const * const)aKey
 {
     // validate input
     NSAssert(aKey,@"KEY must not be nil.");
@@ -96,7 +96,7 @@
  @return logical result indicating if policy is valid
  */
 
-- (BOOL)isValidPolicy:(KCAssociantionPolicy)policy
+- (BOOL)kc_isValidPolicy:(KCAssociantionPolicy)policy
 {
     switch ( policy )
     {
@@ -120,7 +120,7 @@
 
 @implementation NSObject (KCProperties)
 
-+ (BOOL)isPropertyReadOnly:(NSString*)aName
++ (BOOL)kc_isPropertyReadOnly:(NSString*)aName
 {
     const char * type = property_getAttributes(class_getProperty(self, [aName UTF8String]));
     NSString * typeString = [NSString stringWithUTF8String:type];
@@ -130,7 +130,7 @@
     return [typeAttribute rangeOfString:@"R"].length > 0;
 }
 
-+ (BOOL) hasProperties
++ (BOOL) kc_hasProperties
 {
 	unsigned int count = 0;
 	objc_property_t * properties = class_copyPropertyList( self, &count );
@@ -140,45 +140,45 @@
 	return ( count != 0 );
 }
 
-+ (BOOL) hasPropertyNamed: (NSString*) aName
++ (BOOL) kc_hasPropertyNamed: (NSString*) aName
 {
 	return ( class_getProperty(self, [aName UTF8String]) != NULL );
 }
 
-+ (BOOL) hasPropertyNamed: (NSString*) aName ofType: (const char*) aType
++ (BOOL) kc_hasPropertyNamed: (NSString*) aName ofType: (const char*) aType
 {
 	objc_property_t property = class_getProperty( self, [aName UTF8String] );
 	if ( property == NULL )
 		return ( NO );
     
-	const char * value = property_getTypeString( property );
+	const char * value = kc_property_getTypeString( property );
 	if ( strcmp(aType, value) == 0 )
 		return ( YES );
 	
 	return ( NO );
 }
 
-+ (BOOL) hasPropertyForKVCKey: (NSString*) aKey
++ (BOOL) kc_hasPropertyForKVCKey: (NSString*) aKey
 {
-    if ( [self hasPropertyNamed: aKey] )
+    if ( [self kc_hasPropertyNamed: aKey] )
         return ( YES );
     
-    return ( [self hasPropertyNamed: [self propertyStyleString:aKey]] );
+    return ( [self kc_hasPropertyNamed: [self kc_propertyStyleString:aKey]] );
 }
 
 
-+ (const char *) typeOfPropertyNamed: (NSString*) aName
++ (const char *) kc_typeOfPropertyNamed: (NSString*) aName
 {
 	objc_property_t property = class_getProperty( self, [aName UTF8String] );
 	if ( property == NULL )
 		return ( NULL );
 	
-	return ( property_getTypeString(property) );
+	return ( kc_property_getTypeString(property) );
 }
 
-+ (Class)classOfPropertyNamed:(NSString*)aPropertyName
++ (Class)kc_classOfPropertyNamed:(NSString*)aPropertyName
 {
-    if (![self hasPropertyNamed:aPropertyName]) {
+    if (![self kc_hasPropertyNamed:aPropertyName]) {
         NSLog(@"Error: class %@ has no property named %@", NSStringFromClass([self class]), aPropertyName);
         return nil;
     }
@@ -198,13 +198,13 @@
     return NSClassFromString(className);
 }
 
-+ (SEL) getterForPropertyNamed: (NSString*) aName
++ (SEL) kc_getterForPropertyNamed: (NSString*) aName
 {
 	objc_property_t property = class_getProperty( self, [aName UTF8String] );
 	if ( property == NULL )
 		return ( NULL );
 	
-	SEL result = property_getGetter( property );
+	SEL result = kc_property_getGetter( property );
 	if ( result != NULL )
 		return ( NULL );
 	
@@ -216,13 +216,13 @@
 	return ( NSSelectorFromString(aName) );
 }
 
-+ (SEL) setterForPropertyNamed: (NSString*) aName
++ (SEL) kc_setterForPropertyNamed: (NSString*) aName
 {
 	objc_property_t property = class_getProperty( self, [aName UTF8String] );
 	if ( property == NULL )
 		return ( NULL );
 	
-	SEL result = property_getSetter( property );
+	SEL result = kc_property_getSetter( property );
 	if ( result != NULL )
 		return ( result );
 	
@@ -240,13 +240,13 @@
 	return ( NSSelectorFromString(str) );
 }
 
-+ (NSString *) retentionMethodOfPropertyNamed: (NSString*) aName
++ (NSString *) kc_retentionMethodOfPropertyNamed: (NSString*) aName
 {
 	objc_property_t property = class_getProperty( self, [aName UTF8String] );
 	if ( property == NULL )
 		return ( nil );
 	
-	const char * str = property_getRetentionMethod( property );
+	const char * str = kc_property_getRetentionMethod( property );
 	if ( str == NULL )
 		return ( nil );
 	
@@ -256,12 +256,12 @@
 	return ( result );
 }
 
-+ (NSArray *) propertyNames
++ (NSArray *) kc_propertyNames
 {
-    return [self propertyNamesWithClass:self];
+    return [self kc_propertyNamesWithClass:self];
 }
 
-+ (NSArray *)propertyNamesWithClass:(Class)aCls
++ (NSArray *)kc_propertyNamesWithClass:(Class)aCls
 {
     unsigned int i, count = 0;
 	objc_property_t * properties = class_copyPropertyList( aCls, &count );
@@ -289,14 +289,14 @@
 	return list;
 }
 
-+ (NSArray*) namesForPropertiesOfClass:(Class)aCls
++ (NSArray*) kc_namesForPropertiesOfClass:(Class)aCls
 {
-    NSArray *propNames = [self propertyNames];
+    NSArray *propNames = [self kc_propertyNames];
     NSMutableArray *ret = [NSMutableArray array];
     
     for (NSString *name in propNames)
     {
-        Class curClass = [self classOfPropertyNamed:name];
+        Class curClass = [self kc_classOfPropertyNamed:name];
         if ([curClass isSubclassOfClass:aCls])
             [ret addObject:name];
     }
@@ -304,7 +304,7 @@
 }
 
 
-- (NSString*)propertyStyleString:(NSString*)aString
+- (NSString*)kc_propertyStyleString:(NSString*)aString
 {
     
     NSString * result = [[aString substringToIndex: 1] lowercaseString];
@@ -314,64 +314,64 @@
     return ( [result stringByAppendingString: [aString substringFromIndex: 1]] );
 }
 
-- (BOOL)isPropertyReadOnly:(NSString*)aName
+- (BOOL)kc_isPropertyReadOnly:(NSString*)aName
 {
-    return ( [[self class] isPropertyReadOnly:aName] );
+    return ( [[self class] kc_isPropertyReadOnly:aName] );
 }
 
-- (BOOL) hasProperties
+- (BOOL) kc_hasProperties
 {
-	return ( [[self class] hasProperties] );
+	return ( [[self class] kc_hasProperties] );
 }
 
-- (BOOL) hasPropertyNamed: (NSString*) aName
+- (BOOL) kc_hasPropertyNamed: (NSString*) aName
 {
-	return ( [[self class] hasPropertyNamed: aName] );
+	return ( [[self class] kc_hasPropertyNamed: aName] );
 }
 
-- (BOOL) hasPropertyNamed: (NSString*) aName ofType: (const char *) aType
+- (BOOL) kc_hasPropertyNamed: (NSString*) aName ofType: (const char *) aType
 {
-	return ( [[self class] hasPropertyNamed: aName ofType: aType] );
+	return ( [[self class] kc_hasPropertyNamed: aName ofType: aType] );
 }
 
-- (BOOL) hasPropertyForKVCKey: (NSString*) key
+- (BOOL) kc_hasPropertyForKVCKey: (NSString*) key
 {
-    return ( [[self class] hasPropertyForKVCKey: key] );
+    return ( [[self class] kc_hasPropertyForKVCKey: key] );
 }
 
-- (const char *) typeOfPropertyNamed: (NSString*) aName
+- (const char *) kc_typeOfPropertyNamed: (NSString*) aName
 {
-	return ( [[self class] typeOfPropertyNamed: aName] );
+	return ( [[self class] kc_typeOfPropertyNamed: aName] );
 }
 
-- (Class)classOfPropertyNamed:(NSString*)aPropertyName
+- (Class)kc_classOfPropertyNamed:(NSString*)aPropertyName
 {
-    return [[self class] classOfPropertyNamed:aPropertyName];
+    return [[self class] kc_classOfPropertyNamed:aPropertyName];
 }
 
-- (SEL) getterForPropertyNamed: (NSString*) aName
+- (SEL) kc_getterForPropertyNamed: (NSString*) aName
 {
-	return ( [[self class] getterForPropertyNamed: aName] );
+	return ( [[self class] kc_getterForPropertyNamed: aName] );
 }
 
-- (SEL) setterForPropertyNamed: (NSString*) aName
+- (SEL) kc_setterForPropertyNamed: (NSString*) aName
 {
-	return ( [[self class] setterForPropertyNamed: aName] );
+	return ( [[self class] kc_setterForPropertyNamed: aName] );
 }
 
-- (NSString *) retentionMethodOfPropertyNamed: (NSString*) aName
+- (NSString *) kc_retentionMethodOfPropertyNamed: (NSString*) aName
 {
-	return ( [[self class] retentionMethodOfPropertyNamed: aName] );
+	return ( [[self class] kc_retentionMethodOfPropertyNamed: aName] );
 }
 
-- (NSArray *) propertyNames
+- (NSArray *) kc_propertyNames
 {
-	return ( [[self class] propertyNames] );
+	return ( [[self class] kc_propertyNames] );
 }
 
-- (NSArray *) namesForPropertiesOfClass:(Class)aCls
+- (NSArray *) kc_namesForPropertiesOfClass:(Class)aCls
 {
-    return [[self class] namesForPropertiesOfClass:aCls];
+    return [[self class] kc_namesForPropertiesOfClass:aCls];
 }
 
 @end
@@ -384,7 +384,7 @@
 static NSMutableDictionary *s_mapProperty;
 static NSMutableDictionary *s_mapPropertyClassOfProperty;
 
-+ (NSArray *)propertyNamesAllClass:(Class)aCls
++ (NSArray *)kc_propertyNamesAllClass:(Class)aCls
 {
     if (aCls == [NSObject class] /*[KCObject class]*/)
     {
@@ -403,19 +403,19 @@ static NSMutableDictionary *s_mapPropertyClassOfProperty;
 		return value;
 	}
 	
-	NSMutableArray *propertyNamesArray =(NSMutableArray*) [self propertyNamesWithClass:aCls];
+	NSMutableArray *propertyNamesArray =(NSMutableArray*) [self kc_propertyNamesWithClass:aCls];
 	
     if (className && propertyNamesArray)
     {
         [s_mapProperty setObject:propertyNamesArray forKey:className];
-        NSArray* arr = [self propertyNamesAllClass:class_getSuperclass(aCls)];
+        NSArray* arr = [self kc_propertyNamesAllClass:class_getSuperclass(aCls)];
         [propertyNamesArray addObjectsFromArray:arr];
     }
     
     return propertyNamesArray;
 }
 
-+ (Class)propertyClassAllForPropertyName:(NSString *)propertyName ofClass:(Class)aCls
++ (Class)kc_propertyClassAllForPropertyName:(NSString *)propertyName ofClass:(Class)aCls
 {
 	if (!s_mapPropertyClassOfProperty)
     {
@@ -442,7 +442,7 @@ static NSMutableDictionary *s_mapPropertyClassOfProperty;
 		if (strcmp(cPropertyName, name) == 0)
         {
 			free(properties);
-			NSString *className = [NSString stringWithUTF8String:property_getTypeString(property)];
+			NSString *className = [NSString stringWithUTF8String:kc_property_getTypeString(property)];
 			[s_mapPropertyClassOfProperty setObject:className forKey:key];
             //we found the property - we need to free
 			return NSClassFromString(className);
@@ -450,14 +450,14 @@ static NSMutableDictionary *s_mapPropertyClassOfProperty;
 	}
     free(properties);
     //this will support traversing the inheritance chain
-	return [self propertyClassAllForPropertyName:propertyName ofClass:class_getSuperclass(aCls)];
+	return [self kc_propertyClassAllForPropertyName:propertyName ofClass:class_getSuperclass(aCls)];
 }
 
 @end
 
 #pragma mark -
 
-const char *property_getTypeName(objc_property_t aProperty)
+const char *kc_property_getTypeName(objc_property_t aProperty)
 {
 	const char *attributes = property_getAttributes(aProperty);
 	char buffer[1 + strlen(attributes)];
@@ -475,7 +475,7 @@ const char *property_getTypeName(objc_property_t aProperty)
 	return "@";
 }
 
-const char * property_getTypeString( objc_property_t aProperty )
+const char * kc_property_getTypeString( objc_property_t aProperty )
 {
 	const char * attrs = property_getAttributes( aProperty );
 	if ( attrs == NULL )
@@ -493,7 +493,7 @@ const char * property_getTypeString( objc_property_t aProperty )
 	return ( buffer );
 }
 
-SEL property_getGetter( objc_property_t aProperty )
+SEL kc_property_getGetter( objc_property_t aProperty )
 {
 	const char * attrs = property_getAttributes( aProperty );
 	if ( attrs == NULL )
@@ -520,7 +520,7 @@ SEL property_getGetter( objc_property_t aProperty )
 	return ( result );
 }
 
-SEL property_getSetter( objc_property_t aProperty )
+SEL kc_property_getSetter( objc_property_t aProperty )
 {
 	const char * attrs = property_getAttributes( aProperty );
 	if ( attrs == NULL )
@@ -547,7 +547,7 @@ SEL property_getSetter( objc_property_t aProperty )
 	return ( result );
 }
 
-const char * property_getRetentionMethod( objc_property_t aProperty )
+const char * kc_property_getRetentionMethod( objc_property_t aProperty )
 {
 	const char * attrs = property_getAttributes( aProperty );
 	if ( attrs == NULL )

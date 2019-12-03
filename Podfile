@@ -6,8 +6,8 @@ source 'https://github.com/CocoaPods/Specs.git'
 target 'kerkeePlus' do
   # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
    use_frameworks!
-   #pod 'kerkee', '0.0.3'
-   pod 'kerkee' ,:path=>"/Users/tangjin/kerkee_ios"
+   pod 'kerkee', '0.0.11'
+#   pod 'kerkee' ,:path=>"/Users/tangjin/kerkee_ios"
    pod 'SSKeychain', '1.2.3'
   # Pods for kerkeePlus
 

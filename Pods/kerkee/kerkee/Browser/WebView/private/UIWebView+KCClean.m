@@ -66,7 +66,7 @@
  
  */
 
-- (void) cleanForDealloc
+- (void) kc_cleanForDealloc
 {
     [self loadHTMLString:@"" baseURL:nil];
     [self stopLoading];

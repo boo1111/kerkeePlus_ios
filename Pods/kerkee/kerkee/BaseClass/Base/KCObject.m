@@ -35,7 +35,7 @@ Class nsArrayClass;
 	
 	if ((self = [super init]))
     {
-		for (NSString *key in [KCPropertiesUseCache propertyNamesAllClass:[self class]])
+		for (NSString *key in [KCPropertiesUseCache kc_propertyNamesAllClass:[self class]])
         {
 			
 			id value = [dictionary valueForKey:[[self map] valueForKey:key]];
@@ -45,7 +45,7 @@ Class nsArrayClass;
                 continue;
             }
             
-            if ([self isPropertyReadOnly:key])
+            if ([self kc_isPropertyReadOnly:key])
             {
                 continue;
             }
@@ -53,7 +53,7 @@ Class nsArrayClass;
 			// handle dictionary
 			if ([value isKindOfClass:nsDictionaryClass])
             {
-				Class klass = [KCPropertiesUseCache propertyClassAllForPropertyName:key ofClass:[self class]];
+				Class klass = [KCPropertiesUseCache kc_propertyClassAllForPropertyName:key ofClass:[self class]];
 				value = [[klass alloc] initWithDictionary:value];
                 KCAutorelease(value);
 			}
@@ -125,7 +125,7 @@ Class nsArrayClass;
 - (void)encodeWithCoder:(NSCoder*)encoder
 {
 	[encoder encodeObject:self.objectId forKey:idPropertyNameOnObject];
-	for (NSString *key in [KCPropertiesUseCache propertyNamesAllClass:[self class]])
+	for (NSString *key in [KCPropertiesUseCache kc_propertyNamesAllClass:[self class]])
     {
 		[encoder encodeObject:[self valueForKey:key] forKey:key];
 	}
@@ -137,9 +137,9 @@ Class nsArrayClass;
     {
 		[self setValue:[decoder decodeObjectForKey:idPropertyNameOnObject] forKey:idPropertyNameOnObject];
 		
-		for (NSString *key in [KCPropertiesUseCache propertyNamesAllClass:[self class]])
+		for (NSString *key in [KCPropertiesUseCache kc_propertyNamesAllClass:[self class]])
         {
-            if ([self isPropertyReadOnly:key])
+            if ([self kc_isPropertyReadOnly:key])
             {
                 continue;
             }
@@ -161,7 +161,7 @@ Class nsArrayClass;
         [dic setObject:self.objectId forKey:idPropertyName];
     }
 	
-	for (NSString *key in [KCPropertiesUseCache propertyNamesAllClass:[self class]])
+	for (NSString *key in [KCPropertiesUseCache kc_propertyNamesAllClass:[self class]])
     {
 		id value = [self valueForKey:key];
         if (value && [value isKindOfClass:[KCObject class]])
@@ -203,7 +203,7 @@ Class nsArrayClass;
 
 - (NSDictionary *)map
 {
-	NSArray *properties = [KCPropertiesUseCache propertyNamesAllClass:[self class]];
+	NSArray *properties = [KCPropertiesUseCache kc_propertyNamesAllClass:[self class]];
 	NSMutableDictionary *mapDictionary = [[NSMutableDictionary alloc] initWithCapacity:properties.count];
     KCAutorelease(mapDictionary);
 	for (NSString *property in properties)

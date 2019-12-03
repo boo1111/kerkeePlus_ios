@@ -92,19 +92,19 @@ static BOOL sIsOpenJSLog = true;
 -(void)webView:(KCWebView*)aWebView identifierForInitialRequest:(NSURLRequest*)aInitialRequest
 {
     if (self.m_userDelegate)
-        [self.m_userDelegate performSelectorSafetyWithArgs:@selector(webView:identifierForInitialRequest:), aWebView, aInitialRequest, nil];
+        [self.m_userDelegate kc_performSelectorSafetyWithArgs:@selector(webView:identifierForInitialRequest:), aWebView, aInitialRequest, nil];
 }
 
 -(void) webView:(KCWebView*)aWebView didReceiveResourceNumber:(int)aResourceNumber totalResources:(int)aTotalResources
 {
     if (self.m_userDelegate)
-        [self.m_userDelegate performSelectorSafetyWithArgs:@selector(webView:didReceiveResourceNumber:totalResources:), aWebView, aResourceNumber, aTotalResources, nil];
+        [self.m_userDelegate kc_performSelectorSafetyWithArgs:@selector(webView:didReceiveResourceNumber:totalResources:), aWebView, aResourceNumber, aTotalResources, nil];
 }
 
 -(void)webView:(id)aWebView didReceiveTitle:(NSString *)aTitle
 {
     if (self.m_userDelegate)
-        [self.m_userDelegate performSelectorSafetyWithArgs:@selector(webView:didReceiveTitle:), aWebView, aTitle, nil];
+        [self.m_userDelegate kc_performSelectorSafetyWithArgs:@selector(webView:didReceiveTitle:), aWebView, aTitle, nil];
 }
 
 

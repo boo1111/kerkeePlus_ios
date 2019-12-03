@@ -11,9 +11,9 @@
 
 @interface NSData (HMAC)
 
-- (NSData *)md5HashWithKey:(NSData *)key;
-- (NSData *)sha1HashWithKey:(NSData *)key;
-- (NSData *)sha256HashWithKey:(NSData *)key;
-- (NSData *)sha512HashWithKey:(NSData *)key;
+- (NSData *)kc_md5HashWithKey:(NSData *)key;
+- (NSData *)kc_sha1HashWithKey:(NSData *)key;
+- (NSData *)kc_sha256HashWithKey:(NSData *)key;
+- (NSData *)kc_sha512HashWithKey:(NSData *)key;
 
 @end

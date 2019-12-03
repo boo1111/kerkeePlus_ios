@@ -49,7 +49,7 @@
     
     if (self.scrollViewDelegate)
     {
-        [self.scrollViewDelegate performSelectorSafetyWithArgs:@selector(scrollViewDidScroll:), scrollView, nil];
+        [self.scrollViewDelegate kc_performSelectorSafetyWithArgs:@selector(scrollViewDidScroll:), scrollView, nil];
     }
 
     if ([self respondsToSelector:@selector(_updateVisibleContentRects)]) {

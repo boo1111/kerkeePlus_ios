@@ -18,30 +18,30 @@
 
 @interface NSString(KCExtension)
 
-- (NSArray *)allURLs;
+- (NSArray *)kc_allURLs;
 
-- (NSString *)urlByAppendingDict:(NSDictionary *)params;
-- (NSString *)urlByAppendingArray:(NSArray *)params;
-- (NSString *)urlByAppendingKeyValues:(id)first, ...;
+- (NSString *)kc_urlByAppendingDict:(NSDictionary *)params;
+- (NSString *)kc_urlByAppendingArray:(NSArray *)params;
+- (NSString *)kc_urlByAppendingKeyValues:(id)first, ...;
 
-- (NSString *)queryStringFromDictionary:(NSDictionary *)dict;
-- (NSString *)queryStringFromArray:(NSArray *)array;
-- (NSString *)queryStringFromKeyValues:(id)first, ...;
+- (NSString *)kc_queryStringFromDictionary:(NSDictionary *)dict;
+- (NSString *)kc_queryStringFromArray:(NSArray *)array;
+- (NSString *)kc_queryStringFromKeyValues:(id)first, ...;
 
-- (NSString *)URLEncoding;
-- (NSString *)URLDecoding;
+- (NSString *)kc_URLEncoding;
+- (NSString *)kc_URLDecoding;
 
-- (NSString *)hashString;
-- (NSString *)hashMD5String;
+- (NSString *)kc_hashString;
+- (NSString *)kc_hashMD5String;
 
-- (NSString *)MD5;
+- (NSString *)kc_MD5;
 
-- (BOOL)empty;
-- (BOOL)notEmpty;
+- (BOOL)kc_empty;
+- (BOOL)kc_notEmpty;
 
-- (BOOL)is:(NSString *)other;
+- (BOOL)kc_is:(NSString *)other;
 
-- (BOOL)isValueOf:(NSArray *)array;
-- (BOOL)isValueOf:(NSArray *)array caseInsens:(BOOL)caseInsens;
+- (BOOL)kc_isValueOf:(NSArray *)array;
+- (BOOL)kc_isValueOf:(NSArray *)array caseInsens:(BOOL)caseInsens;
 
 @end

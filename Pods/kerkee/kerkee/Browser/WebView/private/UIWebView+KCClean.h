@@ -14,6 +14,6 @@
 @interface UIWebView (clean)
 
 
-- (void) cleanForDealloc;
+- (void) kc_cleanForDealloc;
 
 @end

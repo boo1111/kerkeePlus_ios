@@ -10,12 +10,13 @@
 #import "NSString+KCExtension.h"
 #import "KCBaseDefine.h"
 #import "KCUtilMd5.h"
+#import "KCURIComponents.h"
 
 #pragma mark -
 
 @implementation NSString(KCExtension)
 
-- (NSArray *)allURLs
+- (NSArray *)kc_allURLs
 {
 	NSMutableArray * array = [NSMutableArray array];
     
@@ -75,7 +76,7 @@
 	return array;
 }
 
-- (NSString *)queryStringFromDictionary:(NSDictionary *)dict
+- (NSString *)kc_queryStringFromDictionary:(NSDictionary *)dict
 {
     NSMutableArray * pairs = [NSMutableArray array];
 	for ( NSString * key in [dict keyEnumerator] )
@@ -86,23 +87,28 @@
 		}
         
 		NSString * value = [dict objectForKey:key];
-		NSString * urlEncoding = [value URLEncoding];
+		NSString * urlEncoding = [value kc_URLEncoding];
 		[pairs addObject:[NSString stringWithFormat:@"%@=%@", key, urlEncoding]];
 	}
     
 	return [pairs componentsJoinedByString:@"&"];
 }
 
-- (NSString *)urlByAppendingDict:(NSDictionary *)params
+- (NSString *)kc_urlByAppendingDict:(NSDictionary *)params
 {
     NSString* paramsToken = (params != nil && params.count > 0) ? @"?" :@"";
+    KCURIComponents *co = [KCURIComponents componentsWithString:self];
+    NSString* fragment = [co fragment];
     NSURL * parsedURL = [NSURL URLWithString:self];
-	NSString * queryPrefix = parsedURL.query ? @"&" : paramsToken;
-	NSString * query = [self queryStringFromDictionary:params];
-	return [NSString stringWithFormat:@"%@%@%@", self, queryPrefix, query];
+    NSString * queryPrefix = parsedURL.query ? @"&" : paramsToken;
+    if ([fragment containsString:@"?"]) {
+        queryPrefix = @"&";
+    }
+    NSString * query = [self kc_queryStringFromDictionary:params];
+    return [NSString stringWithFormat:@"%@%@%@", self, queryPrefix, query];
 }
 
-- (NSString *)queryStringFromArray:(NSArray *)array
+- (NSString *)kc_queryStringFromArray:(NSArray *)array
 {
 	NSMutableArray *pairs = [NSMutableArray array];
     
@@ -140,22 +146,22 @@
 			continue;
 		}
         
-		NSString * urlEncoding = [value URLEncoding];
+		NSString * urlEncoding = [value kc_URLEncoding];
 		[pairs addObject:[NSString stringWithFormat:@"%@=%@", key, urlEncoding]];
 	}
     
 	return [pairs componentsJoinedByString:@"&"];
 }
 
-- (NSString *)urlByAppendingArray:(NSArray *)params
+- (NSString *)kc_urlByAppendingArray:(NSArray *)params
 {
     NSURL * parsedURL = [NSURL URLWithString:self];
 	NSString * queryPrefix = parsedURL.query ? @"&" : @"?";
-	NSString * query = [self queryStringFromArray:params];
+	NSString * query = [self kc_queryStringFromArray:params];
 	return [NSString stringWithFormat:@"%@%@%@", self, queryPrefix, query];
 }
 
-- (NSString *)urlByAppendingKeyValues:(id)first, ...
+- (NSString *)kc_urlByAppendingKeyValues:(id)first, ...
 {
 	NSMutableDictionary * dict = [NSMutableDictionary dictionary];
     
@@ -175,10 +181,10 @@
 		[dict setObject:value forKey:key];
 	}
     
-	return [self urlByAppendingDict:dict];
+	return [self kc_urlByAppendingDict:dict];
 }
 
-- (NSString *)queryStringFromKeyValues:(id)first, ...
+- (NSString *)kc_queryStringFromKeyValues:(id)first, ...
 {
 	NSMutableDictionary * dict = [NSMutableDictionary dictionary];
     
@@ -198,30 +204,30 @@
 		[dict setObject:value forKey:key];
 	}
     
-	return [self queryStringFromDictionary:dict];
+	return [self kc_queryStringFromDictionary:dict];
 }
 
-- (BOOL)empty
+- (BOOL)kc_empty
 {
 	return [self length] > 0 ? NO : YES;
 }
 
-- (BOOL)notEmpty
+- (BOOL)kc_notEmpty
 {
 	return [self length] > 0 ? YES : NO;
 }
 
-- (BOOL)is:(NSString *)other
+- (BOOL)kc_is:(NSString *)other
 {
 	return [self isEqualToString:other];
 }
 
-- (BOOL)isValueOf:(NSArray *)array
+- (BOOL)kc_isValueOf:(NSArray *)array
 {
-	return [self isValueOf:array caseInsens:NO];
+	return [self kc_isValueOf:array caseInsens:NO];
 }
 
-- (BOOL)isValueOf:(NSArray *)array caseInsens:(BOOL)caseInsens
+- (BOOL)kc_isValueOf:(NSArray *)array caseInsens:(BOOL)caseInsens
 {
 	NSStringCompareOptions option = caseInsens ? NSCaseInsensitiveSearch : 0;
     
@@ -237,7 +243,7 @@
 	return NO;
 }
 
-- (NSString *)URLEncoding
+- (NSString *)kc_URLEncoding
 {
     NSString *outputStr = (NSString *) CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(kCFAllocatorDefault,
                                                                                                  (CFStringRef)self,
@@ -248,7 +254,7 @@
     return outputStr;
 }
 
-- (NSString *)URLDecoding
+- (NSString *)kc_URLDecoding
 {
 	NSMutableString * string = [NSMutableString stringWithString:self];
     [string replaceOccurrencesOfString:@"+"
@@ -258,12 +264,12 @@
     return [string stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
 }
 
-- (NSString *)hashString
+- (NSString *)kc_hashString
 {
     return [NSString stringWithFormat:@"%lu", (unsigned long)[self hash]];
 }
 
-- (NSString *)MD5
+- (NSString *)kc_MD5
 {
 	NSData * value;
     
@@ -272,10 +278,10 @@
     return [KCUtilMd5 MD5String:value];
 }
 
-- (NSString *)hashMD5String
+- (NSString *)kc_hashMD5String
 {
-    NSString* strMD5 = [self MD5];
-    return [strMD5 hashString];
+    NSString* strMD5 = [self kc_MD5];
+    return [strMD5 kc_hashString];
 }
 
 @end

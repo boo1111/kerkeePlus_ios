@@ -420,7 +420,7 @@
     NSString *path = self.percentEncodedPath;
     if (path.length == 0) return nil;
     
-    if (![path startsWithChar:'/'])
+    if (![path kc_startsWithChar:'/'])
     {
         path = [NSString stringWithFormat:@"/%@", path];
     }

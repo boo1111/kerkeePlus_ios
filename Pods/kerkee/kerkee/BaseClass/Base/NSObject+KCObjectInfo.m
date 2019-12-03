@@ -16,7 +16,7 @@
 
 #pragma mark - Superclasses
 
-+ (NSArray *) superclasses
++ (NSArray *) kc_superclasses
 {
     if ([self isEqual:[NSObject class]]) return @[self];
     
@@ -34,14 +34,14 @@
 }
 
 // Return an array of an object's superclasses
-- (NSArray *) superclasses
+- (NSArray *) kc_superclasses
 {
-    return [[self class] superclasses];
+    return [[self class] kc_superclasses];
 }
 
 
 // A work in progress
-+ (NSString *) typeForString: (const char *) aTypeName
++ (NSString *) kc_typeForString: (const char *) aTypeName
 {
     NSString *typeNameString = @(aTypeName);
     if ([typeNameString hasPrefix:@"@\""])
@@ -142,13 +142,13 @@
     return [NSString stringWithFormat:@"(%@)", typeNameString];
 }
 
-+ (NSString *) dump
++ (NSString *) kc_dump
 {
     NSMutableString *dump = [NSMutableString string];
     
-    [dump appendFormat:@"%@ ", [[self.superclasses valueForKey:@"description"] componentsJoinedByString:@" : "]];
+    [dump appendFormat:@"%@ ", [[self.kc_superclasses valueForKey:@"description"] componentsJoinedByString:@" : "]];
     
-    NSDictionary *protocols = [self protocols];
+    NSDictionary *protocols = [self kc_protocols];
     NSMutableSet *protocolSet = [NSMutableSet set];
     for (NSString *key in protocols.allKeys)
         [protocolSet addObjectsFromArray:protocols[key]];
@@ -161,13 +161,13 @@
     {
         const char *ivname = ivar_getName(ivars[i]);
         const char *typename = ivar_getTypeEncoding(ivars[i]);
-        [dump appendFormat:@"    %@ %s\n", [self typeForString:typename], ivname];
+        [dump appendFormat:@"    %@ %s\n", [self kc_typeForString:typename], ivname];
     }
 	free(ivars);
     [dump appendString:@"}\n\n"];
     
     BOOL hasProperty = NO;
-    NSArray *properties = [self getPropertyListForClass];
+    NSArray *properties = [self kc_getPropertyListForClass];
     for (NSString *property in properties)
     {
         hasProperty = YES;
@@ -191,7 +191,7 @@
         free(strong);
         
         char *typeName = property_copyAttributeValue(prop, "T");
-        [dump appendFormat:@"%@ ", [self typeForString:typeName]];
+        [dump appendFormat:@"%@ ", [self kc_typeForString:typeName]];
         free(typeName);
         
         char *setterName = property_copyAttributeValue(prop, "S");
@@ -210,7 +210,7 @@
     {
         char returnType[1024];
         method_getReturnType(clMethods[i], returnType, 1024);
-        NSString *rType = [self typeForString:returnType];
+        NSString *rType = [self kc_typeForString:returnType];
         [dump appendFormat:@"+ %@ ", rType];
         
         NSString *selectorString = NSStringFromSelector(method_getName(clMethods[i]));
@@ -223,7 +223,7 @@
                 NSString *arg = @"argument";
                 char argType[1024];
                 method_getArgumentType(clMethods[i], j + 2, argType, 1024);
-                NSString *typeStr = [self typeForString:argType];
+                NSString *typeStr = [self kc_typeForString:argType];
                 [dump appendFormat:@"%@:%@%@ ", components[j], typeStr, arg];
             }
             [dump appendString:@"\n"];
@@ -241,7 +241,7 @@
     {
         char returnType[1024];
         method_getReturnType(methods[i], returnType, 1024);
-        NSString *rType = [self typeForString:returnType];
+        NSString *rType = [self kc_typeForString:returnType];
         [dump appendFormat:@"- %@ ", rType];
         
         NSString *selectorString = NSStringFromSelector(method_getName(methods[i]));
@@ -254,7 +254,7 @@
                 NSString *arg = @"argument";
                 char argType[1024];
                 method_getArgumentType(methods[i], j + 2, argType, 1024);
-                NSString *typeStr = [self typeForString:argType];
+                NSString *typeStr = [self kc_typeForString:argType];
                 [dump appendFormat:@"%@:%@%@ ", components[j], typeStr, arg];
             }
             [dump appendString:@"\n"];
@@ -269,16 +269,16 @@
     return dump;
 }
 
-- (NSString *) dump
+- (NSString *) kc_dump
 {
-    return [[self class] dump];
+    return [[self class] kc_dump];
 }
 
 
 
 #pragma mark - Class Bits
 
-+ (NSArray *) getMetaSelectorListForClass
++ (NSArray *) kc_getMetaSelectorListForClass
 {
     NSMutableArray *selectors = [NSMutableArray array];
     unsigned int num;
@@ -292,7 +292,7 @@
 
 
 // Return an array of all an object's selectors
-+ (NSArray *) getSelectorListForClass
++ (NSArray *) kc_getSelectorListForClass
 {
 	NSMutableArray *selectors = [NSMutableArray array];
 	unsigned int num;
@@ -304,17 +304,17 @@
 }
 
 // Return a dictionary with class/selectors entries, all the way up to NSObject
-- (NSDictionary *) selectors
+- (NSDictionary *) kc_selectors
 {
 	NSMutableDictionary *dict = [NSMutableDictionary dictionary];
-	[dict setObject:[[self class] getSelectorListForClass] forKey:NSStringFromClass([self class])];
-	for (Class cl in [self superclasses])
-		[dict setObject:[cl getSelectorListForClass] forKey:NSStringFromClass(cl)];
+	[dict setObject:[[self class] kc_getSelectorListForClass] forKey:NSStringFromClass([self class])];
+	for (Class cl in [self kc_superclasses])
+		[dict setObject:[cl kc_getSelectorListForClass] forKey:NSStringFromClass(cl)];
 	return dict;
 }
 
 // Return an array of all an object's properties
-+ (NSArray *) getPropertyListForClass
++ (NSArray *) kc_getPropertyListForClass
 {
 	NSMutableArray *propertyNames = [NSMutableArray array];
 	unsigned int num;
@@ -326,18 +326,18 @@
 }
 
 // Return a dictionary with class/selectors entries, all the way up to NSObject
-- (NSDictionary *) properties
+- (NSDictionary *) kc_properties
 {
 	NSMutableDictionary *dict = [NSMutableDictionary dictionary];
-	[dict setObject:[[self class] getPropertyListForClass] forKey:NSStringFromClass([self class])];
-	for (Class cl in [self superclasses])
-		[dict setObject:[cl getPropertyListForClass] forKey:NSStringFromClass(cl)];
+	[dict setObject:[[self class] kc_getPropertyListForClass] forKey:NSStringFromClass([self class])];
+	for (Class cl in [self kc_superclasses])
+		[dict setObject:[cl kc_getPropertyListForClass] forKey:NSStringFromClass(cl)];
 	return dict;
 }
 
 
 // Return an array of all an object's properties
-+ (NSArray *) getIvarListForClass
++ (NSArray *) kc_getIvarListForClass
 {
 	NSMutableArray *ivarNames = [NSMutableArray array];
 	unsigned int num;
@@ -349,17 +349,17 @@
 }
 
 // Return a dictionary with class/selectors entries, all the way up to NSObject
-- (NSDictionary *) ivars
+- (NSDictionary *) kc_ivars
 {
 	NSMutableDictionary *dict = [NSMutableDictionary dictionary];
-	[dict setObject:[[self class] getIvarListForClass] forKey:NSStringFromClass([self class])];
-	for (Class cl in [self superclasses])
-		[dict setObject:[cl getIvarListForClass] forKey:NSStringFromClass(cl)];
+	[dict setObject:[[self class] kc_getIvarListForClass] forKey:NSStringFromClass([self class])];
+	for (Class cl in [self kc_superclasses])
+		[dict setObject:[cl kc_getIvarListForClass] forKey:NSStringFromClass(cl)];
 	return dict;
 }
 
 // Return an array of all an object's properties
-+ (NSArray *) getProtocolListForClass
++ (NSArray *) kc_getProtocolListForClass
 {
 	NSMutableArray *protocolNames = [NSMutableArray array];
 	unsigned int num;
@@ -371,44 +371,44 @@
 }
 
 // Return a dictionary with class/selectors entries, all the way up to NSObject
-- (NSDictionary *) protocols
+- (NSDictionary *) kc_protocols
 {
 	NSMutableDictionary *dict = [NSMutableDictionary dictionary];
-	[dict setObject:[[self class] getProtocolListForClass] forKey:NSStringFromClass([self class])];
-	for (Class cl in [self superclasses])
-		[dict setObject:[cl getProtocolListForClass] forKey:NSStringFromClass(cl)];
+	[dict setObject:[[self class] kc_getProtocolListForClass] forKey:NSStringFromClass([self class])];
+	for (Class cl in [self kc_superclasses])
+		[dict setObject:[cl kc_getProtocolListForClass] forKey:NSStringFromClass(cl)];
 	return dict;
 }
 
 
 // Runtime checks of properties, etc.
-- (BOOL) hasProperty: (NSString *) aPropertyName
+- (BOOL) kc_hasProperty: (NSString *) aPropertyName
 {
 	NSMutableSet *set = [NSMutableSet set];
-	NSDictionary *dict = self.properties;
+	NSDictionary *dict = self.kc_properties;
 	for (NSArray *properties in [dict allValues])
 		[set addObjectsFromArray:properties];
 	return [set containsObject:aPropertyName];
 }
 
 // Tests whether ivar exists
-- (BOOL) hasIvar: (NSString *) aIvarName
+- (BOOL) kc_hasIvar: (NSString *) aIvarName
 {
 	NSMutableSet *set = [NSMutableSet set];
-	NSDictionary *dict = self.ivars;
+	NSDictionary *dict = self.kc_ivars;
 	for (NSArray *ivars in [dict allValues])
 		[set addObjectsFromArray:ivars];
 	return [set containsObject:aIvarName];
 }
 
 // Tests class
-+ (BOOL) classExists: (NSString *) aClassName
++ (BOOL) kc_classExists: (NSString *) aClassName
 {
 	return (NSClassFromString(aClassName) != nil);
 }
 
 // Return instance from class
-+ (id) instanceOfClassNamed: (NSString *) aClassName
++ (id) kc_instanceOfClassNamed: (NSString *) aClassName
 {
     id obj = nil;
 	if (NSClassFromString(aClassName) != nil)
@@ -421,7 +421,7 @@
 		return nil;
 }
 
-+ (void)swizzleMethod:(SEL)aOrigSel withMethod:(SEL)aAltSel
++ (void)kc_swizzleMethod:(SEL)aOrigSel withMethod:(SEL)aAltSel
 {
     Method orig_method = class_getInstanceMethod(self, aOrigSel);
     Method alt_method = class_getInstanceMethod(self, aAltSel);
@@ -444,19 +444,19 @@
     method_exchangeImplementations(class_getInstanceMethod(self, aOrigSel), class_getInstanceMethod(self, aAltSel));
 }
 
-+ (BOOL)swizzle:(SEL)aOriginal with:(IMP)aReplacement store:(IMPPointer)aStore
++ (BOOL)kc_swizzle:(SEL)aOriginal with:(IMP)aReplacement store:(IMPPointer)aStore
 {
     return class_swizzleMethodAndStore(self, aOriginal, aReplacement, aStore);
 }
 
 
-+ (void)exchangeMethond:(SEL)aSel1 :(SEL)aSel2
++ (void)kc_exchangeMethond:(SEL)aSel1 :(SEL)aSel2
 {
     Method m1 = class_getInstanceMethod([self class], aSel1);
     Method m2 = class_getInstanceMethod([self class], aSel2);
     method_exchangeImplementations(m1, m2);
 }
-+(IMP)replaceMethod :(SEL)aOldMethond :(IMP)aNewIMP
++(IMP)kc_replaceMethod :(SEL)aOldMethond :(IMP)aNewIMP
 {
     IMP orginIMP = [[self class] instanceMethodForSelector:aOldMethond];
     class_replaceMethod([self class],aOldMethond,aNewIMP,NULL);
