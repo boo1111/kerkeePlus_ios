@@ -184,7 +184,7 @@
             KCManifestObject* manifestObject = [parser parserData:data];
             if (manifestObject)
             {
-                manifestObject.mDestDir = [strPath substring:0 end:[strPath lastIndexOf:kFileSeparator]+1];
+                manifestObject.mDestDir = [strPath kc_substring:0 end:[strPath kc_lastIndexOf:kFileSeparator]+1];
                 
                 manifestObject.mBaseUri = aUri;
                 manifestObject.mRelativePath = aRelativePath;

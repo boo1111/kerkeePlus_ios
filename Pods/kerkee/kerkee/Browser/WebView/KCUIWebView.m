@@ -127,7 +127,7 @@
 {
 //    [self.scrollView removeObserver:self forKeyPath:@"contentOffset"];
     
-    [self cleanForDealloc];
+    [self kc_cleanForDealloc];
     self.scrollViewDelegate = nil;
     
     KCDealloc(super);
@@ -402,7 +402,7 @@
         [super scrollViewDidScroll:scrollView];
     if (self.scrollViewDelegate)
     {
-        [self.scrollViewDelegate performSelectorSafetyWithArgs:@selector(scrollViewDidScroll:), scrollView, nil];
+        [self.scrollViewDelegate kc_performSelectorSafetyWithArgs:@selector(scrollViewDidScroll:), scrollView, nil];
     }
 }
 

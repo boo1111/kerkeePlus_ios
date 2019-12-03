@@ -25,42 +25,42 @@ BOOL class_swizzleMethodAndStore(Class aClass, SEL aOriginal, IMP aReplacement, 
 @interface NSObject (KCObjectInfo)
 
 // A work in progress
-+ (NSString *) typeForString: (const char *) aTypeName;
++ (NSString *) kc_typeForString: (const char *) aTypeName;
 
 // Return all superclasses of class or object
-+ (NSArray *) superclasses;
-- (NSArray *) superclasses;
++ (NSArray *) kc_superclasses;
+- (NSArray *) kc_superclasses;
 
 // Examine
-+ (NSString *) dump;
-- (NSString *) dump;
++ (NSString *) kc_dump;
+- (NSString *) kc_dump;
 
 // Access to object essentials for run-time checks. Stored by class in dictionary.
 // Return an array of all an object's selectors
-+ (NSArray *) getMetaSelectorListForClass;
-+ (NSArray *) getSelectorListForClass;
-+ (NSArray *) getPropertyListForClass;
-+ (NSArray *) getIvarListForClass;
-+ (NSArray *) getProtocolListForClass;
++ (NSArray *) kc_getMetaSelectorListForClass;
++ (NSArray *) kc_getSelectorListForClass;
++ (NSArray *) kc_getPropertyListForClass;
++ (NSArray *) kc_getIvarListForClass;
++ (NSArray *) kc_getProtocolListForClass;
 
 
 
 // Return a dictionary with class/selectors entries, all the way up to NSObject
-@property (readonly) NSDictionary *selectors;
-@property (readonly) NSDictionary *properties;  //you can see KCProperty class
-@property (readonly) NSDictionary *ivars;
-@property (readonly) NSDictionary *protocols;
+@property (readonly) NSDictionary *kc_selectors;
+@property (readonly) NSDictionary *kc_properties;  //you can see KCProperty class
+@property (readonly) NSDictionary *kc_ivars;
+@property (readonly) NSDictionary *kc_protocols;
 
 // Check for properties, ivar. Use respondsToSelector: and conformsToProtocol: as well
-- (BOOL) hasProperty: (NSString *) aPropertyName;
-- (BOOL) hasIvar: (NSString *) aIvarName;
-+ (BOOL) classExists: (NSString *) aClassName;
-+ (id) instanceOfClassNamed: (NSString *) aClassName;
+- (BOOL) kc_hasProperty: (NSString *) aPropertyName;
+- (BOOL) kc_hasIvar: (NSString *) aIvarName;
++ (BOOL) kc_classExists: (NSString *) aClassName;
++ (id) kc_instanceOfClassNamed: (NSString *) aClassName;
 
-+ (void)swizzleMethod:(SEL)aOrigSel withMethod:(SEL)aAltSel;
-+ (BOOL)swizzle:(SEL)aOriginal with:(IMP)aReplacement store:(IMPPointer)aStore;
-+ (void)exchangeMethond:(SEL)aSel1 :(SEL)aSel2;
-+(IMP)replaceMethod :(SEL)aOldMethond :(IMP)aNewIMP;
++ (void)kc_swizzleMethod:(SEL)aOrigSel withMethod:(SEL)aAltSel;
++ (BOOL)kc_swizzle:(SEL)aOriginal with:(IMP)aReplacement store:(IMPPointer)aStore;
++ (void)kc_exchangeMethond:(SEL)aSel1 :(SEL)aSel2;
++(IMP)kc_replaceMethod :(SEL)aOldMethond :(IMP)aNewIMP;
 
 @end
 

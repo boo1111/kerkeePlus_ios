@@ -69,7 +69,7 @@
     {
         NSURL *urlObj = [[NSURL alloc] initWithString:url];
         //KCLog(@"SHFramework-url-----:%@", urlObj.absoluteString);
-        mRequest = [[NSMutableURLRequest alloc] initWithURL:urlObj cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:30];
+        mRequest = [[NSMutableURLRequest alloc] initWithURL:urlObj cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:20];
         if ([method caseInsensitiveCompare:@"GET"] == NSOrderedSame)
         {
             mRequest.HTTPMethod = @"GET";
@@ -108,9 +108,13 @@
  * @param userAgent - User-Agent of the browser(currently WebView)
  * @param referer   - referer of the current request
  */
-- (void)open:(NSString *)method url:(NSString *)url userAgent:(NSString *)userAgent referer:(NSString *)referer cookie:(NSString *)cookie
+- (void)open:(NSString *)method url:(NSString *)url userAgent:(NSString *)userAgent referer:(NSString *)referer cookie:(NSString *)cookie timeout:(NSString *)timeout
 {
     [self createHttpRequestWithMethod:method url:url];
+    if (timeout && [self isPureInt:timeout])
+    {
+        [mRequest setTimeoutInterval:[timeout integerValue]];
+    }
     if (mRequest)
     {
         [mRequest setValue:userAgent forHTTPHeaderField:@"User-Agent"];
@@ -125,6 +129,15 @@
         }
     }
 }
+
+- (BOOL)isPureInt:(NSString*)string
+{
+    NSScanner* scan = [NSScanner scannerWithString:string];
+    int val;
+    return[scan scanInt:&val] && [scan isAtEnd];
+}
+
+
 
 
 /**
@@ -283,6 +296,14 @@ didReceiveResponse:(NSURLResponse *)aResponse
         KCLog(@">>>>> %@, URL:%@", aError.localizedDescription, mRequest.URL);
         
         [self notifyFetchFailed:aError];
+    }
+}
+
+- (void)URLSession:(NSURLSession *)session didReceiveChallenge:(NSURLAuthenticationChallenge *)challenge completionHandler:(void (^)(NSURLSessionAuthChallengeDisposition, NSURLCredential *))completionHandler
+{
+    if ([challenge.protectionSpace.authenticationMethod isEqualToString:NSURLAuthenticationMethodServerTrust]) {
+        NSURLCredential *card = [[NSURLCredential alloc]initWithTrust:challenge.protectionSpace.serverTrust];
+        completionHandler(NSURLSessionAuthChallengeUseCredential , card);
     }
 }
 

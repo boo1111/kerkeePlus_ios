@@ -12,11 +12,11 @@
 
 @interface NSObject (KCTicker)
 
--(void)setTickerInterval:(NSTimeInterval)aInterval;
--(NSTimeInterval)getTickerInterval;
+-(void)kc_setTickerInterval:(NSTimeInterval)aInterval;
+-(NSTimeInterval)kc_getTickerInterval;
 
-- (void)observeTick;
-- (void)unobserveTick;
-- (void)handleTick:(NSTimeInterval)elapsed;
+- (void)kc_observeTick;
+- (void)kc_unobserveTick;
+- (void)kc_handleTick:(NSTimeInterval)elapsed;
 
 @end

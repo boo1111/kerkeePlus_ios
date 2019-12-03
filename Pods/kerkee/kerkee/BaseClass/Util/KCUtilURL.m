@@ -94,7 +94,7 @@
     {
         NSMutableDictionary* dicParams = [[self getQuery:aUrl] mutableCopy];
         [dicParams removeObjectForKey:aKey];
-        NSString* newUrlStr = [base urlByAppendingDict:dicParams];
+        NSString* newUrlStr = [base kc_urlByAppendingDict:dicParams];
         return [NSURL URLWithString:newUrlStr];
     }
     return aUrl;

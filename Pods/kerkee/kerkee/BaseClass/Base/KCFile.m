@@ -243,8 +243,8 @@ static void initializeSetting()
 - (NSString*)getName
 {
     if (!m_path) return nil;
-    int separatorIndex =[m_path lastIndexOfChar:kSeparatorChar];
-    return (separatorIndex < 0) ? m_path : [m_path substring:separatorIndex+1];
+    int separatorIndex =[m_path kc_lastIndexOfChar:kSeparatorChar];
+    return (separatorIndex < 0) ? m_path : [m_path kc_substring:separatorIndex+1];
 //    lastPathComponent:  /tmp/”   --->     “tmp”
 //    return [m_path lastPathComponent];
 }
@@ -258,7 +258,7 @@ static void initializeSetting()
     {
         firstInPath = 2;
     }
-    int index = [m_path lastIndexOfChar:kSeparatorChar];
+    int index = [m_path kc_lastIndexOfChar:kSeparatorChar];
     if (index == -1 && firstInPath > 0) {
         index = 2;
     }
@@ -267,12 +267,12 @@ static void initializeSetting()
         return nil;
     }
     
-    if ([m_path indexOfChar:kSeparatorChar] == index && [m_path characterAtIndex:firstInPath] == kSeparatorChar)
+    if ([m_path kc_indexOfChar:kSeparatorChar] == index && [m_path characterAtIndex:firstInPath] == kSeparatorChar)
     {
-        return [m_path substring:0 end:index+1];
+        return [m_path kc_substring:0 end:index+1];
     }
     
-    return [m_path substring:0 end:index];
+    return [m_path kc_substring:0 end:index];
 }
 
 - (KCFile*)getParentFile
@@ -353,11 +353,11 @@ static void initializeSetting()
 - (KCURI*)toURI
 {
     NSString* name = [self getAbsoluteName];
-    if (![name startsWithChar:'/'])
+    if (![name kc_startsWithChar:'/'])
     {
         return [[KCURI alloc] initWithString:[NSString stringWithFormat:@"file:///%@", name]];
     }
-    else if ([name startsWith:@"//"])
+    else if ([name kc_startsWith:@"//"])
     {
         return [[KCURI alloc] initWithString:[NSString stringWithFormat:@"file:%@", name]];
     }
@@ -367,11 +367,11 @@ static void initializeSetting()
 - (NSURL*)toURL
 {
     NSString* name = [self getAbsoluteName];
-    if (![name startsWithChar:'/'])
+    if (![name kc_startsWithChar:'/'])
     {
         return [NSURL URLWithString:[NSString stringWithFormat:@"file:///%@", name]];
     }
-    else if ([name startsWith:@"//"])
+    else if ([name kc_startsWith:@"//"])
     {
         return [NSURL URLWithString:[NSString stringWithFormat:@"file:%@", name]];
     }

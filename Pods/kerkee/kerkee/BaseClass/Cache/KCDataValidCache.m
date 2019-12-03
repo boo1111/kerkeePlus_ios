@@ -147,7 +147,7 @@ static KCDataValidCache* instance = nil;
 
 - (NSString*)cacheFileNameWithKey:(NSString*)key
 {
-    NSString* keyTemp = [key MD5];
+    NSString* keyTemp = [key kc_MD5];
     NSString* keyHash = [NSString stringWithFormat:@"%lu", (unsigned long)[keyTemp hash]];
     NSString* path = nil;
     path = [[self cacheDirectory] stringByAppendingPathComponent:keyHash];

@@ -111,7 +111,7 @@ static int createWebViewID = 1;
     m_isPageScrollOn = false;
     
     Class wkWebView = NSClassFromString(@"WKWebView");
-    if (wkWebView && m_isUsingUIWebView == NO && SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"9.0"))
+    if (wkWebView && m_isUsingUIWebView == NO && SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"8.0"))
     {
         [self initWKWebView:config];
         m_isUsingUIWebView = NO;

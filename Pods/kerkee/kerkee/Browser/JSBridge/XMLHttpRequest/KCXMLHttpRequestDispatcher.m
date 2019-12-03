@@ -93,7 +93,7 @@
     NSString *host = [aArgs getString:@"host"];
     NSString *port = [self objectInArgList:aArgs forKey:@"port" defaultValue:@""];
     NSString *href = [aArgs getString:@"href"];
-    
+    NSString *timeout = [aArgs getString:@"timeout"];
     KCURI* uriUrl = [KCURI parse:url];
     BOOL isRelative = [uriUrl isRelative];
     if (isRelative)
@@ -102,7 +102,7 @@
         NSUInteger nSegmentCount = list.count;
         if (nSegmentCount > 0)
         {
-            NSString* tmpPath = [url startsWithChar:'/'] ? url : [NSString stringWithFormat:@"/%@", url];
+            NSString* tmpPath = [url kc_startsWithChar:'/'] ? url : [NSString stringWithFormat:@"/%@", url];
             NSString* tmpPort = port.length > 0 ? [NSString stringWithFormat:@":%@", port] : @"";
             url = [NSString stringWithFormat:@"%@//%@%@%@",scheme, host, tmpPort, tmpPath];
             KCLog(@"%@", url);
@@ -114,7 +114,7 @@
     }
     
     
-    [xhr open:method url:url userAgent:userAgent referer:referer cookie:cookie];
+    [xhr open:method url:url userAgent:userAgent referer:referer cookie:cookie timeout:timeout];
 //    BACKGROUND_COMMIT
 }
 

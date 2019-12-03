@@ -13,20 +13,20 @@
 @implementation NSObject (Selector)
 
 
-- (id)performSelectorWithArgs:(SEL)aSelector withObject:(id)first, ...
+- (id)kc_performSelectorWithArgs:(SEL)aSelector withObject:(id)first, ...
 {
     id returnObj;
     
     va_list args;
     va_start(args, first);
-    returnObj = [self performSelectorWithArgs:aSelector withObjectFormat:first arguments:args];
+    returnObj = [self kc_performSelectorWithArgs:aSelector withObjectFormat:first arguments:args];
     va_end(args);
     
     return returnObj;
 }
 
 
-- (id)performSelectorWithArgs:(SEL)aSelector withObjectFormat:(id)format arguments:(va_list)argList
+- (id)kc_performSelectorWithArgs:(SEL)aSelector withObjectFormat:(id)format arguments:(va_list)argList
 {
     NSMethodSignature *sig = [self methodSignatureForSelector:aSelector];
     if (sig)
@@ -72,7 +72,7 @@
 
 #pragma mark - Selectors
 // Return an invocation based on a selector and variadic arguments
-- (NSInvocation *) invocationWithSelector: (SEL) aSelector andArguments:(va_list) arguments
+- (NSInvocation *) kc_invocationWithSelector: (SEL) aSelector andArguments:(va_list) arguments
 {
 	if (![self respondsToSelector:aSelector]) return NULL;
 	
@@ -202,19 +202,19 @@
 
 
 // Return an invocation with the given arguments
-- (NSInvocation *) invocationWithSelectorAndArguments: (SEL) aSelector, ...
+- (NSInvocation *) kc_invocationWithSelectorAndArguments: (SEL) aSelector, ...
 {
 	va_list arglist;
 	va_start(arglist, aSelector);
-	NSInvocation *inv = [self invocationWithSelector:aSelector andArguments:arglist];
+	NSInvocation *inv = [self kc_invocationWithSelector:aSelector andArguments:arglist];
 	va_end(arglist);
 	return inv;
 }
 
 // Peform the selector using va_list arguments
-- (BOOL) performSelector: (SEL) aSelector withReturnValue: (void *) result andArguments: (va_list) arglist
+- (BOOL) kc_performSelector: (SEL) aSelector withReturnValue: (void *) result andArguments: (va_list) arglist
 {
-	NSInvocation *inv = [self invocationWithSelector:aSelector andArguments:arglist];
+	NSInvocation *inv = [self kc_invocationWithSelector:aSelector andArguments:arglist];
 	if (!inv) return NO;
     [inv retainArguments];
 	[inv invoke];
@@ -226,11 +226,11 @@
 }
 
 // Perform a selector with an arbitrary number of arguments
-- (BOOL) performSelector: (SEL) aSelector withReturnValueAndArguments: (void *) result, ...
+- (BOOL) kc_performSelector: (SEL) aSelector withReturnValueAndArguments: (void *) result, ...
 {
 	va_list arglist;
 	va_start(arglist, result);
-	NSInvocation *inv = [self invocationWithSelector:aSelector andArguments:arglist];
+	NSInvocation *inv = [self kc_invocationWithSelector:aSelector andArguments:arglist];
 	if (!inv) return NO;
     [inv retainArguments];
 	[inv invoke];
@@ -244,7 +244,7 @@
 
 // Return a C-string with a selector's return type
 // may extend this idea to return a class
-- (const char *) returnTypeForSelector:(SEL)aSelector
+- (const char *) kc_returnTypeForSelector:(SEL)aSelector
 {
 	NSMethodSignature *ms = [self methodSignatureForSelector:aSelector];
 	return [ms methodReturnType];
@@ -252,46 +252,46 @@
 
 
 // Returning objects by performing selectors
-- (id) performSelectorWithArgs:(SEL)aSelector, ...
+- (id) kc_performSelectorWithArgs:(SEL)aSelector, ...
 {
 	id result;
 	va_list arglist;
 	va_start(arglist, aSelector);
-	[self performSelector:aSelector withReturnValue:&result andArguments:arglist];
+	[self kc_performSelector:aSelector withReturnValue:&result andArguments:arglist];
 	va_end(arglist);
 	return result;
 }
 
 
 // Returning objects by performing selectors
-- (id) performSelectorWithArgs:(SEL)aSelector arguments:(va_list)aArgList
+- (id) kc_performSelectorWithArgs:(SEL)aSelector arguments:(va_list)aArgList
 {
     id result;
-	[self performSelector:aSelector withReturnValue:&result andArguments:aArgList];
+	[self kc_performSelector:aSelector withReturnValue:&result andArguments:aArgList];
 	return result;
 }
 
 // Returning objects by performing selectors
-- (id) performSelectorSafetyWithArgs: (SEL)aSelector, ...
+- (id) kc_performSelectorSafetyWithArgs: (SEL)aSelector, ...
 {
     id result;
     if ([self respondsToSelector:aSelector])
     {
         va_list args;
         va_start(args, aSelector);
-        result = [self performSelectorWithArgs:aSelector arguments:args];
+        result = [self kc_performSelectorWithArgs:aSelector arguments:args];
         va_end(args);
     }
     return result;
 }
 
 // Returning objects by performing selectors
-- (id) performSelectorSafetyWithArgs:(SEL)aSelector arguments:(va_list)aArgList
+- (id) kc_performSelectorSafetyWithArgs:(SEL)aSelector arguments:(va_list)aArgList
 {
     id result;
     if ([self respondsToSelector:aSelector])
     {
-        result = [self performSelectorWithArgs:aSelector arguments:aArgList];
+        result = [self kc_performSelectorWithArgs:aSelector arguments:aArgList];
     }
     return result;
 

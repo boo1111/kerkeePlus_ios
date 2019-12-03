@@ -32,27 +32,27 @@
 #pragma mark -
 @implementation NSString (KCStringAdditions)
 
-- (BOOL)startsWithChar:(char)aChar
+- (BOOL)kc_startsWithChar:(char)aChar
 {
     char c = [self characterAtIndex:0];
     return c == aChar;
 }
-- (BOOL)startsWith:(NSString *)aPrefix
+- (BOOL)kc_startsWith:(NSString *)aPrefix
 {
     return [self hasPrefix:aPrefix];
 }
 
-- (BOOL)endsWith:(NSString *)aSuffix
+- (BOOL)kc_endsWith:(NSString *)aSuffix
 {
     return [self hasSuffix:aSuffix];
 }
 
-- (BOOL)isEmpty
+- (BOOL)kc_isEmpty
 {
     return self.length == 0;
 }
 
-- (NSString *)trim:(NSString *)aString
+- (NSString *)kc_trim:(NSString *)aString
 {
     if(aString == nil)
     {
@@ -64,7 +64,7 @@
 
 }
 
-- (int)indexOf:(NSString*)aSearch
+- (int)kc_indexOf:(NSString*)aSearch
 {
     NSRange range = [self rangeOfString:aSearch];
     
@@ -76,7 +76,7 @@
     return -1;
 }
 
-- (int)indexOf:(NSString*)aSearch startIndex:(NSUInteger)aStartIndex
+- (int)kc_indexOf:(NSString*)aSearch startIndex:(NSUInteger)aStartIndex
 {
     NSUInteger endIndex = [self length];
     NSRange searchRange = NSMakeRange(aStartIndex, endIndex-aStartIndex);
@@ -88,7 +88,7 @@
     return -1;
 }
 
-- (int)indexOfChar:(char)aChar
+- (int)kc_indexOfChar:(char)aChar
 {
     int lenth = (int)self.length;
     for (int i = 0; i < lenth; ++i)
@@ -100,7 +100,7 @@
     return -1;
 }
 
-- (int)lastIndexOfChar:(char)aChar
+- (int)kc_lastIndexOfChar:(char)aChar
 {
     
     int lenth = (int)self.length;
@@ -113,7 +113,7 @@
     return -1;
 }
 
-- (int)lastIndexOf:(NSString*)aSearch
+- (int)kc_lastIndexOf:(NSString*)aSearch
 {
     NSRange range = [self rangeOfString:aSearch options:NSBackwardsSearch];
     
@@ -124,7 +124,7 @@
     
     return -1;
 }
-- (NSString*)replaceChar:(char)aOldChar withChar:(char)aNewChar
+- (NSString*)kc_replaceChar:(char)aOldChar withChar:(char)aNewChar
 {
     const char* src = [self cStringUsingEncoding:NSUTF8StringEncoding];
     int length = (int)strlen(src);
@@ -154,7 +154,7 @@
     
     return newReplaceString;
 }
-- (NSString *)replaceAll:(NSString*)aTarget with:(NSString*)aWith
+- (NSString *)kc_replaceAll:(NSString*)aTarget with:(NSString*)aWith
 {
     NSMutableString *buffer = [NSMutableString stringWithString:self];
     NSRange searchRange = NSMakeRange(0, [buffer length]);
@@ -162,17 +162,17 @@
     return [NSString stringWithString:buffer];
 }
 
--(NSString *)substring:(NSUInteger)aStart
+-(NSString *)kc_substring:(NSUInteger)aStart
 {
     return [self substringFromIndex:aStart];
 }
--(NSString *)substring:(NSUInteger)aStart end:(NSUInteger)aEnd
+-(NSString *)kc_substring:(NSUInteger)aStart end:(NSUInteger)aEnd
 {
     NSRange range = NSMakeRange(aStart, aEnd-aStart);
     return [self substringWithRange:range];
 }
 
-- (BOOL)equals:(NSString*)aString
+- (BOOL)kc_equals:(NSString*)aString
 {
     return [self isEqualToString:aString];
 }

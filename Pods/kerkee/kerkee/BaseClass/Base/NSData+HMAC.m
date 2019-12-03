@@ -23,7 +23,7 @@
 
 @implementation NSData (HMAC)
 
-- (NSData *)md5HashWithKey:(NSData *)key
+- (NSData *)kc_md5HashWithKey:(NSData *)key
 {
     unsigned char digest[CC_MD5_DIGEST_LENGTH];
     
@@ -32,7 +32,7 @@
     return [NSData dataWithBytes:&digest length:CC_MD5_DIGEST_LENGTH];
 }
 
-- (NSData *)sha1HashWithKey:(NSData *)key
+- (NSData *)kc_sha1HashWithKey:(NSData *)key
 {
     unsigned char digest[CC_SHA1_DIGEST_LENGTH];
     
@@ -41,7 +41,7 @@
     return [NSData dataWithBytes:&digest length:CC_SHA1_DIGEST_LENGTH];
 }
 
-- (NSData *)sha256HashWithKey:(NSData *)key
+- (NSData *)kc_sha256HashWithKey:(NSData *)key
 {
     unsigned char digest[CC_SHA256_DIGEST_LENGTH];
     
@@ -50,7 +50,7 @@
     return [NSData dataWithBytes:&digest length:CC_SHA256_DIGEST_LENGTH];
 }
 
-- (NSData *)sha512HashWithKey:(NSData *)key
+- (NSData *)kc_sha512HashWithKey:(NSData *)key
 {
     unsigned char digest[CC_SHA512_DIGEST_LENGTH];
     

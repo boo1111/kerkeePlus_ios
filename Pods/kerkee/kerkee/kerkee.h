@@ -22,7 +22,6 @@ FOUNDATION_EXPORT const unsigned char kerkeeVersionString[];
 
 #pragma mark - base class
 #import <kerkee/KCBaseDefine.h>
-#import <kerkee/KCFileArchiver.h>
 #import <kerkee/KCObject.h>
 #import <kerkee/KCRuntime.h>
 #import <kerkee/KCSandbox.h>
@@ -30,10 +29,7 @@ FOUNDATION_EXPORT const unsigned char kerkeeVersionString[];
 #import <kerkee/KCTaskQueue.h>
 #import <kerkee/NSData+HMAC.h>
 #import <kerkee/NSDate+KCDate.h>
-#import <kerkee/NSObject+KCCoding.h>
-#import <kerkee/NSObject+KCNotification.h>
 #import <kerkee/NSObject+KCObjectInfo.h>
-#import <kerkee/NSObject+KCObserver.h>
 #import <kerkee/NSObject+KCProperty.h>
 #import <kerkee/NSObject+KCSelector.h>
 #import <kerkee/NSObject+KCTicker.h>
@@ -50,20 +46,15 @@ FOUNDATION_EXPORT const unsigned char kerkeeVersionString[];
 
 #pragma mark - coder
 //#import <kerkee/NSData+AES256.h>
-#import <kerkee/NSData+Base64.h>
 
 #pragma mark - debug
 #import <kerkee/KCLog.h>
 
 #pragma mark - util
-#import <kerkee/KCArchiver.h>
 #import <kerkee/KCMainBundle.h>
-#import <kerkee/KCUtilCoding.h>
 #import <kerkee/KCUtilDevice.h>
 #import <kerkee/KCUtilFile.h>
-#import <kerkee/KCUtilGzip.h>
 #import <kerkee/KCUtilMd5.h>
-#import <kerkee/KCUtilNet.h>
 #import <kerkee/KCUtilURL.h>
 
 
@@ -97,6 +88,5 @@ FOUNDATION_EXPORT const unsigned char kerkeeVersionString[];
 #import <kerkee/KCApiBridge.h>
 #import <kerkee/KCFileManager.h>
 #import <kerkee/KCJSCompileExecutor.h>
-#import <kerkee/SSKeychain.h>
 
 

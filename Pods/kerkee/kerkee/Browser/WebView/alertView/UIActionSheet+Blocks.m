@@ -60,13 +60,13 @@ static NSString *KC_DISMISSAL_ACTION_KEY = @"com.kercer.DISMISSAL_ACTION";
 	return buttonIndex;
 }
 
-- (void)setDismissalAction:(void(^)())dismissalAction
+- (void)setDismissalAction:(void(^)(void))dismissalAction
 {
     objc_setAssociatedObject(self, (__bridge const void *)KC_DISMISSAL_ACTION_KEY, nil, OBJC_ASSOCIATION_COPY);
     objc_setAssociatedObject(self, (__bridge const void *)KC_DISMISSAL_ACTION_KEY, dismissalAction, OBJC_ASSOCIATION_COPY);
 }
 
-- (void(^)())dismissalAction
+- (void(^)(void))dismissalAction
 {
     return objc_getAssociatedObject(self, (__bridge const void *)KC_DISMISSAL_ACTION_KEY);
 }

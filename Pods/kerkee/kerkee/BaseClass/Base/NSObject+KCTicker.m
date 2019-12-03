@@ -42,48 +42,48 @@ AS_SINGLETON( KCTicker )
 #define Key_Interval @"com.kercer.KCTicker.Interval"
 #define Key_LastTick @"com.kercer.KCTicker.LastTick"
 
--(void)setTickerInterval:(NSTimeInterval)aInterval
+-(void)kc_setTickerInterval:(NSTimeInterval)aInterval
 {
     objc_setAssociatedObject(self, (__bridge const void *)Key_Interval, [NSNumber numberWithDouble:aInterval], OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
--(NSTimeInterval)getTickerInterval
+-(NSTimeInterval)kc_getTickerInterval
 {
     NSNumber *interval = objc_getAssociatedObject(self, (__bridge const void *)Key_Interval);
     return [interval doubleValue];
 }
 
 
--(void)setLastTick:(NSTimeInterval)aInterval
+-(void)kc_setLastTick:(NSTimeInterval)aInterval
 {
     objc_setAssociatedObject(self, (__bridge const void *)Key_LastTick, [NSNumber numberWithDouble:aInterval], OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
--(NSTimeInterval)getLastTick
+-(NSTimeInterval)kc_getLastTick
 {
     NSNumber *interval = objc_getAssociatedObject(self, (__bridge const void *)Key_LastTick);
     return [interval doubleValue];
 }
 
-- (void)observeTick
+- (void)kc_observeTick
 {
     NSTimeInterval lastTick = [NSDate timeIntervalSinceReferenceDate];
-    [self setLastTick:lastTick];
+    [self kc_setLastTick:lastTick];
     
 	[[KCTicker sharedInstance] addReceive:self];
 }
 
-- (void)unobserveTick
+- (void)kc_unobserveTick
 {
 	[[KCTicker sharedInstance] removeReceive:self];
 }
 
-- (void)handleTick:(NSTimeInterval)elapsed
+- (void)kc_handleTick:(NSTimeInterval)elapsed
 {
 }
 
 
-- (void)handleTickWithNumber:(NSNumber*)elapsed
+- (void)kc_handleTickWithNumber:(NSNumber*)elapsed
 {
-    [self handleTick:[elapsed doubleValue]];
+    [self kc_handleTick:[elapsed doubleValue]];
 }
 
 @end
@@ -141,16 +141,16 @@ DEF_SINGLETON( KCTicker )
     
 	for ( NSObject * obj in m_receives )
 	{
-		if ( [obj respondsToSelector:@selector(handleTick:)] )
+		if ( [obj respondsToSelector:@selector(kc_handleTick:)] )
 		{
-            NSTimeInterval lastTick = [obj getLastTick];
+            NSTimeInterval lastTick = [obj kc_getLastTick];
             NSTimeInterval curInterval = tick -lastTick;
-            NSTimeInterval interval = [obj getTickerInterval];
+            NSTimeInterval interval = [obj kc_getTickerInterval];
             
             if(curInterval >= interval)
             {
-                [obj performSelectorOnMainThread:@selector(handleTickWithNumber:) withObject:[NSNumber numberWithDouble:curInterval] waitUntilDone:NO];
-                [obj setLastTick:tick];
+                [obj performSelectorOnMainThread:@selector(kc_handleTickWithNumber:) withObject:[NSNumber numberWithDouble:curInterval] waitUntilDone:NO];
+                [obj kc_setLastTick:tick];
             }
 			
 		}
