@@ -287,33 +287,42 @@ didReceiveResponse:(NSURLResponse *)response
 
 - (void)URLSession:(NSURLSession *)session dataTask:(NSURLSessionDataTask *)dataTask didReceiveData:(NSData *)data
 {
-    [m_receivedDataBuffer appendData:data];
-    m_receivedDataLength += [data length];
-    
-//    KCLog(@"%@ | %.2f%% - Received: %ld - Total: %ld",
-//          m_filePath.getPath,
-//          (float) m_receivedDataLength / m_expectedDataLength * 100,
-//          (long) m_receivedDataLength, (long) m_expectedDataLength);
-    
-    if (m_receivedDataBuffer.length > kBufferSize && [self isExecuting])
-    {
-        [m_fileHandle writeData:m_receivedDataBuffer];
-        [self clearReceivedDataBuffer];
-    }
-    
-    dispatch_async(dispatch_get_main_queue(), ^{
-        if (self.progressBlock)
-        {
-            self.progressBlock(m_receivedDataLength, m_expectedDataLength, self.remainingTime, self.progress);
-        }
-        if ([self.delegate respondsToSelector:@selector(onDownload:didReceiveData:totalLength:progress:)])
-        {
-            [self.delegate onDownload:self
-                       didReceiveData:m_receivedDataLength
-                          totalLength:m_expectedDataLength
-                             progress:self.progress];
-        }
-    });
+  
+         [m_receivedDataBuffer appendData:data];
+          m_receivedDataLength += [data length];
+            
+        //    KCLog(@"%@ | %.2f%% - Received: %ld - Total: %ld",
+        //          m_filePath.getPath,
+        //          (float) m_receivedDataLength / m_expectedDataLength * 100,
+        //          (long) m_receivedDataLength, (long) m_expectedDataLength);
+            
+            if (m_receivedDataBuffer.length > kBufferSize && [self isExecuting])
+            {
+                @try
+                {
+                      [m_fileHandle writeData:m_receivedDataBuffer];
+                      [self clearReceivedDataBuffer];
+                }
+                @catch (NSException *exception)
+                {
+                        
+                }
+            }
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                if (self.progressBlock)
+                {
+                    self.progressBlock(m_receivedDataLength, m_expectedDataLength, self.remainingTime, self.progress);
+                }
+                if ([self.delegate respondsToSelector:@selector(onDownload:didReceiveData:totalLength:progress:)])
+                {
+                    [self.delegate onDownload:self
+                               didReceiveData:m_receivedDataLength
+                                  totalLength:m_expectedDataLength
+                                     progress:self.progress];
+                }
+            });
+   
 }
 
 #pragma mark -- NSURLSessionTaskDelegate
@@ -323,7 +332,14 @@ didReceiveResponse:(NSURLResponse *)response
     {
         if ([self isExecuting])
         {
-            [m_fileHandle writeData:m_receivedDataBuffer];
+            @try
+            {
+                [m_fileHandle writeData:m_receivedDataBuffer];
+            }
+            @catch (NSException *exception)
+            {
+                
+            }
             [self clearReceivedDataBuffer];
             
             [self notifyFromCompletionWithError:nil filePath:m_filePath];
