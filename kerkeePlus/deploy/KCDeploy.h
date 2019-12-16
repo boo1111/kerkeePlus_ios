@@ -14,7 +14,8 @@
 - (id)initWithDeployFlow:(id<KCDeployFlow>)aDeployFlow;
 - (NSString*)getRootPath;
 - (NSString*)getResRootPath;
-
+- (void)setResRootPath:(NSString *)resRootPath;
+- (void)setRootPath:(NSString *)rootPath;
 - (BOOL)deploy:(KCFile*)aSrcFile dek:(KCDek*)aDek;
 
 - (BOOL)checkHtmlDir;

@@ -20,7 +20,6 @@
 
 - (void)upgradeWebApps:(NSArray*)aWebApps;
 - (void)upgradeWebApp:(KCWebApp*)aWebApp;
-
 - (NSString*)getRootPath;
 - (NSString*)getResRootPath;
 

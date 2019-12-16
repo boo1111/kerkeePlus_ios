@@ -19,9 +19,10 @@
 @interface KCDeploy ()
 {
     KCWebPath* m_webPath;
-    id<KCDeployFlow> m_deployFlow;
+    NSString *m_rootPath;
+    NSString *m_resRootPath;
 }
-
+@property (nonatomic , weak) id<KCDeployFlow> m_deployFlow;
 @end
 
 @implementation KCDeploy
@@ -54,13 +55,31 @@
     m_deployFlow = nil;
 }
 
+- (void)setResRootPath:(NSString *)resRootPath
+{
+    m_resRootPath = resRootPath;
+}
+
+- (void)setRootPath:(NSString *)rootPath
+{
+    m_rootPath = rootPath;
+}
+
 - (NSString*)getRootPath
 {
+    if (m_rootPath)
+    {
+        return m_rootPath;
+    }
     return [m_webPath getRootPath];
 }
 
 - (NSString*)getResRootPath
 {
+    if (m_resRootPath)
+    {
+        return m_resRootPath;
+    }
     return [m_webPath getResRootPath];
 }
 
@@ -81,6 +100,7 @@
             [dirDek mkdirs];
             BOOL isSuccess = [KCZip unzip:tmpZipFile.getPath to:dirDek.getPath];
             [tmpZipFile remove];
+            [aSrcFile remove];
             if (!isSuccess)
             {
                 [dirDek remove];
@@ -107,6 +127,7 @@
     
     return false;
 }
+
 
 
 - (void)notifyDeployError:(KCDeployError*)aError dek:(KCDek*)aDek

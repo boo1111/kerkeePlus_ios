@@ -114,6 +114,8 @@
     
     [dic setObject:(manifestUrl?manifestUrl:@"") forKey:@"manifestUrl"];
     [dic setObject:(m_rootPath ? m_rootPath.getAbsolutePath :@"") forKey:@"rootPath"];
+    [dic setObject:(m_tag?m_tag:@"") forKey:@"mTag"];
+
     return dic;
 }
 
@@ -130,13 +132,15 @@
     NSInteger nID = [[dic objectForKey:@"id"] integerValue];
     NSString* manifestUrl = [dic objectForKey:@"manifestUrl"];
     NSString* rootPath = [dic objectForKey:@"rootPath"];
-    
+    id mTag = [dic objectForKey:@"mTag"];
+
     KCURI* manifestURI = [[KCURI alloc] initWithString:manifestUrl];
     KCFile* rootPathFile = [[KCFile alloc] initWithPath:rootPath];
     
     m_ID =(int)nID;
     m_manifestURI = manifestURI;
     m_rootPath = rootPathFile;
+    m_tag = mTag;
     return self;
     
 }

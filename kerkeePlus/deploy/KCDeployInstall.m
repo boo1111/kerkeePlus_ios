@@ -19,9 +19,6 @@
 #import <kerkee/KCURI.h>
 #import <kerkee/KCFile.h>
 
-#define kDekFileName @"tmp.dek"
-
-
 @interface KCDek ()
 {
 }
@@ -87,7 +84,6 @@
             [dek setWebApp:aWebApp];
             [dek setManifestFileName:m_manifestFileName];
             [self downloadDEK:dek];
-            
         }
     }];
     
@@ -102,7 +98,7 @@
         NSString* downloadDir = aDek.mRootPath.getAbsolutePath;
         int IndexOfChar = [downloadDir kc_lastIndexOfChar:KCFile.separatorChar];
         downloadDir = [downloadDir kc_substring:0 end:IndexOfChar];
-        KCFile* dekFile = [[KCFile alloc] initWithPath:[NSString stringWithFormat:@"%@%@%@", downloadDir, KCFile.separator, kDekFileName]];
+        KCFile* dekFile = [[KCFile alloc] initWithPath:[NSString stringWithFormat:@"%@%@%@", downloadDir, KCFile.separator, [NSString stringWithFormat:@"%@.dek",aDek.mWebApp.mTag]]];
         KCAutorelease(dekFile);
         
         if (dekFile.exists)
@@ -125,7 +121,9 @@
         complete:^(BOOL aIsComplete, KCFile *aFilePath)
         {
             //if succes deploy
+            BACKGROUND_GLOBAL_BEGIN(PRIORITY_DEFAULT)
             [m_deploy deploy:dekFile dek:aDek];
+            BACKGROUND_GLOBAL_COMMIT
         }];
     }
 }
