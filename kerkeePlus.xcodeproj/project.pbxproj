@@ -44,14 +44,12 @@
 		DF72287223A0E8E6005D01D4 /* GAssetFlow.m in Sources */ = {isa = PBXBuildFile; fileRef = DF72286623A0E8E5005D01D4 /* GAssetFlow.m */; };
 		DF72287323A0E8E6005D01D4 /* GWebAppPath.m in Sources */ = {isa = PBXBuildFile; fileRef = DF72286723A0E8E5005D01D4 /* GWebAppPath.m */; };
 		DF72287423A0E8E6005D01D4 /* GUpgradeDek.h in Headers */ = {isa = PBXBuildFile; fileRef = DF72286823A0E8E5005D01D4 /* GUpgradeDek.h */; };
-		DF72287523A0E8E6005D01D4 /* GDekSignature.h in Headers */ = {isa = PBXBuildFile; fileRef = DF72286923A0E8E6005D01D4 /* GDekSignature.h */; };
 		DF72287623A0E8E6005D01D4 /* GWebAppPath.h in Headers */ = {isa = PBXBuildFile; fileRef = DF72286A23A0E8E6005D01D4 /* GWebAppPath.h */; };
 		DF72287723A0E8E6005D01D4 /* GWebAppManager.h in Headers */ = {isa = PBXBuildFile; fileRef = DF72286B23A0E8E6005D01D4 /* GWebAppManager.h */; };
 		DF72287823A0E8E6005D01D4 /* GUpgradeDek.m in Sources */ = {isa = PBXBuildFile; fileRef = DF72286C23A0E8E6005D01D4 /* GUpgradeDek.m */; };
 		DF72287923A0E8E6005D01D4 /* GAssetFlow.h in Headers */ = {isa = PBXBuildFile; fileRef = DF72286D23A0E8E6005D01D4 /* GAssetFlow.h */; };
 		DF72287A23A0E8E6005D01D4 /* GWebApp.h in Headers */ = {isa = PBXBuildFile; fileRef = DF72286E23A0E8E6005D01D4 /* GWebApp.h */; };
 		DF72287B23A0E8E6005D01D4 /* GWebApp.m in Sources */ = {isa = PBXBuildFile; fileRef = DF72286F23A0E8E6005D01D4 /* GWebApp.m */; };
-		DF72287C23A0E8E6005D01D4 /* GDekSignature.m in Sources */ = {isa = PBXBuildFile; fileRef = DF72287023A0E8E6005D01D4 /* GDekSignature.m */; };
 		DF8753C71D226355007CC9B6 /* KCDownloadEngine.h in Resources */ = {isa = PBXBuildFile; fileRef = DFE2903A1D1BED7B005F0F52 /* KCDownloadEngine.h */; };
 		DF8753C81D226355007CC9B6 /* KCDownloader.h in Resources */ = {isa = PBXBuildFile; fileRef = DFE2903C1D1BED7B005F0F52 /* KCDownloader.h */; };
 		DF8753C91D226355007CC9B6 /* KCDownloaderDelegate.h in Resources */ = {isa = PBXBuildFile; fileRef = DF582C151D21256C00FA1898 /* KCDownloaderDelegate.h */; };
@@ -115,14 +113,12 @@
 		DF72286623A0E8E5005D01D4 /* GAssetFlow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GAssetFlow.m; sourceTree = "<group>"; };
 		DF72286723A0E8E5005D01D4 /* GWebAppPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GWebAppPath.m; sourceTree = "<group>"; };
 		DF72286823A0E8E5005D01D4 /* GUpgradeDek.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GUpgradeDek.h; sourceTree = "<group>"; };
-		DF72286923A0E8E6005D01D4 /* GDekSignature.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDekSignature.h; sourceTree = "<group>"; };
 		DF72286A23A0E8E6005D01D4 /* GWebAppPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GWebAppPath.h; sourceTree = "<group>"; };
 		DF72286B23A0E8E6005D01D4 /* GWebAppManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GWebAppManager.h; sourceTree = "<group>"; };
 		DF72286C23A0E8E6005D01D4 /* GUpgradeDek.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GUpgradeDek.m; sourceTree = "<group>"; };
 		DF72286D23A0E8E6005D01D4 /* GAssetFlow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAssetFlow.h; sourceTree = "<group>"; };
 		DF72286E23A0E8E6005D01D4 /* GWebApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GWebApp.h; sourceTree = "<group>"; };
 		DF72286F23A0E8E6005D01D4 /* GWebApp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GWebApp.m; sourceTree = "<group>"; };
-		DF72287023A0E8E6005D01D4 /* GDekSignature.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDekSignature.m; sourceTree = "<group>"; };
 		DF945BCC1D2CDDDA00E8FF20 /* KCUtilVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCUtilVersion.h; sourceTree = "<group>"; };
 		DF945BCD1D2CDDDA00E8FF20 /* KCUtilVersion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCUtilVersion.m; sourceTree = "<group>"; };
 		DFE2903A1D1BED7B005F0F52 /* KCDownloadEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCDownloadEngine.h; sourceTree = "<group>"; };
@@ -268,8 +264,6 @@
 			children = (
 				DF72286D23A0E8E6005D01D4 /* GAssetFlow.h */,
 				DF72286623A0E8E5005D01D4 /* GAssetFlow.m */,
-				DF72286923A0E8E6005D01D4 /* GDekSignature.h */,
-				DF72287023A0E8E6005D01D4 /* GDekSignature.m */,
 				DF72286823A0E8E5005D01D4 /* GUpgradeDek.h */,
 				DF72286C23A0E8E6005D01D4 /* GUpgradeDek.m */,
 				DF72286E23A0E8E6005D01D4 /* GWebApp.h */,
@@ -303,7 +297,6 @@
 			files = (
 				DFE2903E1D1BED7B005F0F52 /* KCDownloadEngine.h in Headers */,
 				DF72287923A0E8E6005D01D4 /* GAssetFlow.h in Headers */,
-				DF72287523A0E8E6005D01D4 /* GDekSignature.h in Headers */,
 				DFE290401D1BED7B005F0F52 /* KCDownloader.h in Headers */,
 				DF582C171D21256C00FA1898 /* KCDownloaderDelegate.h in Headers */,
 				DF72287623A0E8E6005D01D4 /* GWebAppPath.h in Headers */,
@@ -491,7 +484,6 @@
 				DF72287B23A0E8E6005D01D4 /* GWebApp.m in Sources */,
 				DFE2903F1D1BED7B005F0F52 /* KCDownloadEngine.m in Sources */,
 				DF69A5731D13D9400049C628 /* KCDeployFlow.m in Sources */,
-				DF72287C23A0E8E6005D01D4 /* GDekSignature.m in Sources */,
 				DFE290411D1BED7B005F0F52 /* KCDownloader.m in Sources */,
 				DF69A5671D13D80F0049C628 /* KCWebApp.m in Sources */,
 				DF72287323A0E8E6005D01D4 /* GWebAppPath.m in Sources */,
