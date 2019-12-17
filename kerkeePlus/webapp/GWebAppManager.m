@@ -87,15 +87,15 @@ static GWebAppId const _GDefaultAppId = @"com.gegejia.zebra.webApp";
            {
                NSDictionary* jsonWebapp = [jsonWebapps objectAtIndex:i];
                GWebAppJson *jsonModel = [[GWebAppJson alloc] initWithDictionary:jsonWebapp];
-               KCFile* fileRoot = [[KCFile alloc] initWithPath:[GWebAppPath documentPath]];
+               KCFile* fileRoot = nil;
                if (jsonModel.root && jsonModel.root.length > 0)
                {
-                   fileRoot = [[KCFile alloc] initWithFile:fileRoot name:jsonModel.root];
+                   fileRoot = [[KCFile alloc] initWithPath:[GWebAppPath documentPath] name:jsonModel.root];
                    fileRoot = [[KCFile alloc] initWithFile:fileRoot name:jsonModel.identify];
                }
                else
                {
-                   fileRoot = [[KCFile alloc] initWithFile:fileRoot name:jsonModel.identify];
+                   fileRoot =  [[KCFile alloc] initWithPath:[GWebAppPath documentPath] name:jsonModel.identify];
                }
                jsonModel.root = fileRoot.getAbsolutePath;
                [mJsonModels addObject:jsonModel];
@@ -177,6 +177,10 @@ static GWebAppId const _GDefaultAppId = @"com.gegejia.zebra.webApp";
 
 - (void)upgradeWebApp:(GWebAppId)identify deployFlow:(GDeployFlowBlock)flow
 {
+    if (identify.length == 0)
+    {
+        return;
+    }
     __weak typeof(self) weakSelf = self;
     __block GWebAppJson *jsonModel = nil;
     dispatch_group_t group = dispatch_group_create();
