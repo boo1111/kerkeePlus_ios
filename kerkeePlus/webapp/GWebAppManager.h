@@ -36,7 +36,8 @@
 
 @property (nonatomic, weak, readonly) id<GWebAppDataSource> dataSource;
 @property (nonatomic, weak, readonly) id<GDeployFlow> delegate;
-
++ (instancetype)defaultManager;
++ (void)setDefaultManager:(GWebAppManager *)webappManager;
 - (instancetype)initWithDeployFlow:(id<GDeployFlow>)aDeployFlow dataSource:(id<GWebAppDataSource>)dataSource;
 - (void)deploy;
 - (void)upgrade;
@@ -44,4 +45,8 @@
 - (void)setManifestFileName:(NSString*)aManifestFileName;
 - (NSString *)getResourcePath:(GWebAppId)appId;
 - (GWebAppId)getDefaultAppId;
+- (NSString *)getHtmlString:(GWebAppId)appId path:(NSString *)path;
+
 @end
+
+

@@ -20,10 +20,96 @@
 #import "GUpgradeDek.h"
 #import <kerkee/KCTaskQueue.h>
 #import <kerkee/KCFetchManifest.h>
-
+#import <kerkee/KCFileManager.h>
+#import <kerkee/KCMemoryCache.h>
+#import <objc/runtime.h>
 static NSString * const _GWebAppJsonDefaultName = @"webApp.json";
 static NSString * const _GWebAppDBName = @"WebappsDb";
 static GWebAppId const _GDefaultAppId = @"com.gegejia.zebra.webApp";
+static GWebAppManager *_GDefaultWebAppManager = nil;
+
+@interface GWebAppManager (Memory)
+@property (nonatomic , strong) NSMutableDictionary<NSString * , KCWebApp *> *webApps;
+@property (nonatomic , strong) NSMutableDictionary<NSString * , GWebApp *> *tempwebApps;
+@property (nonatomic , strong) KCMemoryCache *memoryCache;
+- (void)safe_setWebapp:(KCWebApp *)obj key:(id)key;
+- (void)safe_setTempWebapp:(GWebApp *)obj key:(id)key;
+- (KCWebApp *)safe_getWebapp:(id)key;
+- (GWebApp *)safe_getTempWebapp:(id)key;
+
+@end
+
+@implementation GWebAppManager (Memory)
+
+- (KCMemoryCache *)memoryCache
+{
+    return objc_getAssociatedObject(self, @selector(memoryCache));
+}
+
+- (void)setMemoryCache:(KCMemoryCache *)memoryCache
+{
+    objc_setAssociatedObject(self, @selector(memoryCache), memoryCache, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
+- (void)setWebApps:(NSMutableDictionary<NSString *,KCWebApp *> *)webApps
+{
+    objc_setAssociatedObject(self, @selector(webApps), webApps, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
+- (NSMutableDictionary<NSString *,KCWebApp *> *)webApps
+{
+    return objc_getAssociatedObject(self, @selector(webApps));
+}
+
+- (NSMutableDictionary<NSString *,GWebApp *> *)tempwebApps
+{
+    return objc_getAssociatedObject(self, @selector(tempwebApps));
+}
+
+- (void)setTempwebApps:(NSMutableDictionary<NSString *,GWebApp *> *)tempwebApps
+{
+    objc_setAssociatedObject(self, @selector(tempwebApps), tempwebApps, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
+- (void)safe_setWebapp:(KCWebApp *)obj key:(id)key
+{
+    if (!obj || !key)
+    {
+        return;
+    }
+    [self.webApps setObject:obj forKey:key];
+}
+
+- (void)safe_setTempWebapp:(GWebApp *)obj key:(id)key
+{
+    if (!obj || !key)
+    {
+        return;
+    }
+    [self.tempwebApps setObject:obj forKey:key];
+}
+
+- (KCWebApp *)safe_getWebapp:(id)key
+{
+    if (!key)
+    {
+        return nil;
+    }
+    return [self.webApps objectForKey:key];
+}
+
+- (GWebApp *)safe_getTempWebapp:(id)key
+{
+    if (!key)
+    {
+        return nil;
+    }
+    return [self.tempwebApps objectForKey:key];
+}
+
+@end
+
+
 @interface GWebAppManager ()<KCDeployFlow>
 {
     KCDeploy* _deploy;
@@ -32,14 +118,25 @@ static GWebAppId const _GDefaultAppId = @"com.gegejia.zebra.webApp";
     KCDB* _db;
     GAssetFlow *_assetFlow;
 }
-@property (nonatomic , strong) NSMutableDictionary<NSString * , KCWebApp *> *webApps;
-@property (nonatomic , strong) NSMutableDictionary<NSString * , GWebApp *> *tempwebApps;
 @property (nonatomic, weak, readwrite) id<GWebAppDataSource> dataSource;
 @property (nonatomic, weak, readwrite) id<GDeployFlow> delegate;
 
 @end
 
+
+
 @implementation GWebAppManager
+
+
++ (void)setDefaultManager:(GWebAppManager *)webappManager
+{
+    _GDefaultWebAppManager = webappManager;
+}
+
++ (instancetype)defaultManager
+{
+    return _GDefaultWebAppManager;
+}
 
 - (instancetype)initWithDeployFlow:(id<GDeployFlow>)aDeployFlow dataSource:(id<GWebAppDataSource>)dataSource
 {
@@ -59,20 +156,19 @@ static GWebAppId const _GDefaultAppId = @"com.gegejia.zebra.webApp";
 {
     @synchronized (self)
     {
+        if (!self.memoryCache) {
+            self.memoryCache = [[KCMemoryCache alloc] init];
+            self.memoryCache.maxCount = 1;
+        }
         if (!_deploy) _deploy = [[KCDeploy alloc] initWithDeployFlow:self];
         if (!_deployInstall) _deployInstall = [[KCDeployInstall alloc] initWithDeploy:_deploy];
         _db = [KerDB openWithDBName:_GWebAppDBName];
-        if (_db)
-        {
-            [self loadWebAppsFromDB];
-        }
+        if (_db)[self loadWebAppsFromDB];
         if (!_assetFlow) _assetFlow = [[GAssetFlow alloc] init];
         [self deploy];
-//        [self upgrade];
+        [self upgrade];
     }
 }
-
-
 
 - (void)_loadWebappsCfg:(NSString *)path block:(void (^)(NSArray<GWebAppJson *> *webAppJsons,NSDictionary *jsonObject)) aBlock
 {
@@ -140,6 +236,10 @@ static GWebAppId const _GDefaultAppId = @"com.gegejia.zebra.webApp";
 
 - (void)_upgrade:(GWebAppJson *)jsonModel deployFlow:(GDeployFlowBlock)flow
 {
+    if (jsonModel.manifestUrl.length == 0)
+    {
+        return;
+    }
     __weak typeof(self) weakSelf = self;
     BACKGROUND_BEGIN
     KCURI *manifestUri = nil;
@@ -321,9 +421,9 @@ static GWebAppId const _GDefaultAppId = @"com.gegejia.zebra.webApp";
             NSData* dataValue = NSDataFromBytes(bytes);
             KCWebApp* kcWebApp =  [KCWebApp webApp:dataValue];
             kcWebApp = [self _synchronizedWebAppRootPath:kcWebApp];
-            [_webApps setObject:kcWebApp forKey:kcWebApp.mTag];
             GWebApp* webapp = [[GWebApp alloc] initWithID:kcWebApp.mTag rootPath:kcWebApp.mRootPath manifestUri:kcWebApp.mManifestURI];
-            [_tempwebApps setObject:webapp forKey:webapp.mID];
+            [self safe_setWebapp:kcWebApp key:kcWebApp.mTag];
+            [self safe_setTempWebapp:webapp key:webapp.mID];
         }
     }
     [iterator close];
@@ -357,8 +457,31 @@ static GWebAppId const _GDefaultAppId = @"com.gegejia.zebra.webApp";
 
 - (NSString *)getResourcePath:(GWebAppId)appId
 {
-    KCWebApp *webApp = [_webApps objectForKey:appId];
+    KCWebApp *webApp = [self safe_getWebapp:appId];
     return webApp.mRootPath.getAbsolutePath;
+}
+
+- (NSString *)getHtmlString:(GWebAppId)appId path:(NSString *)path
+{
+    NSString *cacheKey = [NSString stringWithFormat:@"%@_%@",appId,path];
+    NSString *htmlString = [self.memoryCache getCache:cacheKey];
+    if (htmlString.length == 0)
+    {
+        NSString *resPath = [self getResourcePath:appId];
+        if ([path containsString:resPath])
+        {
+            resPath = path;
+        }
+        else
+        {
+            KCURI *uri = [KCURI parse:path];
+            resPath = [resPath stringByAppendingPathComponent:uri.components.path];
+        }
+        KCFile* htmlFilePath = [[KCFile alloc] initWithPath:resPath];
+        htmlString = [KCFileManager readFileAsString:htmlFilePath.getAbsolutePath];
+        if (htmlString) [self.memoryCache setCache:cacheKey Value:htmlString];
+    }
+    return htmlString;
 }
 
 
@@ -367,7 +490,7 @@ static GWebAppId const _GDefaultAppId = @"com.gegejia.zebra.webApp";
     @synchronized (self)
     {
         if (!webapp) return;
-        [_webApps setObject:webapp.mWebApp forKey:webapp.mID];
+        [self safe_setWebapp:webapp.mWebApp key:webapp.mID];
         [self updateToDBAsyn:webapp];
     }
 }
@@ -377,9 +500,8 @@ static GWebAppId const _GDefaultAppId = @"com.gegejia.zebra.webApp";
     @synchronized (self)
     {
         if (!webapp) return;
-        [_tempwebApps setObject:webapp forKey:webapp.mID];
+        [self safe_setTempWebapp:webapp key:webapp.mID];
     }
-
 }
 
 - (void)updateToDB:(KCWebApp *)aWebApp
@@ -410,12 +532,15 @@ static GWebAppId const _GDefaultAppId = @"com.gegejia.zebra.webApp";
     {
         [self addTempWebApp:aWebApp];
         [_deployInstall installWebApp:aWebApp.mWebApp];
+        [self.memoryCache flushMemory];
     }
 }
 
 - (void)dealloc
 {
-    _webApps = nil;
+    self.webApps = nil;
+    self.tempwebApps = nil;
+    self.memoryCache = nil;
     _deploy = nil;
     _deployInstall = nil;
     if (_db && [_db isOpened])
@@ -426,5 +551,6 @@ static GWebAppId const _GDefaultAppId = @"com.gegejia.zebra.webApp";
 }
 
 @end
+
 
 

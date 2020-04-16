@@ -138,7 +138,8 @@ int compare_version_manifest(NSString *version1, NSString *version2)
         KCFile* webappsJsonPath = [[KCFile alloc] initWithPath:aPath];
         if (aBlock)
         {
-            aBlock([KCFileManager readFileAsString:webappsJsonPath.getAbsolutePath]);
+            NSString *content = [KCFileManager readFileAsString:webappsJsonPath.getAbsolutePath];
+            aBlock(content);
         }
     }
 }
